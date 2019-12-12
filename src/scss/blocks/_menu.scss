@@ -1,0 +1,36 @@
+.menu {
+	&-container {
+		margin-bottom: 1rem;
+		padding: 0 $grid-gutter-width * .5;
+	}
+
+	&-item {
+		margin: 0 $grid-gutter-width * .5;
+		font-size: .875rem;
+	}
+
+	a {
+		padding-top: .3em;
+		color: inherit;
+
+		&,
+		&::after {
+			display: block;
+		}
+
+		&::after {
+			width: 0;
+			margin-top: .2em;
+			content: '';
+			border-bottom: 2px solid $primary;
+
+			@include transition;
+		}
+
+		&:hover {
+			&::after {
+				width: 35px;
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+.ico {
+	$top-size: 16px;
+
+	display: inline-block;
+
+	&._top {
+		width: $top-size;
+		height: $top-size;
+	}
+
+	&-text {
+		display: inline-block;
+		text-indent: -9999px;
+		vertical-align: top;
+	}
+
+	&-svg {
+		vertical-align: top;
+
+		&._top {
+			$margin: 2px;
+
+			margin: $margin;
+			width: #{$top-size - $margin * 2};
+			height: #{$top-size - $margin * 2};
+			fill: $white;
+
+			@include transition;
+
+			&:hover {
+				fill: $primary;
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.header {
+	padding-top: 1rem;
+	color: $white;
+
+	&:not(._overlay) {
+		background-color: $black;
+	}
+
+	&-nav {
+		margin-bottom: 0;
+
+		&-item {
+			font-size: .875rem;
+			color: $gray-550;
+
+			&:not(:last-child) {
+				margin-right: 1.2em;
+			}
+		}
+	}
+}

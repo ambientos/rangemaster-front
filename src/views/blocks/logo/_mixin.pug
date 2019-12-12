@@ -1,0 +1,8 @@
+mixin logo(type)
+	- var _type = type ? ' _' + type : '';
+
+	a(
+		class='logo' + _type
+		href='/'
+	)
+		include ./i/logo.svg

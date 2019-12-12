@@ -1,0 +1,30 @@
+mixin header(type)
+	- var _type = type ? ' _' + type : '';
+
+	header(class='header' + _type)
+		.container
+			.row.align-items-center.justify-content-between
+				figure.header-logo.col-md-3
+					+logo('header')
+
+				nav.menu-container.navbar.navbar-expand-lg.navbar-light.col-md
+					#navbarSupportedContent.collapse.navbar-collapse.justify-content-between
+						+menu
+						.header-nav.d-flex.align-items-center
+							a.header-nav-item.ico._top._search(href='/')
+								include ./i/search.svg
+								span.ico-text Search
+							a.header-nav-item.ico._top._user(href='/')
+								include ./i/user.svg
+								span.ico-text Log In
+							a.header-nav-item(href='/') En
+
+				div(class='navbar d-flex d-lg-none justify-content-end')
+					button.navbar-toggler(
+						type='button'
+						data-toggle='collapse'
+						data-target='#navbarSupportedContent'
+						aria-controls='navbarSupportedContent'
+						aria-expanded='false'
+						aria-label='Toggle navigation')
+						span.navbar-toggler-icon

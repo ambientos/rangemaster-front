@@ -1,0 +1,8 @@
+mixin menu(currentItem)
+	ul.menu.navbar-nav
+		- var menuItems = [{id: 'about', title: 'About Us'}, {id: 'catalog', title: 'Catalog'}, {id: 'news', title: 'News'}, {id: 'downloads', title: 'Downloads'}, {id: 'distributors', title: 'Distributors'}, {id: 'competitions', title: 'Competitions'}, {id: 'contacts', title: 'Contacts'}];
+
+		each menuItem in menuItems
+			- var activeClass = menuItem.id == currentItem ? ' active' : ''
+			li(class='menu-item' + activeClass)
+				a(href='/')= menuItem.title
