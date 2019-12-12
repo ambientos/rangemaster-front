@@ -27,7 +27,7 @@
 
 			@include transition;
 
-			&:hover {
+			.ico:hover & {
 				fill: $primary;
 			}
 		}

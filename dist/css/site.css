@@ -73,7 +73,7 @@
         .ico-svg._top {
           -webkit-transition: none;
           transition: none; } }
-      .ico-svg._top:hover {
+      .ico:hover .ico-svg._top {
         fill: #f00; }
 
 /*# sourceMappingURL=site.css.map */
