@@ -9,5 +9,13 @@ $img-dir: '../i/';
 // Fonts Variables
 //
 
-$font-main:  'Ubuntu';
-$font-sub:   'Bebas Neue';
+$font-dir:         '../fonts/';
+
+$font-main-family: 'Ubuntu';
+$font-sub-family:  'BebasNeue';
+$font-sub:         $font-sub-family, 'Arial Narrow', sans-serif;
+
+
+$fonts: (
+        ( $font-sub-family, 'bold', normal, 700, 20191206 ),
+);

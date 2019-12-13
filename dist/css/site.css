@@ -11,11 +11,24 @@
   overflow: hidden;
   word-wrap: normal !important; }
 
+@font-face {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/BebasNeue/bold.woff2?v=20191206") format("woff2"), url("../fonts/BebasNeue/bold.woff?v=20191206") format("woff"); }
+
 .header {
   padding-top: 1rem;
   color: #fff; }
   .header:not(._overlay) {
     background-color: #0d0d0d; }
+  .header._overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 2; }
   .header-nav {
     margin-bottom: 0; }
     .header-nav-item {
@@ -75,5 +88,43 @@
           transition: none; } }
       .ico:hover .ico-svg._top {
         fill: #f00; }
+
+.promo-container, .promo-item {
+  min-height: 100vh; }
+
+.promo-container {
+  background-color: #0d0d0d; }
+
+.promo-item {
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover; }
+  .promo-item-inner {
+    max-width: 650px;
+    padding-right: 2.5em; }
+  .promo-item-label {
+    margin-bottom: .3em;
+    font-size: .875rem;
+    text-transform: uppercase;
+    color: #f00; }
+  .promo-item-more {
+    position: absolute;
+    right: 0;
+    width: 115px;
+    height: 141px;
+    font-family: "BebasNeue", "Arial Narrow", sans-serif;
+    font-size: .875rem;
+    font-weight: 700;
+    color: #fff;
+    fill: currentColor;
+    background-color: #404040; }
+    .promo-item-more:hover {
+      color: #0d0d0d;
+      background-color: #fff; }
+    .promo-item-more .ico {
+      margin: .2em 0 0 .2em;
+      vertical-align: text-top;
+      fill: inherit; }
 
 /*# sourceMappingURL=site.css.map */

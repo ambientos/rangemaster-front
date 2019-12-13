@@ -1,0 +1,57 @@
+.promo {
+	&-container,
+	&-item {
+		min-height: 100vh;
+	}
+
+	&-container {
+		background-color: $black;
+	}
+
+	&-item {
+		color: $white;
+		background: {
+			repeat: no-repeat;
+			position: 50% 50%;
+			size: cover;
+		}
+
+		&-inner {
+			max-width: 650px;
+			padding-right: 2.5em;
+		}
+
+		&-label {
+			margin-bottom: .3em;
+			font-size: .875rem;
+			text-transform: uppercase;
+			color: $primary;
+		}
+
+		&-more {
+			position: absolute;
+			right: 0;
+			width: 115px;
+			height: 141px;
+			font: {
+				family: $font-sub;
+				size: .875rem;
+				weight: $font-weight-bold;
+			}
+			color: $white;
+			fill: currentColor;
+			background-color: $gray-700;
+
+			&:hover {
+				color: $black;
+				background-color: $white;
+			}
+
+			.ico {
+				margin: .2em 0 0 .2em;
+				vertical-align: text-top;
+				fill: inherit;
+			}
+		}
+	}
+}

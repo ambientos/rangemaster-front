@@ -299,11 +299,12 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 1.2; }
+  font-family: "BebasNeue", "Arial Narrow", sans-serif;
+  font-weight: 700;
+  line-height: 0.8; }
 
 h1, .h1 {
-  font-size: 2.5rem; }
+  font-size: 6rem; }
 
 h2, .h2 {
   font-size: 2rem; }
@@ -1621,7 +1622,7 @@ mark,
   border-color: #454d55; }
 
 .table .thead-light th {
-  color: #495057;
+  color: #404040;
   background-color: #e9ecef;
   border-color: #dee2e6; }
 
@@ -1692,7 +1693,7 @@ mark,
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
+  color: #404040;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
@@ -1710,9 +1711,9 @@ mark,
     border: 0; }
   .form-control:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 #495057; }
+    text-shadow: 0 0 0 #404040; }
   .form-control:focus {
-    color: #495057;
+    color: #404040;
     background-color: #fff;
     border-color: #ff8080;
     outline: 0;
@@ -1738,7 +1739,7 @@ mark,
     opacity: 1; }
 
 select.form-control:focus::-ms-value {
-  color: #495057;
+  color: #404040;
   background-color: #fff; }
 
 .form-control-file,
@@ -2642,7 +2643,7 @@ input[type="button"].btn-block {
       border-color: transparent; }
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link {
-    color: #495057;
+    color: #404040;
     background-color: #fff;
     border-color: #dee2e6 #dee2e6 #fff; }
   .nav-tabs .dropdown-menu {
