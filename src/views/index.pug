@@ -24,18 +24,7 @@ block content
 		a.btn.btn-block.btn-lg.btn-secondary(href='/') In catalog
 		a.btn.btn-block.btn-lg.btn-primary(href='/') About company
 
-	section.promo-grid.d-flex.flex-wrap
-		- var promoList = [{thumb: '4', label: 'Downloads', title: 'Shooting range software'}, {thumb: '4', label: 'Catalog', title: 'Shooting range devices'}, {thumb: '4', label: 'Distributors', title: 'Successfully cooperate'}, {thumb: '4', label: 'Competitions', title: 'Keep track of the competition'}];
-		each promoItem in promoList
-			a.promo-grid-item(href='/')
-				figure.promo-grid-item-thumb
-					img.img-fluid(
-						src='t/'+ promoItem.thumb + '.jpg'
-						alt
-					)
-				.promo-grid-item-content
-					.promo-grid-item-label= promoItem.label
-					.promo-grid-item-title= promoItem.title
+	+promoGrid([{thumb: '4', label: 'Downloads', title: 'Shooting range software'}, {thumb: '4', label: 'Catalog', title: 'Shooting range devices'}, {thumb: '4', label: 'Distributors', title: 'Successfully cooperate'}, {thumb: '4', label: 'Competitions', title: 'Keep track of the competition'}])
 
 	section.widget._text._gray.product-grid-container
 		.carousel-container.container(
@@ -56,3 +45,5 @@ block content
 							.product-grid-item-title!= productItem.title
 							.product-grid-item-price!= productItem.price + '&nbsp;€'
 							a.product-grid-item-more(href='/') See more
+
+	+promoGrid([{type: 'wide', thumb: '6', label: 'Multifunctional remote control', title: 'New product is coming soon'}, {thumb: '7', label: 'New product is coming soon', title: 'Multifunctional remote control'}, {thumb: '8', label: 'News', title: 'Results of the Finland competition'}, {thumb: '9', label: 'New product', title: 'The new small final scoreboard'}, {thumb: '10', label: 'Multifunctional remote control', title: 'New product is coming soon'}], 'with-gutter')

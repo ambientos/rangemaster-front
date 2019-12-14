@@ -1,0 +1,19 @@
+mixin promoGrid(list, type)
+	- var _parentClass = type == 'with-gutter' ? ' _with-gutter row' : ' d-flex';
+
+	section(class='promo-grid flex-wrap' + _parentClass)
+		each item in list
+			- var _itemCols  = item.type && item.type == 'wide' ? '12' : '6';
+			- var _itemClass = type == 'with-gutter' ? ' _with-gutter col-md-' + _itemCols : ''; 
+			a(
+				class='promo-grid-item' + _itemClass
+				href='/'
+			)
+				figure(class='promo-grid-item-thumb' + (type == 'with-gutter' ? ' _with-gutter' : ''))
+					img.img-fluid(
+						src='t/'+ item.thumb + '.jpg'
+						alt
+					)
+				div(class='promo-grid-item-content' + (type == 'with-gutter' ? ' _with-gutter' : ''))
+					.promo-grid-item-label= item.label
+					.promo-grid-item-title= item.title
