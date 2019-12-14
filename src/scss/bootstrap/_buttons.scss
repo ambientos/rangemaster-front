@@ -124,9 +124,9 @@ fieldset:disabled a.btn {
   width: 100%;
 
   // Vertically space out multiple block buttons
-  + .btn-block {
-    margin-top: $btn-block-spacing-y;
-  }
+  //+ .btn-block {
+  //  margin-top: $btn-block-spacing-y;
+  //}
 }
 
 // Specificity overrides

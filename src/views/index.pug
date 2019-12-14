@@ -8,3 +8,51 @@ block top
 	include ./blocks/promo/_base.pug
 
 block content
+	section.widget._text._dark
+		.container
+			.row
+				.col-md-4
+					h1.h2
+						span.text-letter Rangemaster
+						| 
+						span.text-letter Systems
+				.col-md-8
+					.h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero. Donec est lorem, blandit quis imperdiet ut, placerat sed ante. Proin suscipit cursus ultricies. Quisque ac varius lectus, ut ultricies felis. Donec eu tellus sem.
+
+	.d-flex
+		a.btn.btn-block.btn-lg.btn-secondary(href='/') In catalog
+		a.btn.btn-block.btn-lg.btn-primary(href='/') About company
+
+	section.promo-grid.d-flex.flex-wrap
+		- var promoList = [{thumb: '4', label: 'Downloads', title: 'Shooting range software'}, {thumb: '4', label: 'Catalog', title: 'Shooting range devices'}, {thumb: '4', label: 'Distributors', title: 'Successfully cooperate'}, {thumb: '4', label: 'Competitions', title: 'Keep track of the competition'}];
+		each promoItem in promoList
+			a.promo-grid-item(href='/')
+				figure.promo-grid-item-thumb
+					img.img-fluid(
+						src='t/'+ promoItem.thumb + '.jpg'
+						alt
+					)
+				.promo-grid-item-content
+					.promo-grid-item-label= promoItem.label
+					.promo-grid-item-title= promoItem.title
+
+	section.widget._text._gray.product-grid-container
+		.carousel-container.container(
+			data-margin='30'
+			data-items='4'
+		)
+			.product-grid-title Featured products:
+			.product-grid.owl-carousel.carousel
+				- var productList = [{thumb: '5', title: '&quot;PPMU&quot; Phono Pull Unit - Multi-Use', price: '595,00'}, {thumb: '5', title: '&quot;PPMU&quot; Phono Pull Unit - Multi-Use', price: '595,00'}, {thumb: '5', title: '&quot;PPMU&quot; Phono Pull Unit - Multi-Use', price: '595,00'}, {thumb: '5', title: '&quot;PPMU&quot; Phono Pull Unit - Multi-Use', price: '595,00'}, {thumb: '5', title: '&quot;PPMU&quot; Phono Pull Unit - Multi-Use', price: '595,00'}];
+				each productItem in productList
+					.product-grid-item.d-flex.flex-column.justify-content-between
+						figure.product-grid-item-thumb.d-flex.justify-content-center.align-items-center
+							img.img-fluid(
+								src='t/'+ productItem.thumb +'.jpg'
+								alt
+							)
+						.product-grid-item-content
+							.product-grid-item-title!= productItem.title
+							.product-grid-item-price!= productItem.price + '&nbsp;€'
+							a.product-grid-item-more(href='/') See more

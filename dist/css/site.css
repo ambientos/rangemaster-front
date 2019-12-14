@@ -11,6 +11,11 @@
   overflow: hidden;
   word-wrap: normal !important; }
 
+.text-letter {
+  display: inline-block; }
+  .text-letter::first-letter {
+    color: #f00; }
+
 @font-face {
   font-family: "BebasNeue";
   font-weight: 700;
@@ -32,7 +37,7 @@
   .header-nav {
     margin-bottom: 0; }
     .header-nav-item {
-      font-size: .875rem;
+      font-weight: 400;
       color: #8c8c8c; }
       .header-nav-item:not(:last-child) {
         margin-right: 1.2em; }
@@ -43,7 +48,7 @@
 
 .menu-item {
   margin: 0 15px;
-  font-size: .875rem; }
+  font-weight: 400; }
 
 .menu a {
   padding-top: .3em;
@@ -89,8 +94,21 @@
       .ico:hover .ico-svg._top {
         fill: #f00; }
 
+.widget._text {
+  padding: 90px 0; }
+
+.widget._dark {
+  color: #fff;
+  background-color: #0d0d0d; }
+  .widget._dark p {
+    color: #8c8c8c; }
+
+.widget._gray {
+  background-color: #f4f4f4; }
+
 .promo-container, .promo-item {
-  min-height: 100vh; }
+  height: 100vh;
+  min-height: 600px; }
 
 .promo-container {
   background-color: #0d0d0d; }
@@ -105,7 +123,7 @@
     padding-right: 2.5em; }
   .promo-item-label {
     margin-bottom: .3em;
-    font-size: .875rem;
+    font-weight: 400;
     text-transform: uppercase;
     color: #f00; }
   .promo-item-more {
@@ -114,7 +132,6 @@
     width: 115px;
     height: 141px;
     font-family: "BebasNeue", "Arial Narrow", sans-serif;
-    font-size: .875rem;
     font-weight: 700;
     color: #fff;
     fill: currentColor;
@@ -126,5 +143,105 @@
       margin: .2em 0 0 .2em;
       vertical-align: text-top;
       fill: inherit; }
+
+.promo-grid-item {
+  position: relative;
+  width: 50%;
+  background-color: #0d0d0d; }
+  .promo-grid-item-thumb {
+    margin-bottom: 0;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    @media (prefers-reduced-motion: reduce) {
+      .promo-grid-item-thumb {
+        -webkit-transition: none;
+        transition: none; } }
+    :hover > .promo-grid-item-thumb {
+      opacity: 1; }
+  .promo-grid-item-content {
+    position: absolute;
+    left: 15%;
+    right: 10%;
+    bottom: 60px;
+    color: #fff;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    @media (prefers-reduced-motion: reduce) {
+      .promo-grid-item-content {
+        -webkit-transition: none;
+        transition: none; } }
+  .promo-grid-item-label {
+    display: inline-block;
+    position: relative;
+    margin-bottom: .3em;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #f00; }
+    .promo-grid-item-label::before {
+      position: absolute;
+      left: calc(100% + .3em);
+      bottom: .3em;
+      content: '';
+      width: 0;
+      border-top: 1px solid #f00;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+      @media (prefers-reduced-motion: reduce) {
+        .promo-grid-item-label::before {
+          -webkit-transition: none;
+          transition: none; } }
+      .promo-grid-item:hover .promo-grid-item-label::before {
+        width: 12em; }
+  .promo-grid-item-title {
+    font-family: "BebasNeue", "Arial Narrow", sans-serif;
+    font-size: 4.5rem;
+    line-height: .8; }
+  .promo-grid-item a {
+    color: inherit; }
+
+.product-grid-title {
+  margin-bottom: .5em;
+  font-family: "BebasNeue", "Arial Narrow", sans-serif;
+  font-weight: 700;
+  font-size: 6rem; }
+  @media (max-width: 1200px) {
+    .product-grid-title {
+      font-size: calc(1.725rem + 5.7vw) ; } }
+
+.product-grid-item {
+  min-height: 370px;
+  padding: 2.5em;
+  font-weight: 400;
+  background-color: #fff; }
+  .product-grid-item-thumb {
+    min-height: 150px; }
+  .product-grid-item-content {
+    text-align: center; }
+  .product-grid-item-title, .product-grid-item-more {
+    text-transform: uppercase; }
+  .product-grid-item-title {
+    min-height: 2.2em;
+    margin-bottom: 1.5em;
+    line-height: 1.1;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  .product-grid-item-price, .product-grid-item-more {
+    font-size: 1.125rem; }
+  .product-grid-item-price {
+    margin-bottom: 1.5em; }
+  .product-grid-item-more {
+    display: block;
+    height: 0;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    @media (prefers-reduced-motion: reduce) {
+      .product-grid-item-more {
+        -webkit-transition: none;
+        transition: none; } }
+    :hover > * > .product-grid-item-more {
+      height: 25px;
+      opacity: 1; }
 
 /*# sourceMappingURL=site.css.map */

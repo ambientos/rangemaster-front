@@ -1,0 +1,62 @@
+.product {
+	&-grid {
+		&-title {
+			margin-bottom: .5em;
+			font: {
+				family: $font-sub;
+				weight: $font-weight-bold;
+			}
+			@include font-size(6rem);
+		}
+
+		&-item {
+			min-height: 370px;
+			padding: 2.5em;
+			font-weight: $font-weight-normal;
+			background-color: $white;
+
+			&-thumb {
+				min-height: 150px;
+			}
+
+			&-content {
+				text-align: center;
+			}
+
+			&-title,
+			&-more {
+				text-transform: uppercase;
+			}
+
+			&-title {
+				min-height: 2.2em;
+				margin-bottom: 1.5em;
+				line-height: 1.1;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
+			&-price,
+			&-more {
+				font-size: 1.125rem;
+			}
+
+			&-price {
+				margin-bottom: 1.5em;
+			}
+
+			&-more {
+				display: block;
+				height: 0;
+				opacity: 0;
+
+				@include transition;
+
+				:hover > * > & {
+					height: 25px;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

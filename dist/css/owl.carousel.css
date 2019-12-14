@@ -98,7 +98,7 @@ button.owl-prev, button.owl-next {
     button.owl-prev.disabled i::before, button.owl-prev.disabled i::after, button.owl-prev.disabled:hover i::before, button.owl-prev.disabled:hover i::after, button.owl-next.disabled i::before, button.owl-next.disabled i::after, button.owl-next.disabled:hover i::before, button.owl-next.disabled:hover i::after {
       border-color: #adb5bd; }
   button.owl-prev:hover i::before, button.owl-prev:hover i::after, button.owl-next:hover i::before, button.owl-next:hover i::after {
-    border-color: #6c757d; }
+    border-color: #404040; }
   button.owl-prev i, button.owl-next i {
     display: block;
     position: relative;
@@ -113,7 +113,7 @@ button.owl-prev, button.owl-next {
           -webkit-transition: none;
           transition: none; } }
     button.owl-prev i::before, button.owl-next i::before {
-      border-top: 2px solid #f00; }
+      border-top: 2px solid #8c8c8c; }
     button.owl-prev i::after, button.owl-next i::after {
       position: absolute;
       top: -4px;
@@ -121,7 +121,7 @@ button.owl-prev, button.owl-next {
       height: 10px;
       border-width: 2px;
       border-style: solid;
-      border-color: #f00;
+      border-color: #8c8c8c;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg); }
 

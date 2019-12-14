@@ -12,3 +12,11 @@
 	overflow: hidden;
 	word-wrap: normal !important;
 }
+
+.text-letter {
+	display: inline-block;
+
+	&::first-letter {
+		color: $link-color;
+	}
+}

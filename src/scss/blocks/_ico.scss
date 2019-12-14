@@ -28,7 +28,7 @@
 			@include transition;
 
 			.ico:hover & {
-				fill: $primary;
+				fill: $link-color;
 			}
 		}
 	}

@@ -1,0 +1,18 @@
+.widget {
+	&._text {
+		padding: $grid-gutter-width * 3 0;
+	}
+
+	&._dark {
+		color: $white;
+		background-color: $black;
+
+		p {
+			color: $gray-550;
+		}
+	}
+
+	&._gray {
+		background-color: $gray-100;
+	}
+}

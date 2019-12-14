@@ -18,7 +18,7 @@
 		margin-bottom: 0;
 
 		&-item {
-			font-size: .875rem;
+			font-weight: $font-weight-normal;
 			color: $gray-550;
 
 			&:not(:last-child) {

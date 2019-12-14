@@ -1,7 +1,8 @@
 .promo {
 	&-container,
 	&-item {
-		min-height: 100vh;
+		height: 100vh;
+		min-height: 600px;
 	}
 
 	&-container {
@@ -23,9 +24,9 @@
 
 		&-label {
 			margin-bottom: .3em;
-			font-size: .875rem;
+			font-weight: $font-weight-normal;
 			text-transform: uppercase;
-			color: $primary;
+			color: $link-color;
 		}
 
 		&-more {
@@ -35,7 +36,6 @@
 			height: 141px;
 			font: {
 				family: $font-sub;
-				size: .875rem;
 				weight: $font-weight-bold;
 			}
 			color: $white;
@@ -51,6 +51,71 @@
 				margin: .2em 0 0 .2em;
 				vertical-align: text-top;
 				fill: inherit;
+			}
+		}
+	}
+
+	&-grid {
+		&-item {
+			position: relative;
+			width: 50%;
+			background-color: $black;
+
+			&-thumb {
+				margin-bottom: 0;
+				opacity: 0;
+
+				@include transition;
+
+				:hover > & {
+					opacity: 1;
+				}
+			}
+
+			&-content {
+				position: absolute;
+				left: 15%;
+				right: 10%;
+				bottom: $grid-gutter-width * 2;
+				color: $white;
+
+				@include transition;
+			}
+
+			&-label {
+				display: inline-block;
+				position: relative;
+				margin-bottom: .3em;
+				font-weight: $font-weight-normal;
+				text-transform: uppercase;
+				color: $link-color;
+
+				&::before {
+					position: absolute;
+					left: calc(100% + .3em);
+					bottom: .3em;
+					content: '';
+					width: 0;
+					border-top: $border-width solid $link-color;
+
+					@include transition;
+
+					.promo-grid-item:hover & {
+						width: 12em;
+					}
+				}
+			}
+
+			&-title {
+				font: {
+					family: $font-sub;
+					size: 4.5rem;
+				}
+				line-height: .8;
+			}
+
+			a {
+				color: inherit;
 			}
 		}
 	}
