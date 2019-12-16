@@ -1,8 +1,18 @@
 .promo {
 	&-container,
 	&-item {
-		height: 100vh;
-		min-height: 600px;
+		@include media-breakpoint-down('sm') {
+			min-height: 420px;
+		}
+
+		@include media-breakpoint-between('md', 'md') {
+			min-height: 550px;
+		}
+
+		@include media-breakpoint-up('lg') {
+			height: 100vh;
+			min-height: 600px;
+		}
 	}
 
 	&-container {
@@ -29,11 +39,14 @@
 			color: $link-color;
 		}
 
+		&-title {
+			@include media-breakpoint-down('sm') {
+				font-size: 2.5rem;
+			}
+		}
+
 		&-more {
-			position: absolute;
-			right: 0;
-			width: 115px;
-			height: 141px;
+			display: block;
 			font: {
 				family: $font-sub;
 				weight: $font-weight-bold;
@@ -42,15 +55,35 @@
 			fill: currentColor;
 			background-color: $gray-700;
 
+			@include media-breakpoint-down('md') {
+				width: 80px;
+				height: 41px;
+				margin-right: -20px;
+				transform: rotate(-90deg);
+			}
+
+			@include media-breakpoint-up('lg') {
+				position: absolute;
+				right: 0;
+				width: 115px;
+				height: 141px;
+			}
+
 			&:hover {
 				color: $black;
 				background-color: $white;
 			}
 
 			.ico {
-				margin: .2em 0 0 .2em;
-				vertical-align: text-top;
-				fill: inherit;
+				@include media-breakpoint-down('md') {
+					display: none;
+				}
+
+				@include media-breakpoint-up('lg') {
+					margin: .2em 0 0 .2em;
+					vertical-align: text-top;
+					fill: inherit;
+				}
 			}
 		}
 	}
@@ -58,40 +91,94 @@
 	&-grid {
 		$gutter: 5px;
 
+		max-width: 1235px;
+		margin: {
+			left: auto;
+			right: auto;
+		}
+
 		&._with-gutter {
-			max-width: 1316px;
-			margin: {
-				left: auto;
-				right: auto;
+			@include media-breakpoint-up('lg') {
+				padding: .6em .6em 1px;
 			}
-			padding: .6em .6em 1px;
 		}
 
 		&-item {
-			display: block;
 			position: relative;
-			width: 50%;
 
-			&:not(._with-gutter) {
-				background-color: $black;
+			@include media-breakpoint-down('md') {
+				margin-bottom: $gutter * .4;
+				padding: {
+					left: $gutter * .4;
+					right: $gutter * .4;
+				}
 			}
 
-			&._with-gutter {
+			@include media-breakpoint-down('sm') {
 				padding: {
-					left: $gutter;
-					right: $gutter;
+					left: 0;
+					right: 0;
+				}
+			}
+
+			@include media-breakpoint-up('lg') {
+				&:not(._with-gutter) {
+					padding: {
+						left: 0;
+						right: 0;
+					}
+				}
+
+				&._with-gutter {
+					padding: {
+						left: $gutter;
+						right: $gutter;
+					}
+				}
+			}
+
+			&-inner {
+				@include media-breakpoint-down('md') {
+					padding: $grid-gutter-width;
+					background: {
+						color: $black;
+						repeat: no-repeat;
+						position: 50% 50%;
+						size: cover;
+					}
+				}
+
+				@include media-breakpoint-down('sm') {
+					min-height: 210px;
+				}
+
+				@include media-breakpoint-between('md', 'md') {
+					min-height: 320px;
+				}
+
+				@include media-breakpoint-up('lg') {
+					background-image: none !important;
 				}
 			}
 
 			&-thumb {
+				background-color: $black;
+
+				@include media-breakpoint-down('md') {
+					display: none;
+				}
+
 				&:not(._with-gutter) {
 					margin-bottom: 0;
-					opacity: 0;
 
-					@include transition;
+					img {
+						opacity: 0;
 
-					:hover > & {
-						opacity: 1;
+						@include transition;
+
+						:hover > & {
+							opacity: 1;
+						}
 					}
 				}
 
@@ -99,19 +186,20 @@
 			}
 
 			&-content {
-				position: absolute;
-				right: 10%;
-				bottom: $grid-gutter-width * 2;
+				display: block;
 				color: $white;
 
 				@include transition;
 
-				&:not(._with-gutter) {
-					left: 15%;
-				}
+				@include media-breakpoint-up('lg') {
+					position: absolute;
+					left: 4.5em;
+					right: 4em;
+					bottom: $grid-gutter-width * 2;
 
-				&._with-gutter {
-					left: 10%;
+					&._with-gutter {
+						left: calc(4em - .2em);
+					}
 				}
 			}
 
@@ -123,28 +211,29 @@
 				text-transform: uppercase;
 				color: $link-color;
 
-				&::before {
-					position: absolute;
-					left: calc(100% + .3em);
-					bottom: .3em;
-					content: '';
-					width: 0;
-					border-top: $border-width solid $link-color;
+				@include media-breakpoint-up('lg') {
+					&::before {
+						position: absolute;
+						left: calc(100% + .3em);
+						bottom: .3em;
+						content: '';
+						width: 0;
+						border-top: $border-width solid $link-color;
 
-					@include transition;
+						@include transition;
 
-					.promo-grid-item:hover & {
-						width: 12em;
+						.promo-grid-item:hover & {
+							width: 12em;
+						}
 					}
 				}
 			}
 
 			&-title {
-				font: {
-					family: $font-sub;
-					size: 4.5rem;
-				}
+				font-family: $font-sub;
 				line-height: .8;
+
+				@include font-size(4.5rem);
 			}
 
 			a {

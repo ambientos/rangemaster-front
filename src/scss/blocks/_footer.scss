@@ -1,0 +1,50 @@
+.footer {
+	padding-top: 1rem;
+	background-color: $black;
+
+	&-main {
+		color: $white;
+
+		@include media-breakpoint-between('md', 'md') {
+			.navbar-nav {
+				flex-direction: row;
+			}
+
+			.menu-item {
+				$margin-x: .3em;
+
+				margin: {
+					left: $margin-x;
+					right: $margin-x;
+				}
+			}
+		}
+	}
+
+	&-sub {
+		padding-top: .7rem;
+		background-color: darken($black, 10%);
+
+		@include media-breakpoint-down('md') {
+			font-size: .625rem;
+		}
+
+		a {
+			color: inherit;
+		}
+	}
+
+	&-copy,
+	&-policy,
+	&-dev {
+		padding-bottom: .7rem;
+	}
+
+	&-policy {
+		text-align: center;
+	}
+
+	&-dev {
+		text-align: right;
+	}
+}

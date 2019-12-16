@@ -1,6 +1,12 @@
 .widget {
 	&._text {
-		padding: $grid-gutter-width * 3 0;
+		@include media-breakpoint-down('md') {
+			padding: $grid-gutter-width * 2 0;
+		}
+
+		@include media-breakpoint-up('lg') {
+			padding: $grid-gutter-width * 3 0;
+		}
 	}
 
 	&._dark {

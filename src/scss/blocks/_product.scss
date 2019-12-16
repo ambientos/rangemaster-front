@@ -29,11 +29,14 @@
 			}
 
 			&-title {
-				min-height: 2.2em;
 				margin-bottom: 1.5em;
 				line-height: 1.1;
 				text-overflow: ellipsis;
 				overflow: hidden;
+
+				@include media-breakpoint-up('lg') {
+					min-height: 2.2em;
+				}
 			}
 
 			&-price,
@@ -47,14 +50,17 @@
 
 			&-more {
 				display: block;
-				height: 0;
-				opacity: 0;
 
-				@include transition;
+				@include media-breakpoint-up('lg') {
+					height: 0;
+					opacity: 0;
 
-				:hover > * > & {
-					height: 25px;
-					opacity: 1;
+					@include transition;
+
+					:hover > * > & {
+						height: 25px;
+						opacity: 1;
+					}
 				}
 			}
 		}

@@ -290,7 +290,7 @@ $h6-font-size:                $font-size-base !default;
 $headings-margin-bottom:      1.7em !default;
 $headings-font-family:        $font-family-base !default;
 $headings-font-weight:        400 !default;
-$headings-line-height:        .8 !default;
+$headings-line-height:        1.2 !default;
 $headings-color:              null !default;
 
 $display1-size:               6rem !default;
@@ -722,11 +722,12 @@ $navbar-toggler-padding-x:          .75rem !default;
 $navbar-toggler-font-size:          $font-size-lg !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
 
-$navbar-dark-color:                 rgba($white, .5) !default;
-$navbar-dark-hover-color:           rgba($white, .75) !default;
+$navbar-dark-color:                 rgba($white, 1) !default;
+$navbar-dark-hover-color:           rgba($white, .5) !default;
 $navbar-dark-active-color:          $white !default;
 $navbar-dark-disabled-color:        rgba($white, .25) !default;
-$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg fill='#{$navbar-dark-color}' height='7' viewBox='0 0 14 7' width='14' xmlns='http://www.w3.org/2000/svg'><path d='m0 0h14v1.57h-14z'/><path d='m7.53845 5h6.46154v1.57h-6.46154z'/></svg>") !default;
+$navbar-dark-toggler-close-icon-bg: url("data:image/svg+xml,<svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M3 13L12 4M3 4L12 13' stroke='#{$navbar-dark-color}' stroke-linecap='round'/></svg>");
 $navbar-dark-toggler-border-color:  rgba($white, .1) !default;
 
 $navbar-light-color:                rgba($black, .5) !default;

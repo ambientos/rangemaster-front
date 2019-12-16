@@ -2,25 +2,23 @@ mixin header(type)
 	- var _type = type ? ' _' + type : '';
 
 	header(class='header' + _type)
-		.container
+		.header-container.container
 			.row.align-items-center.justify-content-between
-				figure.header-logo.col-md-3
+				figure.header-logo.col-lg-2.col-xl-3
 					+logo('header')
 
-				nav.menu-container.navbar.navbar-expand-lg.navbar-light.col-md
+				nav.menu-container.navbar.navbar-expand-lg.navbar-dark.col-md
 					#navbarSupportedContent.collapse.navbar-collapse.justify-content-between
-						+menu
+						+menu('about')
 						.header-nav.d-flex.align-items-center
-							a.header-nav-item.ico._top._search(href='/')
-								include ./i/search.svg
-								span.ico-text Search
-							a.header-nav-item.ico._top._user(href='/')
-								include ./i/user.svg
-								span.ico-text Log In
+							include ./nav-icons.pug
+
 							a.header-nav-item(href='/') En
 
-				div(class='navbar d-flex d-lg-none justify-content-end')
-					button.navbar-toggler(
+				div(class='header-nav-tablet navbar-dark d-flex d-lg-none align-items-center justify-content-end')
+					include ./nav-icons.pug
+
+					button.navbar-toggler.collapsed(
 						type='button'
 						data-toggle='collapse'
 						data-target='#navbarSupportedContent'

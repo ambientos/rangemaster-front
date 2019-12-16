@@ -1,11 +1,17 @@
 .ico {
-	$top-size: 16px;
+	$top-size: 1.1429em;
+	$top-tablet-size: 1.5em;
 
 	display: inline-block;
 
 	&._top {
 		width: $top-size;
 		height: $top-size;
+
+		.header-nav-tablet & {
+			width: $top-tablet-size;
+			height: $top-tablet-size;
+		}
 	}
 
 	&-text {
@@ -18,7 +24,7 @@
 		vertical-align: top;
 
 		&._top {
-			$margin: 2px;
+			$margin: .125em;
 
 			margin: $margin;
 			width: #{$top-size - $margin * 2};
@@ -26,6 +32,11 @@
 			fill: $white;
 
 			@include transition;
+
+			.header-nav-tablet & {
+				width: #{$top-tablet-size - $margin * 2};
+				height: #{$top-tablet-size - $margin * 2};
+			}
 
 			.ico:hover & {
 				fill: $link-color;

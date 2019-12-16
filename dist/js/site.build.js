@@ -128,7 +128,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fan
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _fancybox_init__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fancybox-init */ \"./site/fancybox-init.js\");\n/* harmony import */ var _carousel_init__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./carousel-init */ \"./site/carousel-init.js\");\n/* harmony import */ var _carousel_init__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_carousel_init__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n//# sourceURL=webpack:///./site/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nav_toggler__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav-toggler */ \"./site/nav-toggler.js\");\n/* harmony import */ var _nav_toggler__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_nav_toggler__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _fancybox_init__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fancybox-init */ \"./site/fancybox-init.js\");\n/* harmony import */ var _carousel_init__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./carousel-init */ \"./site/carousel-init.js\");\n/* harmony import */ var _carousel_init__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_carousel_init__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack:///./site/index.js?");
+
+/***/ }),
+
+/***/ "./site/nav-toggler.js":
+/*!*****************************!*\
+  !*** ./site/nav-toggler.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("/* WEBPACK VAR INJECTION */(function($) {var header = $('.header'),\n    toggler = $('.navbar-toggler');\ntoggler.on('click', function () {\n  header.toggleClass('_is-menu-expanded');\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"jquery\")))\n\n//# sourceURL=webpack:///./site/nav-toggler.js?");
 
 /***/ }),
 

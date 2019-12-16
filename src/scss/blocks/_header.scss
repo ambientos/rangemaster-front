@@ -2,6 +2,8 @@
 	padding-top: 1rem;
 	color: $white;
 
+	@include transition(background-color .2s ease-in-out);
+
 	&:not(._overlay) {
 		background-color: $black;
 	}
@@ -14,16 +16,50 @@
 		z-index: 2;
 	}
 
+	&._is-menu-expanded {
+		@include media-breakpoint-down('md') {
+			background-color: $black;
+		}
+	}
+
+	&-container {
+		position: relative;
+	}
+
 	&-nav {
 		margin-bottom: 0;
+
+		@include media-breakpoint-down('md') {
+			margin-top: 1.5em;
+		}
 
 		&-item {
 			font-weight: $font-weight-normal;
 			color: $gray-550;
 
 			&:not(:last-child) {
-				margin-right: 1.2em;
+				margin-right: 1.6em;
+
+				&:nth-child(2) {
+					margin-right: 1.1em;
+				}
+
+				@include media-breakpoint-up('lg') {
+					margin-right: 1.2em;
+				}
 			}
+
+			@include media-breakpoint-down('md') {
+				.header:not(._is-menu-expanded) & {
+					display: none;
+				}
+			}
+		}
+
+		&-tablet {
+			position: absolute;
+			top: 0;
+			right: 0;
 		}
 	}
 }

@@ -1,19 +1,23 @@
 mixin promoGrid(list, type)
-	- var _parentClass = type == 'with-gutter' ? ' _with-gutter row' : ' d-flex';
+	- var _parentClass = type == 'with-gutter' ? ' _with-gutter' : '';
 
-	section(class='promo-grid flex-wrap' + _parentClass)
+	section(class='promo-grid flex-wrap row' + _parentClass)
 		each item in list
-			- var _itemCols  = item.type && item.type == 'wide' ? '12' : '6';
-			- var _itemClass = type == 'with-gutter' ? ' _with-gutter col-md-' + _itemCols : ''; 
+			- var _itemCols  = item.type && item.type == 'wide' ? ' col-md-12' : ' col-md-6';
+			- var _itemClass = type == 'with-gutter' ? ' _with-gutter' : ''; 
 			a(
-				class='promo-grid-item' + _itemClass
+				class='promo-grid-item' + _itemCols + _itemClass
 				href='/'
 			)
-				figure(class='promo-grid-item-thumb' + (type == 'with-gutter' ? ' _with-gutter' : ''))
-					img.img-fluid(
-						src='t/'+ item.thumb + '.jpg'
-						alt
-					)
-				div(class='promo-grid-item-content' + (type == 'with-gutter' ? ' _with-gutter' : ''))
-					.promo-grid-item-label= item.label
-					.promo-grid-item-title= item.title
+				span(
+					class='promo-grid-item-inner d-flex align-items-end'
+					style='background-image:url(t/'+ item.thumb + '.jpg)'
+				)
+					figure(class='promo-grid-item-thumb' + (type == 'with-gutter' ? ' _with-gutter' : ''))
+						img.img-fluid(
+							src='t/'+ item.thumb + '.jpg'
+							alt
+						)
+					span(class='promo-grid-item-content' + (type == 'with-gutter' ? ' _with-gutter' : ''))
+						.promo-grid-item-label= item.label
+						.promo-grid-item-title= item.title
