@@ -64,5 +64,38 @@
 				}
 			}
 		}
+
+		&-carousel {
+			position: relative;
+
+			.owl {
+				&-nav {
+					position: absolute;
+					top: 30%;
+
+					@include media-breakpoint-down('sm') {
+						display: none;
+					}
+
+					@include media-breakpoint-between('md', 'md') {
+						left: 0;
+						right: 0;
+					}
+
+					@include media-breakpoint-up('lg') {
+						left: -$grid-gutter-width;
+						right: -$grid-gutter-width;
+					}
+
+					button {
+						position: absolute;
+					}
+				}
+
+				&-next {
+					right: 0;
+				}
+			}
+		}
 	}
 }

@@ -123,11 +123,12 @@
 }
 
 button {
-	$size: 25px;
-	$border-width: 2px;
-	$color-inactive: $gray-500;
+	$size: 20px;
+	$border-width: 1px;
 	$color: $primary;
 	$color-active: $secondary;
+	$color-inactive: rgba($color, .4);
+	$color-hover: $color;
 
 	&.owl-prev,
 	&.owl-next {
@@ -142,8 +143,7 @@ button {
 				cursor: default;
 
 				i {
-					&::before,
-					&::after {
+					&::before {
 						border-color: $color-inactive;
 					}
 				}
@@ -152,9 +152,8 @@ button {
 
 		&:hover {
 			i {
-				&::before,
-				&::after {
-					border-color: $color-active;
+				&::before {
+					border-color: $color-hover;
 				}
 			}
 		}
@@ -162,22 +161,15 @@ button {
 		i {
 			display: block;
 			position: relative;
-			width: $size;
+			width: $size * .8;
 
-			&::before,
-			&::after {
+			&::before {
+				$size: $size * .4;
+
 				display: block;
 				content: '';
 
 				@include transition;
-			}
-
-			&::before {
-				border-top: $border-width solid $color;
-			}
-
-			&::after {
-				$size: $size * .4;
 
 				position: absolute;
 				top: -$size * .4;
@@ -195,7 +187,7 @@ button {
 
 	&.owl-prev {
 		i {
-			&::after {
+			&::before {
 				left: 0;
 				border-style: none none solid solid;
 			}
@@ -204,7 +196,7 @@ button {
 
 	&.owl-next {
 		i {
-			&::after {
+			&::before {
 				right: 0;
 				border-style: solid solid none none;
 			}

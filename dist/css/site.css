@@ -196,7 +196,8 @@
     min-height: 600px; } }
 
 .promo-container {
-  background-color: #0d0d0d; }
+  background-color: #0d0d0d;
+  overflow: hidden; }
 
 .promo-item {
   color: #fff;
@@ -247,7 +248,6 @@
         fill: inherit; } }
 
 .promo-grid {
-  max-width: 1235px;
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 992px) {
@@ -288,8 +288,8 @@
       .promo-grid-item-inner {
         background-image: none !important; } }
     .promo-grid-item-thumb {
-      background-color: #0d0d0d;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      background-color: #0d0d0d; }
       @media (max-width: 991.98px) {
         .promo-grid-item-thumb {
           display: none; } }
@@ -305,6 +305,9 @@
               transition: none; } }
           :hover > .promo-grid-item-thumb:not(._with-gutter) img {
             opacity: 1; }
+      .promo-grid-item-thumb,
+      .promo-grid-item-thumb img {
+        width: 100%; }
     .promo-grid-item-content {
       display: block;
       color: #fff;
@@ -356,6 +359,84 @@
     .promo-grid-item a {
       color: inherit; }
 
+.promo-carousel-nav {
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #fff; }
+  @media (max-width: 991.98px) {
+    .promo-carousel-nav {
+      bottom: 30px;
+      -webkit-transform: translate(3em, -0.8em);
+              transform: translate(3em, -0.8em); }
+      .promo-carousel-nav::before {
+        display: block;
+        width: 180px;
+        content: '';
+        border-top: 1px solid #fff; } }
+  @media (min-width: 992px) {
+    .promo-carousel-nav {
+      top: 0;
+      bottom: 0;
+      height: 90px;
+      border-left: 1px solid #fff;
+      -webkit-transform: translateX(3em);
+              transform: translateX(3em); } }
+  .promo-carousel-nav, .promo-carousel-nav-current, .promo-carousel-nav-num {
+    position: absolute; }
+  @media (max-width: 991.98px) {
+    .promo-carousel-nav-current, .promo-carousel-nav-num {
+      top: 0; }
+    .promo-carousel-nav-current {
+      left: 0;
+      -webkit-transform: translate(-0.5em, -50%);
+              transform: translate(-0.5em, -50%); }
+    .promo-carousel-nav-num {
+      left: 180px;
+      -webkit-transform: translate(1.5em, -50%);
+              transform: translate(1.5em, -50%); } }
+  @media (min-width: 992px) {
+    .promo-carousel-nav-current, .promo-carousel-nav-num {
+      left: 0; }
+    .promo-carousel-nav-current {
+      top: 0;
+      -webkit-transform: translate(-50%, -120%);
+              transform: translate(-50%, -120%); }
+    .promo-carousel-nav-num {
+      bottom: 0;
+      -webkit-transform: translate(-50%, 120%);
+              transform: translate(-50%, 120%); } }
+
+.promo .owl-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 21px;
+  margin: auto;
+  z-index: 1; }
+  @media (max-width: 991.98px) {
+    .promo .owl-nav {
+      bottom: 30px; } }
+  @media (min-width: 992px) {
+    .promo .owl-nav {
+      top: 0;
+      bottom: 0;
+      -webkit-transform: translateY(-4.2em);
+              transform: translateY(-4.2em); } }
+
+.promo button.owl-prev.disabled i::before, .promo button.owl-prev.disabled:hover i::before, .promo button.owl-next.disabled i::before, .promo button.owl-next.disabled:hover i::before {
+  border-color: rgba(255, 255, 255, 0.4); }
+
+.promo button.owl-prev:hover i::before, .promo button.owl-next:hover i::before {
+  border-color: #fff; }
+
+.promo button.owl-prev i::before, .promo button.owl-next i::before {
+  border-color: #fff; }
+
+@media (max-width: 991.98px) {
+  .promo button.owl-next {
+    margin-left: 207px; } }
+
 .product-grid-title {
   margin-bottom: .5em;
   font-family: "BebasNeue", "Arial Narrow", sans-serif;
@@ -404,5 +485,26 @@
         :hover > * > .product-grid-item-more {
           height: 25px;
           opacity: 1; } }
+
+.product-grid-carousel {
+  position: relative; }
+  .product-grid-carousel .owl-nav {
+    position: absolute;
+    top: 30%; }
+    @media (max-width: 767.98px) {
+      .product-grid-carousel .owl-nav {
+        display: none; } }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .product-grid-carousel .owl-nav {
+        left: 0;
+        right: 0; } }
+    @media (min-width: 992px) {
+      .product-grid-carousel .owl-nav {
+        left: -30px;
+        right: -30px; } }
+    .product-grid-carousel .owl-nav button {
+      position: absolute; }
+  .product-grid-carousel .owl-next {
+    right: 0; }
 
 /*# sourceMappingURL=site.css.map */

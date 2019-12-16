@@ -95,41 +95,38 @@ button.owl-prev, button.owl-next {
   background: transparent; }
   button.owl-prev.disabled, button.owl-prev.disabled:hover, button.owl-next.disabled, button.owl-next.disabled:hover {
     cursor: default; }
-    button.owl-prev.disabled i::before, button.owl-prev.disabled i::after, button.owl-prev.disabled:hover i::before, button.owl-prev.disabled:hover i::after, button.owl-next.disabled i::before, button.owl-next.disabled i::after, button.owl-next.disabled:hover i::before, button.owl-next.disabled:hover i::after {
-      border-color: #adb5bd; }
-  button.owl-prev:hover i::before, button.owl-prev:hover i::after, button.owl-next:hover i::before, button.owl-next:hover i::after {
-    border-color: #404040; }
+    button.owl-prev.disabled i::before, button.owl-prev.disabled:hover i::before, button.owl-next.disabled i::before, button.owl-next.disabled:hover i::before {
+      border-color: rgba(140, 140, 140, 0.4); }
+  button.owl-prev:hover i::before, button.owl-next:hover i::before {
+    border-color: #8c8c8c; }
   button.owl-prev i, button.owl-next i {
     display: block;
     position: relative;
-    width: 25px; }
-    button.owl-prev i::before, button.owl-prev i::after, button.owl-next i::before, button.owl-next i::after {
+    width: 16px; }
+    button.owl-prev i::before, button.owl-next i::before {
       display: block;
       content: '';
       -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out; }
-      @media (prefers-reduced-motion: reduce) {
-        button.owl-prev i::before, button.owl-prev i::after, button.owl-next i::before, button.owl-next i::after {
-          -webkit-transition: none;
-          transition: none; } }
-    button.owl-prev i::before, button.owl-next i::before {
-      border-top: 2px solid #8c8c8c; }
-    button.owl-prev i::after, button.owl-next i::after {
+      transition: all 0.2s ease-in-out;
       position: absolute;
-      top: -4px;
-      width: 10px;
-      height: 10px;
-      border-width: 2px;
+      top: -3.2px;
+      width: 8px;
+      height: 8px;
+      border-width: 1px;
       border-style: solid;
       border-color: #8c8c8c;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg); }
+      @media (prefers-reduced-motion: reduce) {
+        button.owl-prev i::before, button.owl-next i::before {
+          -webkit-transition: none;
+          transition: none; } }
 
-button.owl-prev i::after {
+button.owl-prev i::before {
   left: 0;
   border-style: none none solid solid; }
 
-button.owl-next i::after {
+button.owl-next i::before {
   right: 0;
   border-style: solid solid none none; }
 

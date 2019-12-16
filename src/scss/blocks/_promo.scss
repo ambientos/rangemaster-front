@@ -17,6 +17,7 @@
 
 	&-container {
 		background-color: $black;
+		overflow: hidden;
 	}
 
 	&-item {
@@ -91,7 +92,7 @@
 	&-grid {
 		$gutter: 5px;
 
-		max-width: 1235px;
+		//max-width: 1235px;
 		margin: {
 			left: auto;
 			right: auto;
@@ -162,6 +163,7 @@
 			}
 
 			&-thumb {
+				margin-bottom: $gutter * 2;
 				background-color: $black;
 
 				@include media-breakpoint-down('md') {
@@ -182,7 +184,10 @@
 					}
 				}
 
-				margin-bottom: $gutter * 2;
+				&,
+				img {
+					width: 100%;
+				}
 			}
 
 			&-content {
@@ -238,6 +243,130 @@
 
 			a {
 				color: inherit;
+			}
+		}
+	}
+
+	&-carousel {
+		&-nav {
+			$size: $grid-gutter-width * 3;
+			$color: $white;
+
+			left: 0;
+			right: 0;
+			margin: auto;
+			color: $color;
+
+			@include media-breakpoint-down('md') {
+				bottom: $grid-gutter-width;
+				transform: translate(3em, -.8em);
+
+				&::before {
+					display: block;
+					width: $size * 2;
+					content: '';
+					border-top: 1px solid $color;
+				}
+			}
+
+			@include media-breakpoint-up('lg') {
+				top: 0;
+				bottom: 0;
+				height: $size;
+				border-left: 1px solid $color;
+				transform: translateX(3em);
+			}
+
+			&,
+			&-current,
+			&-num {
+				position: absolute;
+			}
+
+			@include media-breakpoint-down('md') {
+				&-current,
+				&-num {
+					top: 0;
+				}
+
+				&-current {
+					left: 0;
+					transform: translate(-.5em, -50%);
+				}
+
+				&-num {
+					left: $size * 2;
+					transform: translate(1.5em, -50%);
+				}
+			}
+
+			@include media-breakpoint-up('lg') {
+				&-current,
+				&-num {
+					left: 0;
+				}
+
+				&-current {
+					top: 0;
+					transform: translate(-50%, -120%);
+				}
+
+				&-num {
+					bottom: 0;
+					transform: translate(-50%, 120%);
+				}
+			}
+		}
+	}
+
+	.owl-nav {
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 21px;
+		margin: auto;
+		z-index: 1;
+
+		@include media-breakpoint-down('md') {
+			bottom: $grid-gutter-width;
+		}
+
+		@include media-breakpoint-up('lg') {
+			top: 0;
+			bottom: 0;
+			transform: translateY(-4.2em);
+		}
+	}
+
+	button {
+		$color: $white;
+		$color-inactive: rgba($color, .4);
+
+		&.owl-prev,
+		&.owl-next {
+			&.disabled {
+				&,
+				&:hover {
+					i::before {
+						border-color: $color-inactive;
+					}
+				}
+			}
+
+			&:hover {
+				i::before {
+					border-color: $color;
+				}
+			}
+
+			i::before {
+				border-color: $color;
+			}
+		}
+
+		@include media-breakpoint-down('md') {
+			&.owl-next {
+				margin-left: $grid-gutter-width * 6.9;
 			}
 		}
 	}
