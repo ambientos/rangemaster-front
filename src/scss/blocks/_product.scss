@@ -10,10 +10,16 @@
 		}
 
 		&-item {
+			display: block;
 			min-height: 370px;
 			padding: 2.5em;
 			font-weight: $font-weight-normal;
+			color: inherit;
 			background-color: $white;
+
+			&:hover {
+				color: currentColor;
+			}
 
 			&-thumb {
 				min-height: 150px;
@@ -50,6 +56,7 @@
 
 			&-more {
 				display: block;
+				color: $link-color;
 
 				@include media-breakpoint-up('lg') {
 					height: 0;

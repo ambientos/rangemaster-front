@@ -90,6 +90,8 @@
         font-size: .625rem; } }
     .footer-sub a {
       color: inherit; }
+      .footer-sub a:hover {
+        color: #fff; }
   .footer-copy, .footer-policy, .footer-dev {
     padding-bottom: .7rem; }
   .footer-policy {
@@ -200,6 +202,7 @@
   overflow: hidden; }
 
 .promo-item {
+  position: relative;
   color: #fff;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -333,7 +336,7 @@
       text-transform: uppercase;
       color: #f00; }
       @media (min-width: 992px) {
-        .promo-grid-item-label::before {
+        :not(._with-gutter) > * > * > .promo-grid-item-label::before {
           position: absolute;
           left: calc(100% + .3em);
           bottom: .3em;
@@ -343,12 +346,12 @@
           -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out; } }
   @media (min-width: 992px) and (prefers-reduced-motion: reduce) {
-    .promo-grid-item-label::before {
+    :not(._with-gutter) > * > * > .promo-grid-item-label::before {
       -webkit-transition: none;
       transition: none; } }
       @media (min-width: 992px) {
-          .promo-grid-item:hover .promo-grid-item-label::before {
-            width: 12em; } }
+        :not(._with-gutter):hover > * > * > .promo-grid-item-label::before {
+          width: 12em; } }
     .promo-grid-item-title {
       font-family: "BebasNeue", "Arial Narrow", sans-serif;
       line-height: .8;
@@ -447,10 +450,14 @@
       font-size: calc(1.725rem + 5.7vw) ; } }
 
 .product-grid-item {
+  display: block;
   min-height: 370px;
   padding: 2.5em;
   font-weight: 400;
+  color: inherit;
   background-color: #fff; }
+  .product-grid-item:hover {
+    color: currentColor; }
   .product-grid-item-thumb {
     min-height: 150px; }
   .product-grid-item-content {
@@ -470,7 +477,8 @@
   .product-grid-item-price {
     margin-bottom: 1.5em; }
   .product-grid-item-more {
-    display: block; }
+    display: block;
+    color: #f00; }
     @media (min-width: 992px) {
       .product-grid-item-more {
         height: 0;

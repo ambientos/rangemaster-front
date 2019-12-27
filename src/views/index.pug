@@ -36,7 +36,7 @@ block content
 			.product-grid.owl-carousel.carousel
 				- var productList = [{thumb: '5', title: '&quot;PPMU&quot; Phono Pull Unit - Multi-Use', price: '595,00'}, {thumb: '5', title: '&quot;PPMU&quot; Phono Pull Unit - Multi-Use', price: '595,00'}, {thumb: '5', title: '&quot;PPMU&quot; Phono Pull Unit - Multi-Use', price: '595,00'}, {thumb: '5', title: '&quot;PPMU&quot; Phono Pull Unit - Multi-Use', price: '595,00'}, {thumb: '5', title: '&quot;PPMU&quot; Phono Pull Unit - Multi-Use', price: '595,00'}];
 				each productItem in productList
-					.product-grid-item.d-flex.flex-column.justify-content-between
+					a.product-grid-item.d-flex.flex-column.justify-content-between(href='/')
 						figure.product-grid-item-thumb.d-flex.justify-content-center.align-items-center
 							img.img-fluid(
 								src='t/'+ productItem.thumb +'.jpg'
@@ -45,6 +45,6 @@ block content
 						.product-grid-item-content
 							.product-grid-item-title!= productItem.title
 							.product-grid-item-price!= productItem.price + '&nbsp;€'
-							a.product-grid-item-more(href='/') See more
+							.product-grid-item-more(href='/') See more
 
 	+promoGrid([{type: 'wide', thumb: '6', label: 'Multifunctional remote control', title: 'New product is coming soon'}, {thumb: '7', label: 'New product is coming soon', title: 'Multifunctional remote control'}, {thumb: '8', label: 'News', title: 'Results of the Finland competition'}, {thumb: '9', label: 'New product', title: 'The new small final scoreboard'}, {thumb: '10', label: 'Multifunctional remote control', title: 'New product is coming soon'}], 'with-gutter')

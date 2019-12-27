@@ -21,6 +21,7 @@
 	}
 
 	&-item {
+		position: relative;
 		color: $white;
 		background: {
 			repeat: no-repeat;
@@ -217,7 +218,7 @@
 				color: $link-color;
 
 				@include media-breakpoint-up('lg') {
-					&::before {
+					:not(._with-gutter) > * > * > &::before {
 						position: absolute;
 						left: calc(100% + .3em);
 						bottom: .3em;
@@ -226,10 +227,10 @@
 						border-top: $border-width solid $link-color;
 
 						@include transition;
+					}
 
-						.promo-grid-item:hover & {
-							width: 12em;
-						}
+					:not(._with-gutter):hover > * > * > &::before {
+						width: 12em;
 					}
 				}
 			}
