@@ -24,22 +24,21 @@
   src: url("../fonts/BebasNeue/bold.woff2?v=20191206") format("woff2"), url("../fonts/BebasNeue/bold.woff?v=20191206") format("woff"); }
 
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
   padding-top: 1rem;
   color: #fff;
+  z-index: 2;
   -webkit-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
     .header {
       -webkit-transition: none;
       transition: none; } }
-  .header:not(._overlay) {
+  ._scrolled .header, .header:not(._overlay) {
     background-color: #0d0d0d; }
-  .header._overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 2; }
   @media (max-width: 991.98px) {
     .header._is-menu-expanded {
       background-color: #0d0d0d; } }
@@ -67,6 +66,12 @@
       position: absolute;
       top: 0;
       right: 0; }
+  .header-observer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px; }
 
 .footer {
   padding-top: 1rem;

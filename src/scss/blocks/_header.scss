@@ -1,19 +1,17 @@
 .header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
 	padding-top: 1rem;
 	color: $white;
+	z-index: 2;
 
 	@include transition(background-color .2s ease-in-out);
 
+	._scrolled &,
 	&:not(._overlay) {
 		background-color: $black;
-	}
-
-	&._overlay {
-		position: absolute;
-		left: 0;
-		top: 0;
-		right: 0;
-		z-index: 2;
 	}
 
 	&._is-menu-expanded {
@@ -61,5 +59,15 @@
 			top: 0;
 			right: 0;
 		}
+	}
+
+	&-observer {
+		$size: 1px;
+
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: $size;
+		height: $size;
 	}
 }
