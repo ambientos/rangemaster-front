@@ -341,6 +341,7 @@
 
 	button {
 		$color: $white;
+		$color-hover: $link-color;
 		$color-inactive: rgba($color, .4);
 
 		&.owl-prev,
@@ -356,7 +357,7 @@
 
 			&:hover {
 				i::before {
-					border-color: $color;
+					border-color: $color-hover;
 				}
 			}
 

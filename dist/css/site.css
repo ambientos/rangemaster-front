@@ -436,7 +436,7 @@
   border-color: rgba(255, 255, 255, 0.4); }
 
 .promo button.owl-prev:hover i::before, .promo button.owl-next:hover i::before {
-  border-color: #fff; }
+  border-color: #f00; }
 
 .promo button.owl-prev i::before, .promo button.owl-next i::before {
   border-color: #fff; }
