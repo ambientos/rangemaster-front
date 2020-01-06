@@ -9,6 +9,16 @@
 		}
 	}
 
+	&._inside {
+		@include media-breakpoint-down('md') {
+			padding: $grid-gutter-width * 2 $grid-gutter-width * .5;
+		}
+
+		@include media-breakpoint-up('lg') {
+			padding: $grid-gutter-width * 3;
+		}
+	}
+
 	&._dark {
 		color: $white;
 		background-color: $black;

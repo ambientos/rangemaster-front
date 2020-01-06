@@ -83,11 +83,18 @@
 		color: $white;
 
 		&-container {
-			min-height: 400px;
 			background: {
 				position: 50% 50%;
 				repeat: no-repeat;
 				size: cover;
+			}
+
+			@include media-breakpoint-down('sm') {
+				min-height: 220px;
+			}
+
+			@include media-breakpoint-up('md') {
+				min-height: 400px;
 			}
 		}
 	}

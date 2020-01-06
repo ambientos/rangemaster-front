@@ -84,10 +84,15 @@
     margin-bottom: .75em;
     color: #fff; }
     .header-title-container {
-      min-height: 400px;
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: cover; }
+      @media (max-width: 767.98px) {
+        .header-title-container {
+          min-height: 220px; } }
+      @media (min-width: 768px) {
+        .header-title-container {
+          min-height: 400px; } }
   .header-observer {
     position: absolute;
     left: 0;
@@ -213,6 +218,14 @@
 @media (min-width: 992px) {
   .widget._text {
     padding: 90px 0; } }
+
+@media (max-width: 991.98px) {
+  .widget._inside {
+    padding: 60px 15px; } }
+
+@media (min-width: 992px) {
+  .widget._inside {
+    padding: 90px; } }
 
 .widget._dark {
   color: #fff;
