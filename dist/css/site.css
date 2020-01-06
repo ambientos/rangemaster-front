@@ -455,7 +455,6 @@
       font-size: calc(1.725rem + 5.7vw) ; } }
 
 .product-grid-item {
-  display: block;
   min-height: 370px;
   padding: 2.5em;
   font-weight: 400;
