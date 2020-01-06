@@ -105,4 +105,94 @@
 			}
 		}
 	}
+
+	&-col {
+		@include media-breakpoint-down('md') {
+			&-name,
+			&-price {
+				display: block;
+				text-align: center;
+			}
+		}
+
+		&-table {
+			@include media-breakpoint-down('md') {
+				&.table-striped tbody tr:nth-of-type(2n+1) {
+					background-color: transparent;
+				}
+
+				thead {
+					display: none;
+				}
+			}
+
+			@include media-breakpoint-down('sm') {
+				$margin-x: -$grid-gutter-width * .5;
+
+				display: block;
+				width: auto;
+				margin: {
+					left: $margin-x;
+					right: $margin-x;
+				}
+				overflow: hidden;
+			}
+		}
+
+		&-num {
+			@include media-breakpoint-down('md') {
+				display: none;
+			}
+
+			@include media-breakpoint-up('lg') {
+				width: 3.5em;
+				text-align: center;
+			}
+		}
+
+		&-name {
+			@include media-breakpoint-down('md') {
+				background-color: $gray-100;
+			}
+		}
+
+		&-main {
+			margin: 1rem 0 3rem;
+		}
+
+		&-thumb {
+			text-align: center;
+
+			@include media-breakpoint-down('md') {
+				img {
+					max-width: 275px;
+					margin: auto;
+				}
+			}
+		}
+
+		&-info {
+			@include media-breakpoint-down('md') {
+				margin-bottom: 1em;
+			}
+		}
+
+		&-more {
+			@include media-breakpoint-down('md') {
+				display: none;
+			}
+
+			@include media-breakpoint-up('lg') {
+				width: 210px;
+
+				.btn {
+					margin: -$table-cell-padding;
+
+					&-block {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
 }

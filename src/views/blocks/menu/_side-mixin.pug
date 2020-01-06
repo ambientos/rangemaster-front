@@ -1,0 +1,6 @@
+mixin menuSide(menuItems, currentItem)
+	ul.menu-side.list-unstyled
+		each menuItem in menuItems
+			- var activeClass = menuItem.id == currentItem ? ' active' : ''
+			li(class='menu-side-item' + activeClass)
+				a(href='/')= menuItem.title

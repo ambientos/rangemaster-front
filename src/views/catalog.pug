@@ -1,0 +1,56 @@
+extends ./layout/skeleton.pug
+
+block meta
+	title Catalog
+
+block top
+	+header('overlay')
+	+title('Catalog', '16')
+
+block content
+	main.main
+		.container
+			.d-md-flex
+				aside.main-side
+					+menuSide([{id: 1, title: 'Sequencers for clay target shooting'}, {id: 2, title: 'Publlic info screens - real time results + classfication'}, {id: 3, title: 'Payment solutions & acess control - overview'}, {id: 4, title: 'Scoreboard'}, {id: 5, title: 'Remote controls - transmitter-433 MHZ'}, {id: 6, title: 'Remote controls - receivers-433 MHZ'}, {id: 7, title: 'Microphones & stands'}, {id: 8, title: 'Chipcard, access control & coiner items'}, {id: 9, title: 'Competition software'}, {id: 10, title: 'Solutions for rifle ranges'}], 1)
+
+				.main-content
+					table.product-col-table.table.table-striped
+						colgroup
+							col.product-col-num
+							col.product-col-name
+							col.product-col-price
+							col.product-col-more
+
+						thead
+							tr
+								th
+								th Name
+								th Price
+								th
+
+						tbody
+							- var catalogList = [{id: '01', title: '"PPMU" Phono Pull Unit - Multi-Use', price: '595,00'}, {id: '02', title: '"PPMU SET" Phono Pull Unit - Multi-Use - with cables', price: '990,00'}, {id: '03', title: '"X1" Phono Pull unit, multi use, with chipcard payment system', price: '749,00'}];
+							each catalogItem in catalogList
+								tr
+									th.product-col-num= catalogItem.id
+									td.product-col-name= catalogItem.title
+									td.product-col-price= catalogItem.price + ' €'
+									td.product-col-more
+										a.btn.btn-block.btn-primary.btn-dark-hover(href='/') See more
+								tr
+									td(colspan='4')
+										.product-col-main
+											.row.align-items-md-center
+												.col-md-5
+													figure.product-col-thumb
+														img.img-fluid.img-block(
+															src='t/17.jpg'
+															alt
+														)
+
+												.product-col-info.col-md-7
+													p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero. Donec est lorem, blandit quis imperdiet ut, placerat sed ante. Proin suscipit cursus ultricies.
+
+											.d-lg-none
+												a.btn.btn-block.btn-primary.btn-dark-hover(href='/') See more

@@ -11,17 +11,26 @@
   th,
   td {
     padding: $table-cell-padding;
-    vertical-align: top;
-    border-top: $table-border-width solid $table-border-color;
+    vertical-align: middle;
+    //border-top: $table-border-width solid $table-border-color;
+  }
+
+  th {
+    font: {
+      size: .75rem;
+      weight: $font-weight-normal;
+    }
+    color: $gray-550;
+    text-transform: uppercase;
   }
 
   thead th {
     vertical-align: bottom;
-    border-bottom: (2 * $table-border-width) solid $table-border-color;
+    //border-bottom: (2 * $table-border-width) solid $table-border-color;
   }
 
   tbody + tbody {
-    border-top: (2 * $table-border-width) solid $table-border-color;
+    //border-top: (2 * $table-border-width) solid $table-border-color;
   }
 }
 

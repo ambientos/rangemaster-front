@@ -70,6 +70,18 @@ fieldset:disabled a.btn {
   }
 }
 
+.btn-dark-hover {
+  &:hover,
+  &:focus,
+  &.focus {
+    $bg-color: $black;
+
+    color: $white;
+    border-color: $bg-color;
+    background-color: $bg-color;
+  }
+}
+
 
 //
 // Link buttons

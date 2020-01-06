@@ -1,0 +1,17 @@
+.main {
+	margin: 3em 0 6em;
+
+	@include media-breakpoint-down('sm') {
+		overflow: hidden;
+	}
+
+	&-side {
+		@include media-breakpoint-up('md') {
+			$width: 150px;
+
+			flex: 0 0 $width;
+			width: $width;
+			margin-right: $grid-gutter-width * 1.3;
+		}
+	}
+}
