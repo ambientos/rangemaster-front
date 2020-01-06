@@ -9,6 +9,12 @@
   @include img-fluid();
 }
 
+// full-width
+.img-block {
+  display: block;
+  width: 100%;
+}
+
 
 // Image thumbnails
 .img-thumbnail {

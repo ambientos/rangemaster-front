@@ -80,6 +80,14 @@
       .header-logo svg {
         width: 85px;
         height: 27px; } }
+  .header-title {
+    margin-bottom: .75em;
+    color: #fff; }
+    .header-title-container {
+      min-height: 400px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover; }
   .header-observer {
     position: absolute;
     left: 0;

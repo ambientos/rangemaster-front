@@ -78,6 +78,20 @@
 		}
 	}
 
+	&-title {
+		margin-bottom: .75em;
+		color: $white;
+
+		&-container {
+			min-height: 400px;
+			background: {
+				position: 50% 50%;
+				repeat: no-repeat;
+				size: cover;
+			}
+		}
+	}
+
 	&-observer {
 		$size: 1px;
 

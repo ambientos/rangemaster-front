@@ -368,6 +368,10 @@ mark,
   max-width: 100%;
   height: auto; }
 
+.img-block {
+  display: block;
+  width: 100%; }
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;

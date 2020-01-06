@@ -1,0 +1,42 @@
+extends ./layout/skeleton.pug
+
+block meta
+	title About Us
+
+block top
+	+header('overlay')
+	+title('About Us', '14')
+
+block content
+	section
+		.row.no-gutters
+			.widget._text._dark.col-md-6
+				h1.h2
+					span.text-letter Rangemaster
+					| 
+					span.text-letter Systems
+
+				.h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero. Donec est lorem, blandit quis imperdiet ut, placerat sed ante. Proin suscipit cursus ultricies. Quisque ac varius lectus, ut ultricies felis. Donec eu tellus sem. Curabitur ac sapien at diam consequat ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam gravida vel sem at suscipit. Etiam convallis bibendum maximus.
+
+			.widget.col-md-6.row.align-items-md-end.no-gutters
+				.col-md-12
+					img.img-fluid.img-block(
+						src='t/15.jpg'
+						alt
+					)
+
+	.row.justify-content-md-end.no-gutters
+		a.col-md-6.btn.btn-lg.btn-secondary(href='/') Contact with Us
+
+	section.widget._text
+		.container
+			.row
+				.col-md-4
+					.h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+				.col-md-8
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero. Donec est lorem, blandit quis imperdiet ut, placerat sed ante. Proin suscipit cursus ultricies. Quisque ac varius lectus, ut ultricies felis. Donec eu tellus sem. Curabitur ac sapien at diam consequat ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam gravida vel sem at suscipit. Etiam convallis bibendum maximus.
+
+	+promoGrid([{thumb: '11', label: 'Downloads', title: 'Shooting range software'}, {thumb: '4', label: 'Catalog', title: 'Shooting range devices'}, {thumb: '12', label: 'Distributors', title: 'Successfully cooperate'}, {thumb: '13', label: 'Competitions', title: 'Keep track of the competition'}])
