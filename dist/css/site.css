@@ -121,6 +121,16 @@
         color: #fff; }
   .footer-logo {
     margin-top: 1em; }
+    .footer-logo:hover .logo-text {
+      fill: #fff; }
+    .footer-logo .logo-text {
+      fill: #8c8c8c;
+      -webkit-transition: fill 0.2s ease-in-out;
+      transition: fill 0.2s ease-in-out; }
+      @media (prefers-reduced-motion: reduce) {
+        .footer-logo .logo-text {
+          -webkit-transition: none;
+          transition: none; } }
   .footer-copy, .footer-policy, .footer-dev {
     padding-bottom: .7rem; }
   .footer-policy {

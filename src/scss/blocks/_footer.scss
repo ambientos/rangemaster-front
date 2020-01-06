@@ -40,6 +40,18 @@
 
 	&-logo {
 		margin-top: 1em;
+
+		&:hover {
+			.logo-text {
+				fill: $white;
+			}
+		}
+
+		.logo-text {
+			fill: $gray-550;
+
+			@include transition(fill .2s ease-in-out);
+		}
 	}
 
 	&-copy,

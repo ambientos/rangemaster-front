@@ -5,4 +5,8 @@ mixin logo(type)
 		class='logo' + _type
 		href='/'
 	)
-		include ./i/logo.svg
+		if ( type == 'header' )
+			include ./i/logo-header.svg
+
+		if ( type == 'footer' )
+			include ./i/logo-footer.svg
