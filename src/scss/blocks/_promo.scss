@@ -93,7 +93,6 @@
 	&-grid {
 		$gutter: 5px;
 
-		//max-width: 1235px;
 		margin: {
 			left: auto;
 			right: auto;
@@ -109,10 +108,19 @@
 			position: relative;
 
 			@include media-breakpoint-down('md') {
-				margin-bottom: $gutter * .4;
+				$gutter: $gutter * .4;
+
 				padding: {
-					left: $gutter * .4;
-					right: $gutter * .4;
+					left: $gutter;
+					right: $gutter;
+				}
+
+				&:not(._with-gutter) {
+					margin-top: $gutter;
+				}
+
+				&._with-gutter {
+					margin-bottom: $gutter;
 				}
 			}
 
@@ -120,6 +128,14 @@
 				padding: {
 					left: 0;
 					right: 0;
+				}
+
+				&:not(._with-gutter) {
+					margin-top: $gutter * .4;
+				}
+
+				&._with-gutter {
+					margin: 0 $gutter $gutter;
 				}
 			}
 
