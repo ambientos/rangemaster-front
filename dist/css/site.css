@@ -678,8 +678,9 @@
     right: 0; }
 
 @media (max-width: 991.98px) {
+  .product-col-web, .product-col-name, .product-col-mail, .product-col-title, .product-col-phone, .product-col-price {
+    display: block; }
   .product-col-name, .product-col-price {
-    display: block;
     text-align: center; } }
 
 @media (max-width: 991.98px) {
@@ -696,14 +697,13 @@
     margin-right: -15px;
     overflow: hidden; } }
 
+.product-col-num, .product-col-flag {
+  width: 3.5em;
+  text-align: center; }
+
 @media (max-width: 991.98px) {
   .product-col-num {
     display: none; } }
-
-@media (min-width: 992px) {
-  .product-col-num {
-    width: 3.5em;
-    text-align: center; } }
 
 @media (max-width: 991.98px) {
   .product-col-name {

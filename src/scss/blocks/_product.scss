@@ -108,9 +108,17 @@
 
 	&-col {
 		@include media-breakpoint-down('md') {
+			&-web,
 			&-name,
+			&-mail,
+			&-title,
+			&-phone,
 			&-price {
 				display: block;
+			}
+
+			&-name,
+			&-price {
 				text-align: center;
 			}
 		}
@@ -139,14 +147,15 @@
 			}
 		}
 
+		&-num,
+		&-flag {
+			width: 3.5em;
+			text-align: center;
+		}
+
 		&-num {
 			@include media-breakpoint-down('md') {
 				display: none;
-			}
-
-			@include media-breakpoint-up('lg') {
-				width: 3.5em;
-				text-align: center;
 			}
 		}
 

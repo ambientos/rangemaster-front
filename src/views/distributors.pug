@@ -17,7 +17,7 @@ block content
 				.main-content
 					table.product-col-table.table.table-striped
 						colgroup
-							col.product-col-num
+							col.product-col-flag
 							col.product-col-title
 							col.product-col-phone
 							col.product-col-web
@@ -35,7 +35,7 @@ block content
 							- var distrList = [{flag: 'at', name: 'Rangemaster Systems', tel: '+43-699-104-03-204', url: 'http://www.rangemaster.at', mail: 'info@rangemaster.at'}, {flag: 'fr', name: 'Laporte', tel: '+33(0)493657752', url: 'www.laporte.biz', mail: 'f.legall@laporte.biz'}, {flag: 'fl', name: 'Nastakiekko OY', tel: '+358 207 209 699', url: 'www.nastatrap.com', mail: 'nasta@nastatrap.com'}, {flag: 'de', name: 'Spieth GMBH & CO KG', tel: '07356 – 9376 – 0', url: 'http://www.spieth.com', mail: 'info@spieth.de'}];
 							each distrItem in distrList
 								tr
-									td.product-col-num
+									td.product-col-flag
 										img(
 											width='26'
 											src='i/flags/' + distrItem.flag + '.svg'
