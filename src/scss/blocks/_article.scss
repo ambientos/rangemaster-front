@@ -1,0 +1,59 @@
+.article {
+	&-year {
+		margin-bottom: 3em;
+	}
+
+	&-list {
+		&-item {
+			position: relative;
+			margin-bottom: $grid-gutter-width;
+
+			@include media-breakpoint-down('md') {
+				$margin-x: $grid-gutter-width * .5;
+
+				margin: {
+					left: -$margin-x;
+					right: -$margin-x;
+				}
+				padding: 1.5em $margin-x;
+			}
+
+			@include media-breakpoint-up('lg') {
+				padding: 1.5em 8em;
+			}
+
+			&:nth-of-type(odd) {
+				background-color: $gray-100;
+			}
+
+			&-date {
+				color: $gray-550;
+			}
+
+			&-title {
+				display: block;
+				margin: .5em 0;
+				font: {
+					size: 1.125rem;
+					weight: $font-weight-normal;
+				}
+				text-transform: uppercase;
+				color: inherit;
+
+				&::before {
+					position: absolute;
+					left: 0;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					content: '';
+				}
+
+				&:hover {
+					color: inherit;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

@@ -5,14 +5,21 @@
 }
 
 .page-link {
+  $size: 50px;
+
   position: relative;
   display: block;
+  width: $size;
   padding: $pagination-padding-y $pagination-padding-x;
   margin-left: -$pagination-border-width;
-  line-height: $pagination-line-height;
+  font-size: 1.125rem;
+  line-height: $size * .6399;
+  text-align: center;
+  //line-height: $pagination-line-height;
   color: $pagination-color;
   background-color: $pagination-bg;
   border: $pagination-border-width solid $pagination-border-color;
+  border-radius: 50%;
 
   &:hover {
     z-index: 2;
@@ -30,17 +37,7 @@
 }
 
 .page-item {
-  &:first-child {
-    .page-link {
-      margin-left: 0;
-      @include border-left-radius($border-radius);
-    }
-  }
-  &:last-child {
-    .page-link {
-      @include border-right-radius($border-radius);
-    }
-  }
+  margin: 0 .9em;
 
   &.active .page-link {
     z-index: 3;
