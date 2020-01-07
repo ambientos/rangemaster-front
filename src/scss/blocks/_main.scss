@@ -16,6 +16,8 @@
 	}
 
 	&-content {
+		flex-grow: 1;
+
 		&._article {
 			font-size: 1rem;
 			line-height: 1.75;
