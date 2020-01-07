@@ -164,6 +164,12 @@ pre {
 figure {
   margin: 0 0 1rem; }
 
+figcaption {
+  margin-top: .5em;
+  font-size: .875rem;
+  line-height: 1.5;
+  color: #8c8c8c; }
+
 img {
   vertical-align: middle;
   border-style: none; }

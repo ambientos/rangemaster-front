@@ -1,0 +1,34 @@
+extends ./layout/skeleton.pug
+
+block meta
+	title News
+
+block top
+	+header()
+	+title({title: 'Lorem ipsum dolor sit amet, consectetur', date: '20.11.19', breadcrumbs: ['News', 'Lorem ipsum dolor sit amet, consectetur']})
+
+block content
+	main.main
+		.container.container-article
+			.main-content._article
+				h2 Lorem ipsum dolor sit amet, consectetur
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin, est a commodo sodales, leo leo aliquet est, sit amet placerat nisi est quis felis. Vivamus id lorem a urna pretium auctor. Mauris consectetur suscipit lacus nec accumsan. Cras sit amet nunc est. Aliquam mollis neque ut eleifend euismod. Vivamus commodo mauris et consectetur convallis. Sed hendrerit felis a nibh commodo accumsan. Nullam interdum nunc eu nibh dapibus, at vestibulum sapien tristique. Integer porttitor quam augue, a suscipit purus feugiat porta. Curabitur velit arcu, viverra quis nunc eu, eleifend sagittis velit. Pellentesque eleifend semper massa ut euismod. Cras vitae dui in urna commodo rhoncus sed eget diam.
+
+				figure
+					img.img-fluid.img-block(
+						src='t/18.jpg'
+						alt)
+					figcaption Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin, est a commodo sodales, leo leo aliquet est, sit amet placerat nisi est quis felis.
+
+				h2 Lorem ipsum dolor sit amet, consectetur
+
+				p Etiam tempus nisi purus. Curabitur gravida mattis turpis, in placerat magna hendrerit id. Aliquam consequat tempus accumsan. Mauris eget libero ut velit luctus tristique auctor id nunc. Nulla neque nisi, fermentum quis varius eget, mattis sed ex. Nam a bibendum sem. In in mauris nec erat consequat bibendum. Sed sit amet est ante. Mauris facilisis et ipsum eget accumsan. Phasellus sem libero, varius eget finibus a, iaculis ac mauris. Phasellus semper iaculis ex. Sed suscipit urna feugiat nunc lobortis, eu hendrerit eros interdum. Pellentesque gravida quis nibh eu pellentesque. Duis aliquet ultrices leo, et pellentesque ipsum euismod nec. Vestibulum id velit non tellus congue commodo. Morbi quam sem, sagittis elementum sodales id, varius eget nulla.
+
+				p Praesent tempus, quam ut porttitor iaculis, lectus tellus suscipit odio, ac consectetur arcu arcu et nulla. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam eleifend leo eu augue viverra, ut dapibus dolor dapibus. Ut sed felis non quam elementum cursus vel sed ligula. In hac habitasse platea dictumst. Aliquam ac ultrices quam, eu feugiat arcu. Integer maximus erat turpis. Pellentesque feugiat venenatis eros, at blandit sapien hendrerit quis. Ut vulputate varius placerat.
+
+				figure
+					img.img-fluid.img-block(
+						src='t/19.jpg'
+						alt)
+					figcaption Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin, est a commodo sodales, leo leo aliquet est, sit amet placerat nisi est quis felis.

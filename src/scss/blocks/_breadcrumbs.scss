@@ -1,0 +1,27 @@
+.breadcrumbs {
+	margin-bottom: 1.5em;
+	color: $gray-550;
+
+	.delimiter {
+		&::before {
+			$size: 4px;
+
+			display: inline-block;
+			width: $size;
+			height: $size;
+			margin: 0 .7em 0 .5em;
+			content: '';
+			vertical-align: middle;
+			border-radius: 50%;
+			background-color: currentColor;
+		}
+	}
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $black;
+		}
+	}
+}

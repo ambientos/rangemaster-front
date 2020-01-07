@@ -1,12 +1,16 @@
 - var promoData = [{thumb: '1', label: 'Big catalog update', title: 'New shooting range software'}, {thumb: '2', label: 'Big catalog update', title: 'New shooting range devices'}, {thumb: '3', label: 'Distributors', title: 'Successfully cooperate'}];
+
 .promo-container.carousel-container(data-promo='1')
 	.promo.owl-carousel.carousel
 		each promoItem in promoData
-			.promo-item.d-flex.justify-content-center.align-items-center(style='background-image:url(t/'+ promoItem.thumb +'.jpg)')
+			.promo-item.d-flex.justify-content-center.align-items-center(
+				style='background-image:url(t/'+ promoItem.thumb +'.jpg)')
+
 				.container.d-flex.justify-content-end
 					.promo-item-inner
 						.promo-item-label= promoItem.label
 						.promo-item-title.h1= promoItem.title
+
 				a.promo-item-more.d-flex.justify-content-center.align-items-center(href='/')
 					span.promo-item-more-text
 						| See more

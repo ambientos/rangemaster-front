@@ -1,10 +1,14 @@
 mixin title(options)
-	- var bg = options.bg ? options.bg : false;
-	- var title = options.title ? options.title : ''
+	- var bg          = options.bg ? options.bg : false;
+	- var title       = options.title ? options.title : '';
+	- var breadcrumbs = options.breadcrumbs ? options.breadcrumbs : false;
+	- var date        = options.date ? options.date : '';
 
 	div(
 		class='header-title-container d-flex align-items-end' + ( bg ? ' _with-bg' : '' )
-		style=bg ? 'background-image:url(t/'+ bg +'.jpg)' : ''
-	)
-		.container
-			h1.header-title.text-letter= title
+		style=bg ? 'background-image:url(t/'+ bg +'.jpg)' : '')
+
+		if bg
+			include ./_bg-content.pug
+		else
+			include ./_content.pug

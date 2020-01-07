@@ -1,0 +1,13 @@
+mixin breadcrumbs(items)
+	.breadcrumbs(
+		typeof='BreadcrumbList'
+		vocab='http://schema.org/')
+
+		each item, index in items
+			span(property='itemListElement' typeof='ListItem')
+				a(href='/' property='item' typeof='WebPage')
+					span(property='name')= item
+					meta(property='position' content=index +1)
+
+			if index +1 < items.length
+				span.delimiter

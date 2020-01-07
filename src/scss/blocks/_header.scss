@@ -85,6 +85,14 @@
 		&-container {
 			&:not(._with-bg) {
 				background-color: $gray-100;
+
+				@include media-breakpoint-down('md') {
+					padding-top: 6em;
+				}
+
+				@include media-breakpoint-up('lg') {
+					padding-top: 8em;
+				}
 			}
 
 			&._with-bg {
@@ -94,14 +102,37 @@
 					repeat: no-repeat;
 					size: cover;
 				}
+
+				@include media-breakpoint-down('sm') {
+					min-height: 220px;
+				}
+
+				@include media-breakpoint-up('md') {
+					min-height: 400px;
+				}
+			}
+		}
+
+		&-article {
+			position: relative;
+
+			&-date {
+				color: $gray-550;
+
+				@include media-breakpoint-down('md') {
+					margin-bottom: .5em;
+				}
+
+				@include media-breakpoint-up('lg') {
+					position: absolute;
+					left: -100px;
+					bottom: 0;
+				}
 			}
 
-			@include media-breakpoint-down('sm') {
-				min-height: 220px;
-			}
-
-			@include media-breakpoint-up('md') {
-				min-height: 400px;
+			&-title {
+				margin-bottom: $grid-gutter-width;
+				@include font-size(4.5rem);
 			}
 		}
 	}
