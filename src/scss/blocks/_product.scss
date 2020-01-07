@@ -109,6 +109,7 @@
 	&-col {
 		@include media-breakpoint-down('md') {
 			&-web,
+			&-flag,
 			&-name,
 			&-mail,
 			&-title,
@@ -117,9 +118,23 @@
 				display: block;
 			}
 
+			&-web,
+			&-name,
+			&-mail,
+			&-title,
+			&-phone,
+			&-price {
+				padding-left: 60px !important;
+			}
+
 			&-name,
 			&-price {
 				text-align: center;
+			}
+
+			&-name,
+			&-title {
+				background-color: $gray-100;
 			}
 		}
 
@@ -137,13 +152,18 @@
 			@include media-breakpoint-down('sm') {
 				$margin-x: -$grid-gutter-width * .5;
 
-				display: block;
 				width: auto;
 				margin: {
 					left: $margin-x;
 					right: $margin-x;
 				}
 				overflow: hidden;
+
+				&,
+				tr,
+				tbody {
+					display: block;
+				}
 			}
 		}
 
@@ -153,15 +173,16 @@
 			text-align: center;
 		}
 
-		&-num {
+		&-flag {
 			@include media-breakpoint-down('md') {
-				display: none;
+				margin-bottom: -3.4em;
+				vertical-align: top !important;
 			}
 		}
 
-		&-name {
+		&-num {
 			@include media-breakpoint-down('md') {
-				background-color: $gray-100;
+				display: none;
 			}
 		}
 

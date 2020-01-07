@@ -209,9 +209,7 @@
 
 @media (max-width: 767.98px) {
   .menu-side {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; } }
+    width: 2000px; } }
 
 .menu-side-item {
   color: #8c8c8c; }
@@ -219,11 +217,10 @@
     margin-bottom: 1em; }
   @media (max-width: 767.98px) {
     .menu-side-item {
+      display: inline-block;
       max-width: 200px;
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 200px;
-              flex: 0 0 200px;
-      margin-right: 1em; } }
+      margin-right: 1em;
+      vertical-align: top; } }
   .menu-side-item.active a {
     color: #f00; }
     @media (min-width: 768px) {
@@ -678,10 +675,14 @@
     right: 0; }
 
 @media (max-width: 991.98px) {
-  .product-col-web, .product-col-name, .product-col-mail, .product-col-title, .product-col-phone, .product-col-price {
+  .product-col-web, .product-col-flag, .product-col-name, .product-col-mail, .product-col-title, .product-col-phone, .product-col-price {
     display: block; }
+  .product-col-web, .product-col-name, .product-col-mail, .product-col-title, .product-col-phone, .product-col-price {
+    padding-left: 60px !important; }
   .product-col-name, .product-col-price {
-    text-align: center; } }
+    text-align: center; }
+  .product-col-name, .product-col-title {
+    background-color: #f4f4f4; } }
 
 @media (max-width: 991.98px) {
   .product-col-table.table-striped tbody tr:nth-of-type(2n+1) {
@@ -691,23 +692,27 @@
 
 @media (max-width: 767.98px) {
   .product-col-table {
-    display: block;
     width: auto;
     margin-left: -15px;
     margin-right: -15px;
-    overflow: hidden; } }
+    overflow: hidden; }
+    .product-col-table,
+    .product-col-table tr,
+    .product-col-table tbody {
+      display: block; } }
 
 .product-col-num, .product-col-flag {
   width: 3.5em;
   text-align: center; }
 
 @media (max-width: 991.98px) {
-  .product-col-num {
-    display: none; } }
+  .product-col-flag {
+    margin-bottom: -3.4em;
+    vertical-align: top !important; } }
 
 @media (max-width: 991.98px) {
-  .product-col-name {
-    background-color: #f4f4f4; } }
+  .product-col-num {
+    display: none; } }
 
 .product-col-title {
   text-transform: uppercase; }
