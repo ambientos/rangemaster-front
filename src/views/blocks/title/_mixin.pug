@@ -1,4 +1,10 @@
-mixin title(text, bg)
-	.header-title-container.d-flex.align-items-end(style=bg ? 'background-image:url(t/'+ bg +'.jpg)' : '')
+mixin title(options)
+	- var bg = options.bg ? options.bg : false;
+	- var title = options.title ? options.title : ''
+
+	div(
+		class='header-title-container d-flex align-items-end' + ( bg ? ' _with-bg' : '' )
+		style=bg ? 'background-image:url(t/'+ bg +'.jpg)' : ''
+	)
 		.container
-			h1.header-title.text-letter= text
+			h1.header-title.text-letter= title

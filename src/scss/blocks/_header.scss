@@ -83,10 +83,17 @@
 		color: $white;
 
 		&-container {
-			background: {
-				position: 50% 50%;
-				repeat: no-repeat;
-				size: cover;
+			&:not(._with-bg) {
+				background-color: $gray-100;
+			}
+
+			&._with-bg {
+				background: {
+					color: $black;
+					position: 50% 50%;
+					repeat: no-repeat;
+					size: cover;
+				}
 			}
 
 			@include media-breakpoint-down('sm') {

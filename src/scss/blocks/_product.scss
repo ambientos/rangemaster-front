@@ -162,13 +162,6 @@
 
 		&-thumb {
 			text-align: center;
-
-			@include media-breakpoint-down('md') {
-				img {
-					max-width: 275px;
-					margin: auto;
-				}
-			}
 		}
 
 		&-info {

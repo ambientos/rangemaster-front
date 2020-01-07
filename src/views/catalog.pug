@@ -5,7 +5,7 @@ block meta
 
 block top
 	+header('overlay')
-	+title('Catalog', '16')
+	+title({title: 'Catalog', bg: '16'})
 
 block content
 	main.main
@@ -44,7 +44,7 @@ block content
 											.row.align-items-md-center
 												.col-md-5
 													figure.product-col-thumb
-														img.img-fluid.img-block(
+														img.img-fluid(
 															src='t/17.jpg'
 															alt
 														)
