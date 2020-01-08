@@ -147,6 +147,19 @@
 				thead {
 					display: none;
 				}
+
+				td[data-title] {
+					&::before {
+						display: block;
+						font: {
+							size: .75rem;
+							weight: $font-weight-normal;
+						}
+						text-transform: uppercase;
+						color: $gray-550;
+						content: attr(data-title);
+					}
+				}
 			}
 
 			@include media-breakpoint-down('sm') {

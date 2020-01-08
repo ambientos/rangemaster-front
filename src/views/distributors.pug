@@ -40,7 +40,7 @@ block content
 											width='26'
 											src='i/flags/' + distrItem.flag + '.svg'
 											alt)
-									td.product-col-title= distrItem.name
-									td.product-col-phone= distrItem.tel
-									td.product-col-web= distrItem.url
-									td.product-col-mail= distrItem.mail
+									td.product-col-title(data-title='Name')= distrItem.name
+									td.product-col-phone(data-title='Telephone')= distrItem.tel
+									td.product-col-web(data-title='Web')= distrItem.url
+									td.product-col-mail(data-title='E-mail')= distrItem.mail

@@ -688,7 +688,14 @@
   .product-col-table.table-striped tbody tr:nth-of-type(2n+1) {
     background-color: transparent; }
   .product-col-table thead {
-    display: none; } }
+    display: none; }
+  .product-col-table td[data-title]::before {
+    display: block;
+    font-size: .75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #8c8c8c;
+    content: attr(data-title); } }
 
 @media (max-width: 767.98px) {
   .product-col-table {
