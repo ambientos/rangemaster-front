@@ -677,7 +677,7 @@
 @media (max-width: 991.98px) {
   .product-col-web, .product-col-flag, .product-col-name, .product-col-mail, .product-col-title, .product-col-phone, .product-col-price {
     display: block; }
-  .product-col-web, .product-col-name, .product-col-mail, .product-col-title, .product-col-phone, .product-col-price {
+  .product-col-web, .product-col-mail, .product-col-title, .product-col-phone {
     padding-left: 60px !important; }
   .product-col-name, .product-col-price {
     text-align: center; }
