@@ -675,11 +675,13 @@
     right: 0; }
 
 @media (max-width: 991.98px) {
-  .product-col-web, .product-col-flag, .product-col-name, .product-col-mail, .product-col-title, .product-col-phone, .product-col-price {
+  .product-col-dl, .product-col-web, .product-col-flag, .product-col-name, .product-col-mail, .product-col-title, .product-col-phone, .product-col-price {
     display: block; }
+  .product-col-date, .product-col-size {
+    display: inline-block; }
   .product-col-web, .product-col-mail, .product-col-title, .product-col-phone {
     padding-left: 60px !important; }
-  .product-col-name, .product-col-price {
+  .product-col-name._catalog, .product-col-price._catalog {
     text-align: center; }
   .product-col-name, .product-col-title {
     background-color: #f4f4f4; } }
@@ -708,9 +710,10 @@
     .product-col-table tbody {
       display: block; } }
 
-.product-col-num, .product-col-flag {
-  width: 3.5em;
-  text-align: center; }
+@media (min-width: 992px) {
+  .product-col-num, .product-col-flag {
+    width: 3.5em;
+    text-align: center; } }
 
 @media (max-width: 991.98px) {
   .product-col-flag {
@@ -733,6 +736,43 @@
 @media (max-width: 991.98px) {
   .product-col-info {
     margin-bottom: 1em; } }
+
+@media (max-width: 991.98px) {
+  .product-col-date[data-title] {
+    margin-right: 2em; }
+  .product-col-date:not([data-title]) {
+    padding: 0; } }
+
+.product-col-dl {
+  width: 170px; }
+  @media (max-width: 991.98px) {
+    .product-col-dl-link {
+      margin-right: 2em; } }
+  @media (max-width: 991.98px) {
+    .product-col-dl-link[data-title]::after {
+      content: attr(data-title); } }
+  @media (max-width: 991.98px) {
+    .product-col-dl-link img {
+      width: 14px;
+      margin-right: .5em; } }
+  .product-col-dl table {
+    width: 100%; }
+  .product-col-dl tr {
+    background-color: transparent !important; }
+    @media (max-width: 991.98px) {
+      .product-col-dl tr {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+  .product-col-dl td {
+    padding: 0;
+    text-align: center; }
+    @media (max-width: 991.98px) {
+      .product-col-dl td {
+        white-space: nowrap;
+        vertical-align: middle; } }
+  .product-col-dl a {
+    color: inherit; }
 
 @media (max-width: 991.98px) {
   .product-col-more {

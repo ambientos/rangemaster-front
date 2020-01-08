@@ -34,8 +34,8 @@ block content
 							each catalogItem in catalogList
 								tr
 									th.product-col-num= catalogItem.id
-									td.product-col-name= catalogItem.title
-									td.product-col-price= catalogItem.price + ' €'
+									td.product-col-name._catalog= catalogItem.title
+									td.product-col-price._catalog= catalogItem.price + ' €'
 									td.product-col-more
 										a.btn.btn-block.btn-primary.btn-dark-hover(href='/') See more
 								tr

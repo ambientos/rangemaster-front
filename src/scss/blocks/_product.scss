@@ -108,6 +108,7 @@
 
 	&-col {
 		@include media-breakpoint-down('md') {
+			&-dl,
 			&-web,
 			&-flag,
 			&-name,
@@ -116,6 +117,11 @@
 			&-phone,
 			&-price {
 				display: block;
+			}
+
+			&-date,
+			&-size {
+				display: inline-block;
 			}
 
 			&-web,
@@ -127,7 +133,9 @@
 
 			&-name,
 			&-price {
-				text-align: center;
+				&._catalog {
+					text-align: center;
+				}
 			}
 
 			&-name,
@@ -180,8 +188,10 @@
 
 		&-num,
 		&-flag {
-			width: 3.5em;
-			text-align: center;
+			@include media-breakpoint-up('lg') {
+				width: 3.5em;
+				text-align: center;
+			}
 		}
 
 		&-flag {
@@ -212,6 +222,69 @@
 		&-info {
 			@include media-breakpoint-down('md') {
 				margin-bottom: 1em;
+			}
+		}
+
+		&-date {
+			@include media-breakpoint-down('md') {
+				&[data-title] {
+					margin-right: 2em;
+				}
+
+				&:not([data-title]) {
+					padding: 0;
+				}
+			}
+		}
+
+		&-dl {
+			width: 170px;
+
+			&-link {
+				@include media-breakpoint-down('md') {
+					margin-right: 2em;
+				}
+
+				&[data-title] {
+					@include media-breakpoint-down('md') {
+						&::after {
+							content: attr(data-title);
+						}
+					}
+				}
+
+				img {
+					@include media-breakpoint-down('md') {
+						width: 14px;
+						margin-right: .5em;
+					}
+				}
+			}
+
+			table {
+				width: 100%;
+			}
+
+			tr {
+				background-color: transparent !important;
+
+				@include media-breakpoint-down('md') {
+					display: flex;
+				}
+			}
+
+			td {
+				padding: 0;
+				text-align: center;
+
+				@include media-breakpoint-down('md') {
+					white-space: nowrap;
+					vertical-align: middle;
+				}
+			}
+
+			a {
+				color: inherit;
 			}
 		}
 

@@ -1,0 +1,60 @@
+extends ./layout/skeleton.pug
+
+block meta
+	title Downloads
+
+block top
+	+header('overlay')
+	+title({title: 'Downloads', bg: '22'})
+
+block content
+	main.main
+		.container
+			.d-md-flex
+				aside.main-side
+					+menuSide([{id: 1, title: 'Folders'}, {id: 2, title: 'Resources'}, {id: 3, title: 'Manuals'}, {id: 4, title: 'Software demos and freeware'}], 1)
+
+				.main-content
+					table.product-col-table.table.table-striped
+						colgroup
+							col.product-col-num
+							col.product-col-name
+							col.product-col-date
+							col.product-col-size
+							col.product-col-dl
+
+						thead
+							tr
+								th
+								th Name
+								th Rev. Data
+								th Size
+								th Download
+
+						tbody
+							- var langsList = {ru: 'Russian', en: 'English', de: 'Deutsch'};
+							- var dlList = [{id: '01', title: 'Catalogue 2019', date: '28.04.19', size: '7.33 MB', dl: {ru: false, en: '#', de: false}}, {id: '02', title: 'X3 PRO/.NET - Full Range Automation - Brief Overview (2016)', date: '30.04.19', size: '16 MB', dl: {ru: '#', en: '#', de: false}}, {id: '03', title: 'RANGEMASTER X3 PRO/.NET - PRES. FOR iPAD,iPHONE & iMAC (.key)', date: '', size: '7.33 MB', dl: {ru: '#', en: '#', de: '#'}}, {id: '04', title: 'RANGEMASTER X3 PRO/.NET - FULL RANGE AUTOMATION - SCHEMA', date: '', size: '1700 KB', dl: {ru: false, en: '#', de: '#'}}, {id: '05', title: 'RANGEMASTER EASYSCORE FOLDER', date: '', size: '378 KB', dl: {ru: false, en: '#', de: '#'}}, {id: '06', title: 'RANGEMASTER EASYSCORE/.NET FOLDER', date: '', size: '438 KB', dl: {ru: false, en: '#', de: '#'}}, {id: '07', title: 'RANGEMASTER EASYSCORE REPORT FOLDER', date: '', size: '764 KB', dl: {ru: false, en: '#', de: '#'}}, {id: '08', title: 'RANGEMASTER SCOREBOARDS', date: '', size: '1.21 MB', dl: {ru: '#', en: '#', de: false}}, {id: '09', title: 'AVANCED SPORTING SOLUTIONS', date: '26.07.18', size: '211 KB', dl: {ru: false, en: '#', de: false}}, {id: '10', title: 'ADVANCED RADIO CONTROL SOLUTIONS FOR SPORTING & COMPAK', date: '30.05.18', size: '4.84  MB', dl: {ru: false, en: '#', de: false}}, {id: '11', title: 'REVOLUTIONAL SOLUTIONS FOR SPORTING & COMPAK', date: '01.09.18', size: '1 MB', dl: {ru: false, en: '#', de: false}}, {id: '12', title: 'FITASC ACCREDITATION OF RANGEMASTER SYSTEMS EQUIPMENT', date: '', size: '213 KB', dl: {ru: false, en: '#', de: false}}];
+							each dlItem in dlList
+								tr
+									th.product-col-num= dlItem.id
+									td.product-col-name(data-title='Name')= dlItem.title
+									td.product-col-date(data-title=dlItem.date ? 'Rev. Date' : false)= dlItem.date
+									td.product-col-size(data-title='Size')= dlItem.size
+									td.product-col-dl(data-title='Download')
+										table
+											colgroup
+												col.product-col-flag._dl
+												col.product-col-flag._dl
+												col.product-col-flag._dl
+											tbody
+												tr
+													each link, index in dlItem.dl
+														td
+															if link
+																a.product-col-dl-link(
+																	href=link
+																	data-title=langsList[index])
+																	img(
+																		width='26'
+																		src='i/flags/'+ index +'.svg'
+																		alt)
