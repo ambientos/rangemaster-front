@@ -202,9 +202,9 @@
       .menu-item::after {
         -webkit-transition: none;
         transition: none; } }
-  .menu-item:not(.active):hover::after {
+  ._header > .menu-item.active::after, ._header > .menu-item:hover::after {
     width: 35px; }
-  .menu-item.active a {
+  ._footer > .menu-item:hover a, .menu-item:last-child a {
     color: #f00; }
 
 @media (max-width: 767.98px) {

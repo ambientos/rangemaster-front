@@ -1,5 +1,6 @@
-mixin menu(currentItem)
-	ul.menu.navbar-nav
+mixin menu(type)
+	ul(class='menu navbar-nav _' + type)
+		- var currentItem = currentMenuItem ? currentMenuItem : false;
 		- var menuItems = [{id: 'about', title: 'About Us'}, {id: 'catalog', title: 'Catalog'}, {id: 'news', title: 'News'}, {id: 'downloads', title: 'Downloads'}, {id: 'distributors', title: 'Distributors'}, {id: 'competitions', title: 'Competitions'}, {id: 'contacts', title: 'Contacts'}];
 
 		each menuItem in menuItems

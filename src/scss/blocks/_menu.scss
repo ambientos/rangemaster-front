@@ -31,7 +31,8 @@
 			@include transition;
 		}
 
-		&:not(.active) {
+		._header > & {
+			&.active,
 			&:hover {
 				&::after {
 					width: 35px;
@@ -39,7 +40,8 @@
 			}
 		}
 
-		&.active {
+		._footer > &:hover,
+		&:last-child {
 			a {
 				color: $link-color;
 			}
