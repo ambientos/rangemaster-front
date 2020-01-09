@@ -8,13 +8,13 @@ block top
 	+title({title: 'Contacts', bg: '23'})
 
 block content
-	main.main
+	main.main._nomargin
 		.row.no-gutters
 			.col-md-6
 				form.contacts-form
-					.contacts-form-inner
+					.contacts-form-inner.widget._dark
 						.h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit
-						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero. Donec est lorem, blandit quis imperdiet ut, placerat sed ante. Proin suscipit cursus ultricies. Quisque ac varius lectus, ut ultricies felis. Donec eu tellus sem.
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero.
 						.contacts-form-fields
 							- var fieldList = [{label: 'Name', type: 'text'}, {label: 'Surname', type: 'text'}, {label: 'Telephone number', type: 'tel'}, {label: 'E-mail', type: 'email'}];
 							each field in fieldList
@@ -24,11 +24,11 @@ block content
 										type=field.type
 										placeholder=field.label)
 					.contacts-form-submit
-						input.btn.btn-block.btn-primary(
+						input.btn.btn-lg.btn-block.btn-secondary(
 							value='Send'
 							type='submit')
 
-			.col-md-6
+			.col-md-6.widget
 				.contacts-list
 					- var contactsList = [{label: 'Name:', text: 'Maxima WarenhandelsGmBH'}, {label: 'Administration Address:', text: 'Dr. Robers Graf Straße 64/9, A-8010, Graz, Austria'}, {label: 'Storage, Operations &amp; Shipping Address:', text: 'Weissenbach 9, A-8082, Kirchbach, Austria'}, {label: 'Registration N°:', text: 'FN90762z, HG Graz'}, {label: 'Mail:', text: 'info@rangemaster.at'}, {label: 'Phone:', text: '+43-699-104-03-204'}, {label: 'Fax:', text: '+43-720-920-195'}];
 					each contactsItem in contactsList

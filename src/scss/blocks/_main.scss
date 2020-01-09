@@ -5,6 +5,10 @@
 		overflow: hidden;
 	}
 
+	&._nomargin {
+		margin: 0;
+	}
+
 	&-side {
 		@include media-breakpoint-up('md') {
 			$width: 150px;
