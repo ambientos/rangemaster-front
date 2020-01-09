@@ -50,7 +50,19 @@
 
 	&-side {
 		@include media-breakpoint-down('sm') {
-			width: 2000px;
+			$margin-x: $grid-gutter-width * .8;
+
+			margin: {
+				left: -$margin-x;
+				right: -$margin-x;
+			}
+			overflow: {
+				x: scroll;
+				y: hidden;
+			}
+			-webkit-overflow-scrolling: scroll;
+			white-space: nowrap;
+			-moz-backface-visibility: hidden;
 		}
 
 		&-item {
@@ -61,12 +73,13 @@
 			}
 
 			@include media-breakpoint-down('sm') {
-				$max-width: 200px;
+				$max-width: 170px;
 
 				display: inline-block;
 				max-width: $max-width;
-				margin-right: 1em;
+				margin-left: 1em;
 				vertical-align: top;
+				white-space: normal;
 			}
 
 			&.active {

@@ -13,6 +13,15 @@
     padding: $table-cell-padding;
     vertical-align: middle;
     //border-top: $table-border-width solid $table-border-color;
+    
+    @include media-breakpoint-down('sm') {
+      $padding-x: $grid-gutter-width * .8;
+
+      padding: {
+        left: $padding-x;
+        right: $padding-x;
+      }
+    }
   }
 
   th {

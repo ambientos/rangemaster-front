@@ -148,6 +148,8 @@
 				}
 
 				&._with-gutter {
+					$gutter: $gutter * 2.5;
+
 					padding: {
 						left: $gutter;
 						right: $gutter;
@@ -157,7 +159,7 @@
 
 			&-inner {
 				@include media-breakpoint-down('md') {
-					padding: $grid-gutter-width;
+					padding: $grid-gutter-width $grid-gutter-width * .8;
 					background: {
 						color: $black;
 						repeat: no-repeat;

@@ -11,7 +11,7 @@
 
 	&._inside {
 		@include media-breakpoint-down('md') {
-			padding: $grid-gutter-width * 2 $grid-gutter-width * .5;
+			padding: $grid-gutter-width * 2 $grid-gutter-width * .8;
 		}
 
 		@include media-breakpoint-up('lg') {

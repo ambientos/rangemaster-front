@@ -7,22 +7,36 @@
 				weight: $font-weight-bold;
 			}
 			@include font-size(6rem);
+			line-height: 1;
 		}
 
 		&-item {
 			display: block;
-			min-height: 370px;
 			padding: 2.5em;
 			font-weight: $font-weight-normal;
 			color: inherit;
 			background-color: $white;
+
+			@include media-breakpoint-down('md') {
+				min-height: 310px;
+			}
+
+			@include media-breakpoint-up('lg') {
+				min-height: 370px;
+			}
 
 			&:hover {
 				color: currentColor;
 			}
 
 			&-thumb {
-				min-height: 150px;
+				@include media-breakpoint-down('md') {
+					min-height: 100px;
+				}
+
+				@include media-breakpoint-up('lg') {
+					min-height: 150px;
+				}
 			}
 
 			&-content {
@@ -50,17 +64,15 @@
 				font-size: 1.125rem;
 			}
 
-			&-price {
-				margin-bottom: 1.5em;
-			}
-
 			&-more {
-				display: block;
+				display: none;
 				color: $link-color;
 
 				@include media-breakpoint-up('lg') {
+					display: block;
 					height: 0;
 					opacity: 0;
+					margin-top: 1.5em;
 
 					@include transition;
 
@@ -74,6 +86,15 @@
 
 		&-carousel {
 			position: relative;
+
+			&-container {
+				@include media-breakpoint-down('sm') {
+					&.widget {
+						padding-right: $grid-gutter-width * 2.5;
+						overflow: hidden;
+					}
+				}
+			}
 
 			.owl {
 				&-nav {
@@ -169,7 +190,7 @@
 			}
 
 			@include media-breakpoint-down('sm') {
-				$margin-x: -$grid-gutter-width * .5;
+				$margin-x: -$grid-gutter-width * .8;
 
 				width: auto;
 				margin: {

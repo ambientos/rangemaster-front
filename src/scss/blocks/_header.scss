@@ -58,6 +58,10 @@
 			position: absolute;
 			top: 0;
 			right: 0;
+
+			@include media-breakpoint-down('sm') {
+				right: $grid-gutter-width * .5;
+			}
 		}
 	}
 
