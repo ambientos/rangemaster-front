@@ -78,12 +78,30 @@
 		user-select: none;
 	}
 
+	.owl-dots {
+		text-align: center;
+	}
+
 	button.owl-dot {
-		background: none;
-		color: inherit;
-		border: none;
+		$size: 10px;
+
+		width: $size;
+		height: $size;
+		margin: 0 .3em;
 		padding:0!important;
 		font: inherit;
+		color: $gray-550;
+		border: {
+			width: $border-width;
+			style: solid;
+			color: currentColor;
+			radius: 50%;
+		}
+		background: $white;
+
+		&.active {
+			background-color: currentColor;
+		}
 	}
 
 	&.owl-loaded {

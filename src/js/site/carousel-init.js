@@ -3,17 +3,18 @@
  */
 
 $('.carousel-container').each(function(){
-	let $container = $(this),
-		$carousel = $container.find('.carousel'),
-		promo = +$container.data('promo') || 0,
-		items = +$container.data('items') || 1,
-		loop = $container.data('loop') || 0,
-		margin = $container.data('margin') || 0,
-		nav = $container.data('nav') || 0,
-		navContainer = $container.data('nav-container') || 0,
+	let $container    = $(this),
+		$carousel     = $container.find('.carousel'),
+		promo         = +$container.data('promo') || 0,
+		items         = +$container.data('items') || 1,
+		loop          = $container.data('loop') || 0,
+		margin        = $container.data('margin') || 0,
+		nav           = $container.data('nav') || 0,
+		navContainer  = $container.data('nav-container') || 0,
+		dots          = $container.data('dots') || 0,
 		dotsContainer = $container.data('dots-container') || 0,
 
-		numberFormat = {
+		numberFormat  = {
 			minimumIntegerDigits: 2
 			//minimumFractionDigits: 2,
 		}
@@ -24,7 +25,8 @@ $('.carousel-container').each(function(){
 		margin: +margin,
 		loop: loop,
 		nav: nav,
-		navText: ['<i></i>', '<i></i>']
+		navText: ['<i></i>', '<i></i>'],
+		dots: dots
 	}
 
 
@@ -89,9 +91,6 @@ $('.carousel-container').each(function(){
 
 	if ( dotsContainer ) {
 		options.dotsContainer = dotsContainer
-	}
-	else {
-		options.dots = false
 	}
 
 

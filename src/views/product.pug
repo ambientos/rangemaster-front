@@ -21,14 +21,14 @@ block content
 
 					tbody
 						tr
-							td.product-col-name._product "PPMU" Phono Pull Unit - Multi-Use
-							td.product-col-price._product 595,00 €
+							td.product-col-name._product._catalog "PPMU" Phono Pull Unit - Multi-Use
+							td.product-col-price._product._catalog 595,00 €
 							td.product-col-more
 								a.btn.btn-block.btn-dark.btn-contrast-hover(href='/') Submit application
 
-				.row.align-items-md-center
+				.d-none.d-md-flex.row.align-items-md-center
 					figure.product-thumb-main.col-md-6
-						img(
+						img.img-fluid(
 							src='t/24.jpg'
 							alt)
 
@@ -48,6 +48,7 @@ block content
 				.product-thumb-carousel-container._border.carousel-container.container-product.container(
 					data-margin='30'
 					data-items='3'
+					data-dots='1'
 					data-nav='1')
 					.product-thumb-carousel.owl-carousel.carousel
 						- var i=0;
@@ -107,15 +108,19 @@ block content
 				a.product-video(
 					href='https://www.youtube.com/watch?v=X8n4SlhJuK4'
 					data-fancybox)
-					img(
+					img.img-fluid(
 						src='t/25.jpg'
 						alt)
+
+			section.product-widget.d-lg-none
+				a.btn.btn-block.btn-dark.btn-contrast-hover(href='/') Submit application
 
 			section.product-widget
 				.product-widget-title Compatible Products
 				.product-thumb-carousel-container.carousel-container.container-product.container(
 					data-margin='30'
 					data-items='3'
+					data-dots='1'
 					data-nav='1')
 					.product-thumb-carousel.owl-carousel.carousel
 						- var i=0;

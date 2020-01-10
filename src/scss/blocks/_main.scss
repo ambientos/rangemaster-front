@@ -10,7 +10,13 @@
 	}
 
 	&._page {
-		margin-top: 7.8em;
+		@include media-breakpoint-down('md') {
+			margin-top: 6.5em;
+		}
+
+		@include media-breakpoint-up('lg') {
+			margin-top: 7.8em;
+		}
 	}
 
 	&-side {

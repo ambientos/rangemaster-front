@@ -213,7 +213,17 @@
 
 				th,
 				td {
-					padding: 1em 0 .5em;
+					padding: {
+						top: 1em;
+						bottom: .5em;
+					}
+
+					@include media-breakpoint-up('md') {
+						padding: {
+							left: 0;
+							right: 0;
+						}
+					}
 				}
 			}
 		}
@@ -250,7 +260,9 @@
 		&-name,
 		&-price {
 			&._product {
-				font-size: 1.125rem;
+				@include media-breakpoint-up('lg') {
+					font-size: 1.125rem;
+				}
 			}
 		}
 
@@ -373,15 +385,22 @@
 	}
 
 	&-main {
-		margin: {
-			top: 2.2em;
-			bottom: $grid-gutter-width;
+		margin-top: 2.2em;
+
+		@include media-breakpoint-up('md') {
+			margin-bottom: $grid-gutter-width;
 		}
 	}
 
 	&-widget {
 		&:not(:last-child) {
-			margin-bottom: 5em;
+			@include media-breakpoint-down('sm') {
+				margin-bottom: 3em;
+			}
+
+			@include media-breakpoint-up('md') {
+				margin-bottom: 5em;
+			}
 		}
 
 		&-title {
@@ -393,21 +412,36 @@
 			}
 			text-transform: uppercase;
 			color: $gray-550;
-			border-bottom: $border-width solid $gray-400;
+
+			@include media-breakpoint-up('md') {
+				border-bottom: $border-width solid $gray-400;
+			}
 		}
 	}
 
 	&-thumb {
 		&-main {
 			margin: 1rem 0;
+			text-align: center;
 		}
 
 		&-carousel {
-			padding: 2em $grid-gutter-width * 2.5;
+			padding: 2em 0;
+
+			@include media-breakpoint-up('md') {
+				$padding-x: $grid-gutter-width * 2.5;
+
+				padding: {
+					left: $padding-x;
+					right: $padding-x;
+				}
+			}
 
 			&-container {
 				&._border {
-					border-top: $border-width solid $gray-400;
+					@include media-breakpoint-up('md') {
+						border-top: $border-width solid $gray-400;
+					}
 				}
 			}
 
@@ -424,6 +458,12 @@
 						transform: uppercase;
 					}
 					color: $body-color;
+				}
+
+				img {
+					@include media-breakpoint-down('md') {
+						width: 90%;
+					}
 				}
 			}
 

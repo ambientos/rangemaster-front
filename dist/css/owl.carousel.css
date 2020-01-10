@@ -56,12 +56,22 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+  .owl-carousel .owl-dots {
+    text-align: center; }
   .owl-carousel button.owl-dot {
-    background: none;
-    color: inherit;
-    border: none;
+    width: 10px;
+    height: 10px;
+    margin: 0 .3em;
     padding: 0 !important;
-    font: inherit; }
+    font: inherit;
+    color: #8c8c8c;
+    border-width: 1px;
+    border-style: solid;
+    border-color: currentColor;
+    border-radius: 50%;
+    background: #fff; }
+    .owl-carousel button.owl-dot.active {
+      background-color: currentColor; }
   .owl-carousel.owl-loaded {
     display: block; }
   .owl-carousel.owl-loading {
