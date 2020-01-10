@@ -205,6 +205,17 @@
 					display: block;
 				}
 			}
+
+			&._doc {
+				thead {
+					border-bottom: $border-width solid $gray-400;
+				}
+
+				th,
+				td {
+					padding: 1em 0 .5em;
+				}
+			}
 		}
 
 		&-num,
@@ -212,6 +223,10 @@
 			@include media-breakpoint-up('lg') {
 				width: 3.5em;
 				text-align: center;
+
+				._doc & {
+					width: 1.5em;
+				}
 			}
 		}
 
@@ -228,6 +243,17 @@
 			}
 		}
 
+		&-name {
+			text-transform: uppercase;
+		}
+
+		&-name,
+		&-price {
+			&._product {
+				font-size: 1.125rem;
+			}
+		}
+
 		&-title {
 			text-transform: uppercase;
 		}
@@ -238,6 +264,10 @@
 
 		&-thumb {
 			text-align: center;
+
+			@include media-breakpoint-up('lg') {
+				margin-bottom: 0;
+			}
 		}
 
 		&-info {
@@ -261,6 +291,14 @@
 		&-dl {
 			width: 170px;
 
+			._doc & {
+				width: 80px;
+
+				td {
+					padding: 0;
+				}
+			}
+
 			&-link {
 				@include media-breakpoint-down('md') {
 					margin-right: 2em;
@@ -275,9 +313,15 @@
 				}
 
 				img {
+					$size-md: 14px;
+
 					@include media-breakpoint-down('md') {
-						width: 14px;
+						width: $size-md;
 						margin-right: .5em;
+					}
+
+					._doc & {
+						width: $size-md;
 					}
 				}
 			}
@@ -324,6 +368,207 @@
 						width: auto;
 					}
 				}
+			}
+		}
+	}
+
+	&-main {
+		margin: {
+			top: 2.2em;
+			bottom: $grid-gutter-width;
+		}
+	}
+
+	&-widget {
+		&:not(:last-child) {
+			margin-bottom: 5em;
+		}
+
+		&-title {
+			margin-bottom: 1.8em;
+			padding-bottom: .3em;
+			font: {
+				size: .75rem;
+				weight: $font-weight-normal;
+			}
+			text-transform: uppercase;
+			color: $gray-550;
+			border-bottom: $border-width solid $gray-400;
+		}
+	}
+
+	&-thumb {
+		&-main {
+			margin: 1rem 0;
+		}
+
+		&-carousel {
+			padding: 2em $grid-gutter-width * 2.5;
+
+			&-container {
+				&._border {
+					border-top: $border-width solid $gray-400;
+				}
+			}
+
+			&-item {
+				margin: 0;
+				text-align: center;
+
+				&-title {
+					display: block;
+					margin-top: 2em;
+					font-weight: $font-weight-normal;
+					text: {
+						align: left;
+						transform: uppercase;
+					}
+					color: $body-color;
+				}
+			}
+
+			.owl {
+				&-nav {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					margin-top: 0;
+
+					@include media-breakpoint-down('sm') {
+						display: none;
+					}
+
+					@include media-breakpoint-between('md', 'md') {
+						left: 0;
+						right: 0;
+					}
+
+					@include media-breakpoint-up('lg') {
+						$padding-x: $grid-gutter-width * .5;
+
+						left: -$padding-x;
+						right: -$padding-x;
+					}
+
+					.owl-prev {
+						i {
+							left: .3em;
+						}
+					}
+
+					button {
+						$size: 50px;
+
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						position: absolute;
+						width: $size;
+						height: $size;
+						margin-top: -$size * .5;
+						border: {
+							width: $border-width;
+							style: solid;
+							color: $gray-550;
+							radius: 50%;
+						}
+
+						&.disabled {
+							border-color: rgba($gray-550, .4);
+						}
+
+						i {
+							left: .1em;
+
+							&::before {
+								position: static;
+							}
+						}
+					}
+				}
+
+				&-next {
+					right: 0;
+				}
+			}
+
+			a {
+				display: block;
+			}
+		}
+	}
+
+	&-option {
+		margin: 1.7em 0;
+		text-transform: uppercase;
+
+		&-label {
+			margin-right: .3em;
+			color: $gray-550;
+		}
+
+		&-list {
+			margin-bottom: 0;
+
+			li {
+				position: relative;
+				margin: .3em 0;
+				padding-left: 1em;
+
+				&::before {
+					position: absolute;
+					left: 0;
+					top: 0;
+					content: '\2013';
+				}
+			}
+		}
+	}
+
+	&-video {
+		$icon-size: $grid-gutter-width;
+
+		display: inline-block;
+		position: relative;
+
+		&:hover {
+			&::before {
+				background-color: rgba($white, .5);
+			}
+		}
+
+		&::before,
+		&::after {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			content: '';
+		}
+
+		&::before {
+			$size: $icon-size;
+
+			width: $size;
+			height: $size;
+			border-radius: 50%;
+			background-color: rgba($gray-100, .3);
+
+			@include transition;
+		}
+
+		&::after {
+			$size: $icon-size * .2;
+
+			left: .1em;
+			width: 0;
+			height: 0;
+			border: {
+				style: solid;
+				width: $size 0 $size $size * 1.7;
+				color: transparent transparent transparent $white;
 			}
 		}
 	}

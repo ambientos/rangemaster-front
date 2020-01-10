@@ -12,63 +12,65 @@ block content
 		.container-product.container
 			+breadcrumbs(['Catalog', 'Sequencers for clay target shooting', '"PPMU" Phono Pull Unit - Multi-Use'])
 
-			table.product-col-table.table.table-striped
-				colgroup
-					col.product-col-name
-					col.product-col-price
-					col.product-col-more
+			section.product-main
+				table.product-col-table.table.table-striped
+					colgroup
+						col.product-col-name
+						col.product-col-price
+						col.product-col-more
 
-				tbody
-					tr
-						td.product-col-name._catalog "PPMU" Phono Pull Unit - Multi-Use
-						td.product-col-price._catalog 595,00 €
-						td.product-col-more
-							a.btn.btn-block.btn-dark.btn-contrast-hover(href='/') Submit application
+					tbody
+						tr
+							td.product-col-name._product "PPMU" Phono Pull Unit - Multi-Use
+							td.product-col-price._product 595,00 €
+							td.product-col-more
+								a.btn.btn-block.btn-dark.btn-contrast-hover(href='/') Submit application
 
-			.row
-				figure.product-thumb-main.col-md-6
-					img(
-						src='t/24.jpg'
-						alt)
+				.row.align-items-md-center
+					figure.product-thumb-main.col-md-6
+						img(
+							src='t/24.jpg'
+							alt)
 
-				.col-md-6
-					section.product-widget
-						.product-widget-title Description:
-						.product-descr
-							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero. Donec est lorem, blandit quis imperdiet ut, placerat sed ante. Proin suscipit cursus ultricies.
-						.product-option
-							span.product-option-label Order code
-							span PPMU
-						.product-option
-							span.product-option-label Price:
-							span 595,00 €
+					.col-md-6
+						section.product-widget
+							.product-widget-title Description:
+							.product-descr
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero. Donec est lorem, blandit quis imperdiet ut, placerat sed ante. Proin suscipit cursus ultricies.
+							.product-option
+								span.product-option-label Order code: 
+								span PPMU
+							.product-option
+								span.product-option-label Price: 
+								span 595,00 €
 
 			section.product-widget
-				.product-thumb-carousel-container
-					.product-thumb-carousel.carousel-container.container-product.container(
-						data-margin='20'
-						data-items='3'
-						data-nav='1')
-						.owl-carousel.carousel
-							- var i=0;
-							while i < 4
-								- i++;
-								figure.product-thumb-item
-									img(
+				.product-thumb-carousel-container._border.carousel-container.container-product.container(
+					data-margin='30'
+					data-items='3'
+					data-nav='1')
+					.product-thumb-carousel.owl-carousel.carousel
+						- var i=0;
+						while i < 4
+							- i++;
+							figure.product-thumb-carousel-item
+								a(href='t/24.jpg')
+									img.img-fluid(
 										src='t/5.jpg'
+										width='170'
 										alt)
 
 			section.product-widget
 				.product-widget-title Technical data:
 				- var dataList = ['Suitable for any type of electrically operated traps', '5 microphones connectable', 'Built in display', 'Adjustable sensitivity', 'Adjustable timer', 'Resetable counter', 'Highly imune against background noise'];
-				ul.product-option-list
+				ul.product-option-list.list-unstyled
 					each dataItem in dataList
 						li= dataItem
 
 			section.product-widget
 				- var langsList = {ru: 'Russian', en: 'English', de: 'Deutsch'};
 				- var docList = [{title: 'RANGEMASTER X3 PRO/.NET - PRES. FOR iPAD, iPHONE & iMAC (.key)', dl: {ru: '#', en: '#', de: false}}, {title: 'RANGEMASTER X3 PRO/.NET - PRES. FOR iPAD, iPHONE & iMAC (.key)', dl: {ru: false, en: '#', de: false}}, {title: 'RANGEMASTER X3 PRO/.NET - PRES. FOR iPAD, iPHONE & iMAC (.key)', dl: {ru: '#', en: '#', de: '#'}}];
-				table.product-col-table.table
+				table.product-col-table.table._doc
 					colgroup
 						col.product-col-name
 						col.product-col-dl
@@ -80,7 +82,7 @@ block content
 					tbody
 						each docItem in docList
 							tr
-								td.product-col-name._product(data-title='Documentation')= docItem.title
+								td.product-col-name(data-title='Documentation')= docItem.title
 								td.product-col-dl(data-title='Language')
 									table
 										colgroup
@@ -102,26 +104,27 @@ block content
 
 			section.product-widget
 				.product-widget-title Watch Video:
-					figure.product-video
-						a(
-							href='https://www.youtube.com/watch?v=X8n4SlhJuK4'
-							data-fancybox)
-							img(
-								src='t/25.jpg'
-								alt)
+				a.product-video(
+					href='https://www.youtube.com/watch?v=X8n4SlhJuK4'
+					data-fancybox)
+					img(
+						src='t/25.jpg'
+						alt)
 
 			section.product-widget
-				.product-thumb-carousel-container
-					.product-thumb-carousel.carousel-container.container-product.container(
-						data-margin='20'
-						data-items='3'
-						data-nav='1')
-						.product-widget-title Compatible Products
-						.owl-carousel.carousel
-							- var i=0;
-							while i < 4
-								- i++;
-								figure.product-thumb-item
-									img(
+				.product-widget-title Compatible Products
+				.product-thumb-carousel-container.carousel-container.container-product.container(
+					data-margin='30'
+					data-items='3'
+					data-nav='1')
+					.product-thumb-carousel.owl-carousel.carousel
+						- var i=0;
+						while i < 4
+							- i++;
+							figure.product-thumb-carousel-item
+								a(href='/')
+									img.img-fluid(
 										src='t/17.jpg'
+										width='220'
 										alt)
+									span.product-thumb-carousel-item-title "PPMU" Phono Pull Unit - Multi-Use
