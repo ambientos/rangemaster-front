@@ -58,6 +58,9 @@
     user-select: none; }
   .owl-carousel .owl-dots {
     text-align: center; }
+    @media (min-width: 768px) {
+      .owl-carousel .owl-dots {
+        display: none; } }
   .owl-carousel button.owl-dot {
     width: 10px;
     height: 10px;

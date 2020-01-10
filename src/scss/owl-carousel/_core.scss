@@ -80,6 +80,10 @@
 
 	.owl-dots {
 		text-align: center;
+
+		@include media-breakpoint-up('md') {
+			display: none;
+		}
 	}
 
 	button.owl-dot {
