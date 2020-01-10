@@ -1,0 +1,127 @@
+extends ./layout/skeleton.pug
+
+block meta
+	title Product
+
+block top
+	- var currentMenuItem = 'catalog';
+	+header
+
+block content
+	main.main._page
+		.container-product.container
+			+breadcrumbs(['Catalog', 'Sequencers for clay target shooting', '"PPMU" Phono Pull Unit - Multi-Use'])
+
+			table.product-col-table.table.table-striped
+				colgroup
+					col.product-col-name
+					col.product-col-price
+					col.product-col-more
+
+				tbody
+					tr
+						td.product-col-name._catalog "PPMU" Phono Pull Unit - Multi-Use
+						td.product-col-price._catalog 595,00 €
+						td.product-col-more
+							a.btn.btn-block.btn-dark.btn-contrast-hover(href='/') Submit application
+
+			.row
+				figure.product-thumb-main.col-md-6
+					img(
+						src='t/24.jpg'
+						alt)
+
+				.col-md-6
+					section.product-widget
+						.product-widget-title Description:
+						.product-descr
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero. Donec est lorem, blandit quis imperdiet ut, placerat sed ante. Proin suscipit cursus ultricies.
+						.product-option
+							span.product-option-label Order code
+							span PPMU
+						.product-option
+							span.product-option-label Price:
+							span 595,00 €
+
+			section.product-widget
+				.product-thumb-carousel-container
+					.product-thumb-carousel.carousel-container.container-product.container(
+						data-margin='20'
+						data-items='3'
+						data-nav='1')
+						.owl-carousel.carousel
+							- var i=0;
+							while i < 4
+								- i++;
+								figure.product-thumb-item
+									img(
+										src='t/5.jpg'
+										alt)
+
+			section.product-widget
+				.product-widget-title Technical data:
+				- var dataList = ['Suitable for any type of electrically operated traps', '5 microphones connectable', 'Built in display', 'Adjustable sensitivity', 'Adjustable timer', 'Resetable counter', 'Highly imune against background noise'];
+				ul.product-option-list
+					each dataItem in dataList
+						li= dataItem
+
+			section.product-widget
+				- var langsList = {ru: 'Russian', en: 'English', de: 'Deutsch'};
+				- var docList = [{title: 'RANGEMASTER X3 PRO/.NET - PRES. FOR iPAD, iPHONE & iMAC (.key)', dl: {ru: '#', en: '#', de: false}}, {title: 'RANGEMASTER X3 PRO/.NET - PRES. FOR iPAD, iPHONE & iMAC (.key)', dl: {ru: false, en: '#', de: false}}, {title: 'RANGEMASTER X3 PRO/.NET - PRES. FOR iPAD, iPHONE & iMAC (.key)', dl: {ru: '#', en: '#', de: '#'}}];
+				table.product-col-table.table
+					colgroup
+						col.product-col-name
+						col.product-col-dl
+
+					thead
+						th Documentation:
+						th Language:
+
+					tbody
+						each docItem in docList
+							tr
+								td.product-col-name._product(data-title='Documentation')= docItem.title
+								td.product-col-dl(data-title='Language')
+									table
+										colgroup
+											col.product-col-flag._dl
+											col.product-col-flag._dl
+											col.product-col-flag._dl
+										tbody
+											tr
+												each link, index in docItem.dl
+													td
+														if link
+															a.product-col-dl-link(
+																href=link
+																data-title=langsList[index])
+																img(
+																	width='26'
+																	src='i/flags/'+ index +'.svg'
+																	alt)
+
+			section.product-widget
+				.product-widget-title Watch Video:
+					figure.product-video
+						a(
+							href='https://www.youtube.com/watch?v=X8n4SlhJuK4'
+							data-fancybox)
+							img(
+								src='t/25.jpg'
+								alt)
+
+			section.product-widget
+				.product-thumb-carousel-container
+					.product-thumb-carousel.carousel-container.container-product.container(
+						data-margin='20'
+						data-items='3'
+						data-nav='1')
+						.product-widget-title Compatible Products
+						.owl-carousel.carousel
+							- var i=0;
+							while i < 4
+								- i++;
+								figure.product-thumb-item
+									img(
+										src='t/17.jpg'
+										alt)

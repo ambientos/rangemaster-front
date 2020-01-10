@@ -28,6 +28,23 @@ $('.carousel-container').each(function(){
 	}
 
 
+	if ( items === 3 ) {
+		options.responsive = {
+			0: {
+				items: 1
+			},
+			768: {
+				items: 2
+			},
+			992: {
+				items: 3
+			},
+			1200: {
+				items: 3
+			}
+		}
+	}
+
 	if ( items === 4 ) {
 		options.responsive = {
 			0: {

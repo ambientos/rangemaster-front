@@ -21,10 +21,16 @@
 	}
 }
 
-.container-article {
-	max-width: 700px;
+.container {
+	&-article {
+		max-width: 700px;
 
-	&-list {
-		max-width: 930px;
+		&-list {
+			max-width: 930px;
+		}
+	}
+
+	&-product {
+		max-width: 960px;
 	}
 }

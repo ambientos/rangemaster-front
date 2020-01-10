@@ -16,7 +16,7 @@
   --warning: #f00;
   --danger: #f00;
   --light: #f4f4f4;
-  --dark: #343a40;
+  --dark: #0d0d0d;
   --link: #f00;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
@@ -1626,19 +1626,19 @@ mark,
 .table-dark,
 .table-dark > th,
 .table-dark > td {
-  background-color: #c6c8ca; }
+  background-color: #bbbbbb; }
 
 .table-dark th,
 .table-dark td,
 .table-dark thead th,
 .table-dark tbody + tbody {
-  border-color: #95999c; }
+  border-color: #818181; }
 
 .table-hover .table-dark:hover {
-  background-color: #b9bbbe; }
+  background-color: #aeaeae; }
   .table-hover .table-dark:hover > td,
   .table-hover .table-dark:hover > th {
-    background-color: #b9bbbe; }
+    background-color: #aeaeae; }
 
 .table-link,
 .table-link > th,
@@ -2263,8 +2263,8 @@ fieldset:disabled a.btn {
 
 .btn-dark {
   color: #fff;
-  background-color: #343a40;
-  border-color: #343a40; }
+  background-color: #0d0d0d;
+  border-color: #0d0d0d; }
   .btn-dark:hover {
     color: #212529;
     background-color: white;
@@ -2273,21 +2273,21 @@ fieldset:disabled a.btn {
     color: #212529;
     background-color: white;
     border-color: white;
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
-            box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5); }
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(49, 49, 49, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(49, 49, 49, 0.5); }
   .btn-dark.disabled, .btn-dark:disabled {
     color: #fff;
-    background-color: #343a40;
-    border-color: #343a40; }
+    background-color: #0d0d0d;
+    border-color: #0d0d0d; }
   .btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active,
   .show > .btn-dark.dropdown-toggle {
     color: #fff;
-    background-color: #1d2124;
-    border-color: #171a1d; }
+    background-color: black;
+    border-color: black; }
     .btn-dark:not(:disabled):not(.disabled):active:focus, .btn-dark:not(:disabled):not(.disabled).active:focus,
     .show > .btn-dark.dropdown-toggle:focus {
-      -webkit-box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
-              box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5); }
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(49, 49, 49, 0.5);
+              box-shadow: 0 0 0 0.2rem rgba(49, 49, 49, 0.5); }
 
 .btn-link {
   color: #fff;
@@ -2479,27 +2479,27 @@ fieldset:disabled a.btn {
               box-shadow: 0 0 0 0.2rem rgba(244, 244, 244, 0.5); }
 
 .btn-outline-dark {
-  color: #343a40;
-  border-color: #343a40; }
+  color: #0d0d0d;
+  border-color: #0d0d0d; }
   .btn-outline-dark:hover {
     color: #fff;
-    background-color: #343a40;
-    border-color: #343a40; }
+    background-color: #0d0d0d;
+    border-color: #0d0d0d; }
   .btn-outline-dark:focus, .btn-outline-dark.focus {
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
-            box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(13, 13, 13, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(13, 13, 13, 0.5); }
   .btn-outline-dark.disabled, .btn-outline-dark:disabled {
-    color: #343a40;
+    color: #0d0d0d;
     background-color: transparent; }
   .btn-outline-dark:not(:disabled):not(.disabled):active, .btn-outline-dark:not(:disabled):not(.disabled).active,
   .show > .btn-outline-dark.dropdown-toggle {
     color: #fff;
-    background-color: #343a40;
-    border-color: #343a40; }
+    background-color: #0d0d0d;
+    border-color: #0d0d0d; }
     .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-dark.dropdown-toggle:focus {
-      -webkit-box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
-              box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(13, 13, 13, 0.5);
+              box-shadow: 0 0 0 0.2rem rgba(13, 13, 13, 0.5); }
 
 .btn-outline-link {
   color: #f00;
@@ -2528,6 +2528,11 @@ fieldset:disabled a.btn {
   color: #fff;
   border-color: #0d0d0d;
   background-color: #0d0d0d; }
+
+.btn-contrast-hover:hover, .btn-contrast-hover:focus, .btn-contrast-hover.focus {
+  color: #fff;
+  border-color: #f00;
+  background-color: #f00; }
 
 .btn-link {
   font-weight: 400;

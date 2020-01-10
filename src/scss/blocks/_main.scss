@@ -9,6 +9,10 @@
 		margin: 0;
 	}
 
+	&._page {
+		margin-top: 7.8em;
+	}
+
 	&-side {
 		@include media-breakpoint-up('md') {
 			$width: 150px;

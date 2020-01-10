@@ -21,6 +21,9 @@
   .container-article-list {
     max-width: 930px; }
 
+.container-product {
+  max-width: 960px; }
+
 @font-face {
   font-family: "BebasNeue";
   font-weight: 700;
@@ -269,6 +272,8 @@
       overflow: hidden; } }
   .main._nomargin {
     margin: 0; }
+  .main._page {
+    margin-top: 7.8em; }
   @media (min-width: 768px) {
     .main-side {
       -webkit-box-flex: 0;
