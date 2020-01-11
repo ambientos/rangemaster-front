@@ -295,9 +295,9 @@
       .main-content._article h2 {
         text-transform: uppercase; }
         .main-content._article h2:not(:first-child) {
-          margin-top: 2em; }
+          margin-top: 3.3em; }
         .main-content._article h2:not(:last-child) {
-          margin-bottom: 1em; }
+          margin-bottom: 2em; }
       .main-content._article figure {
         margin-top: 2.5em; }
 
