@@ -1,6 +1,22 @@
 .breadcrumbs {
-	margin-bottom: 1.5em;
 	color: $gray-550;
+
+	@include media-breakpoint-down('sm') {
+		$margin-x: $grid-gutter-width * .8;
+
+		margin: {
+			left: -$margin-x;
+			right: -$margin-x;
+		}
+		padding-left: $margin-x;
+		overflow: {
+			x: scroll;
+			y: hidden;
+		}
+		-webkit-overflow-scrolling: touch;
+		white-space: nowrap;
+		-moz-backface-visibility: hidden;
+	}
 
 	.delimiter {
 		&::before {
@@ -9,12 +25,17 @@
 			display: inline-block;
 			width: $size;
 			height: $size;
-			margin: 0 .7em 0 .5em;
+			margin: 0 .7em;
 			content: '';
 			vertical-align: middle;
 			border-radius: 50%;
 			background-color: currentColor;
 		}
+	}
+
+	> span {
+		display: inline-block;
+		margin-bottom: 1.5em;
 	}
 
 	a {
