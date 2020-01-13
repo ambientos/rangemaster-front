@@ -1,6 +1,19 @@
-#popup-search.popup
-	form.search-form
+#popup-search.popup.popup-search
+	form.popup-search-form(
+		method='get'
+		action='')
 		label.screen-reader-text Search
-		input.form-control(
+		input.popup-search-form-input.form-control(
 			type='search'
+			name='q'
 			placeholder='Search')
+		input.popup-search-form-submit(
+			type='submit'
+			value='')
+
+	.popup-search-often-container
+		.popup-search-often-label Search vars
+		.popup-search-often-list
+			- var oftenList = ['"PPMU" Phono Pull Unit - Multi-Use', 'Software demos and freeware', 'Competition software', 'Manuals', 'Scoreboard'];
+			each oftenItem in oftenList
+				spaa.popup-search-often-list-item= oftenItem

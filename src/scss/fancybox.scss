@@ -1,3 +1,10 @@
+@import "variables";
+@import "mixins";
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
 body.compensate-for-scrollbar {
 	overflow: hidden;
 }
@@ -50,7 +57,7 @@ body.compensate-for-scrollbar {
 	}
 
 	&-bg {
-		background: rgba(0,0,0, .5);
+		background: rgba($black, .95);
 		opacity: 0;
 		transition-duration: inherit;
 		transition-property: opacity;

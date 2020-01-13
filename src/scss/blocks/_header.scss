@@ -3,6 +3,7 @@
 	left: 0;
 	top: 0;
 	right: 0;
+	min-height: 4.2em;
 	padding-top: 1rem;
 	color: $white;
 	z-index: 2;
@@ -34,6 +35,7 @@
 		&-item {
 			font-weight: $font-weight-normal;
 			color: $gray-550;
+			outline: none;
 
 			&:not(:last-child) {
 				margin-right: 1.6em;

@@ -42,7 +42,7 @@ body.compensate-for-scrollbar {
   overflow-y: auto; }
 
 .fancybox-bg {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(13, 13, 13, 0.95);
   opacity: 0;
   -webkit-transition-duration: inherit;
           transition-duration: inherit;
