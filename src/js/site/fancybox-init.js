@@ -5,11 +5,11 @@ let $menu      = $('.header-menu-container'),
 
 $('[data-src="#popup-search"]').fancybox({
 	afterShow: function() {
-		$tabletNav.fadeOut()
+		$tabletNav.addClass('d-none')
 		$menu.fadeOut()
 	},
 	afterClose: function(){
-		$tabletNav.fadeIn()
+		$tabletNav.removeClass('d-none')
 		$menu.fadeIn()
 	}
 })
