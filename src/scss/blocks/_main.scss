@@ -31,6 +31,18 @@
 	}
 
 	&-side {
+		@include media-breakpoint-down('sm') {
+			$margin-x: $grid-gutter-width * .8;
+
+			height: 42px;
+			margin: {
+				left: -$margin-x;
+				right: -$margin-x;
+				bottom: 1rem;
+			}
+			overflow: hidden;
+		}
+
 		@include media-breakpoint-up('md') {
 			$width: 150px;
 

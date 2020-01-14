@@ -50,12 +50,7 @@
 
 	&-side {
 		@include media-breakpoint-down('sm') {
-			$margin-x: $grid-gutter-width * .8;
-
-			margin: {
-				left: -$margin-x;
-				right: -$margin-x;
-			}
+			margin-bottom: 0;
 			overflow: {
 				x: scroll;
 				y: hidden;

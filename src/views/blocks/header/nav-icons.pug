@@ -3,8 +3,11 @@ a.header-nav-item.ico._top._search(
 	data-fancybox=''
 	data-src='#popup-search')
 	include ./i/search.svg
-	span.ico-text Search
+	span.screen-reader-text Search
 
-a.header-nav-item.ico._top._user(href='/')
+a.header-nav-item.ico._top._user(
+	href='#'
+	data-fancybox=''
+	data-src='#popup-sign')
 	include ./i/user.svg
-	span.ico-text Log In
+	span.screen-reader-text Sign
