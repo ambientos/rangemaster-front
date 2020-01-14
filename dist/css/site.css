@@ -308,6 +308,32 @@
           margin-bottom: 2em; }
       .main-content._article figure {
         margin-top: 2.5em; }
+  .main-to-top {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    position: fixed;
+    right: 1em;
+    bottom: 2em;
+    width: 45px;
+    height: 45px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #404040;
+    border-radius: 50%;
+    cursor: pointer; }
+    @media (prefers-reduced-motion: reduce) {
+      .main-to-top {
+        -webkit-transition: none;
+        transition: none; } }
+    body:not(._scrolled) .main-to-top {
+      opacity: 0;
+      visibility: hidden; }
+    .main-to-top:hover {
+      background-color: rgba(255, 255, 255, 0.2); }
+      .main-to-top:hover .main-to-top-ico {
+        fill: #0d0d0d; }
+    .main-to-top-ico {
+      fill: #404040; }
 
 .ico {
   display: inline-block; }
