@@ -70,11 +70,13 @@
 			}
 
 			&-list {
+				margin-bottom: 0;
+
 				&-item {
-					display: block;
+					display: inline-block;
 					position: relative;
-					margin-top: 1em;
 					padding-left: 1.5em;
+					color: inherit;
 					cursor: pointer;
 
 					&:hover {
@@ -107,6 +109,11 @@
 							size: contain;
 						}
 					}
+				}
+
+				li {
+					display: block;
+					margin-top: 1em;
 				}
 			}
 		}

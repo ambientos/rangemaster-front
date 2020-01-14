@@ -1181,35 +1181,40 @@
   .popup-search-often-container {
     margin-top: 30px;
     color: #8c8c8c; }
-  .popup-search-often-list-item {
-    display: block;
-    position: relative;
-    margin-top: 1em;
-    padding-left: 1.5em;
-    cursor: pointer; }
-    .popup-search-often-list-item:hover {
-      color: #fff; }
-      .popup-search-often-list-item:hover::before {
-        opacity: 1; }
-    .popup-search-often-list-item, .popup-search-often-list-item::before {
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out; }
-      @media (prefers-reduced-motion: reduce) {
-        .popup-search-often-list-item, .popup-search-often-list-item::before {
-          -webkit-transition: none;
-          transition: none; } }
-    .popup-search-often-list-item::before {
-      position: absolute;
-      left: 0;
-      top: .2em;
-      width: 1em;
-      height: 1em;
-      content: '';
-      opacity: .6;
-      background-color: transparent;
-      background-repeat: no-repeat;
-      background-image: url("../i/search.svg");
-      background-size: contain; }
+  .popup-search-often-list {
+    margin-bottom: 0; }
+    .popup-search-often-list-item {
+      display: inline-block;
+      position: relative;
+      padding-left: 1.5em;
+      color: inherit;
+      cursor: pointer; }
+      .popup-search-often-list-item:hover {
+        color: #fff; }
+        .popup-search-often-list-item:hover::before {
+          opacity: 1; }
+      .popup-search-often-list-item, .popup-search-often-list-item::before {
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
+        @media (prefers-reduced-motion: reduce) {
+          .popup-search-often-list-item, .popup-search-often-list-item::before {
+            -webkit-transition: none;
+            transition: none; } }
+      .popup-search-often-list-item::before {
+        position: absolute;
+        left: 0;
+        top: .2em;
+        width: 1em;
+        height: 1em;
+        content: '';
+        opacity: .6;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-image: url("../i/search.svg");
+        background-size: contain; }
+    .popup-search-often-list li {
+      display: block;
+      margin-top: 1em; }
   .popup-search .fancybox-close-small {
     top: .7em;
     width: 44px;

@@ -3,7 +3,9 @@ let $formContainer = $('.popup-search'),
 	$formInput     = $formContainer.find('.popup-search-form-input'),
 	$formOftenItem = $formContainer.find('.popup-search-often-list-item')
 
-$formOftenItem.on('click', function(){
+$formOftenItem.on('click', function(e){
+	e.preventDefault()
+
 	let itemTextQuery = $(this).text()
 
 	$formInput.val(itemTextQuery)

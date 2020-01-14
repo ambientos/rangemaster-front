@@ -13,7 +13,8 @@
 
 	.popup-search-often-container
 		.popup-search-often-label Search vars
-		.popup-search-often-list
+		ul.popup-search-often-list.list-unstyled
 			- var oftenList = ['"PPMU" Phono Pull Unit - Multi-Use', 'Software demos and freeware', 'Competition software', 'Manuals', 'Scoreboard'];
 			each oftenItem in oftenList
-				span.popup-search-often-list-item= oftenItem
+				li
+					a.popup-search-often-list-item(href='#')= oftenItem
