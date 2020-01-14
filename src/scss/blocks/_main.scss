@@ -19,6 +19,17 @@
 		}
 	}
 
+	&-html {
+		min-height: 100%;
+	}
+
+	&-body {
+		&,
+		> * {
+			width: 100%;
+		}
+	}
+
 	&-side {
 		@include media-breakpoint-up('md') {
 			$width: 150px;

@@ -141,6 +141,7 @@
     height: 1px; }
 
 .footer {
+  margin-top: auto;
   padding-top: 1rem;
   background-color: #0d0d0d; }
   .footer-main {
@@ -280,6 +281,11 @@
   @media (min-width: 992px) {
     .main._page {
       margin-top: 7.8em; } }
+  .main-html {
+    min-height: 100%; }
+  .main-body,
+  .main-body > * {
+    width: 100%; }
   @media (min-width: 768px) {
     .main-side {
       -webkit-box-flex: 0;

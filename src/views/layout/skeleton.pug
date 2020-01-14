@@ -2,11 +2,11 @@ include ../mixins/_list.pug
 
 doctype html
 
-html(lang="en" dir="ltr")
+html(lang="en" dir="ltr").main-html.d-flex
 	head
 		include _head.pug
 
-	body
+	body.main-body.d-flex.flex-column
 		block top
 
 		block content
