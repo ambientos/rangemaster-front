@@ -1048,14 +1048,18 @@
   color: #8c8c8c; }
   @media (max-width: 767.98px) {
     .breadcrumbs {
-      margin-left: -24px;
-      margin-right: -24px;
       padding-left: 24px;
       overflow-x: scroll;
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
       white-space: nowrap;
       -moz-backface-visibility: hidden; } }
+  @media (max-width: 767.98px) {
+    .breadcrumbs-container {
+      height: 42px;
+      margin-left: -24px;
+      margin-right: -24px;
+      overflow: hidden; } }
   .breadcrumbs .delimiter::before {
     display: inline-block;
     width: 4px;

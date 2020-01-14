@@ -1,13 +1,9 @@
 .breadcrumbs {
+	$margin-x: $grid-gutter-width * .8;
+
 	color: $gray-550;
 
 	@include media-breakpoint-down('sm') {
-		$margin-x: $grid-gutter-width * .8;
-
-		margin: {
-			left: -$margin-x;
-			right: -$margin-x;
-		}
 		padding-left: $margin-x;
 		overflow: {
 			x: scroll;
@@ -16,6 +12,17 @@
 		-webkit-overflow-scrolling: touch;
 		white-space: nowrap;
 		-moz-backface-visibility: hidden;
+	}
+
+	&-container {
+		@include media-breakpoint-down('sm') {
+			height: 42px;
+			margin: {
+				left: -$margin-x;
+				right: -$margin-x;
+			}
+			overflow: hidden;
+		}
 	}
 
 	.delimiter {
