@@ -349,10 +349,6 @@
     .header-nav-tablet .ico._top {
       width: 1.5em;
       height: 1.5em; }
-  .ico-text {
-    display: inline-block;
-    text-indent: -9999px;
-    vertical-align: top; }
   .ico-svg {
     vertical-align: top; }
     .ico-svg._top {
@@ -1234,5 +1230,53 @@
         left: 0;
         right: -528px;
         margin: auto; } }
+
+@media (min-width: 992px) {
+  .popup-sign {
+    width: 55%;
+    margin-left: auto; } }
+
+@media (max-width: 991.98px) {
+  .popup-sign, .popup-sign-form {
+    width: 100%; } }
+
+@media (max-width: 991.98px) {
+  .popup-sign-form-inner {
+    padding: 60px 24px 39px; } }
+
+@media (min-width: 992px) {
+  .popup-sign-form-inner {
+    padding: 75px 90px 39px; } }
+
+@media (max-width: 991.98px) {
+  .popup-sign-form-fields {
+    margin-top: 1.5em; } }
+
+@media (min-width: 992px) {
+  .popup-sign-form-fields {
+    margin-top: 3em; } }
+
+@media (min-width: 992px) {
+  .popup-sign-container {
+    top: 77px;
+    height: calc(100% - 77px); } }
+
+.popup-sign-container .fancybox-slide--html {
+  padding: 0; }
+
+.popup-sign-container .fancybox-content {
+  background-color: transparent; }
+
+.popup-sign .fancybox-close-small {
+  right: auto;
+  color: #8c8c8c; }
+  @media (max-width: 991.98px) {
+    .popup-sign .fancybox-close-small {
+      left: .6em;
+      top: .5em; } }
+  @media (min-width: 992px) {
+    .popup-sign .fancybox-close-small {
+      left: 5.35em;
+      top: 1em; } }
 
 /*# sourceMappingURL=site.css.map */

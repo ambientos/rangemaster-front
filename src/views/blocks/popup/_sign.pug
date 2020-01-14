@@ -1,0 +1,11 @@
+#popup-sign.popup.popup-sign.d-flex
+	form.popup-sign-form.d-flex.flex-column
+		.popup-sign-form-inner.widget._dark.flex-grow-1
+			.d-none.d-md-block
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero.
+			.popup-sign-form-fields
+				+formGroups([{label: 'E-mail', type: 'email'}, {label: 'Password', type: 'password'}, {label: 'Password again', type: 'password'}])
+		.popup-sign-form-submit
+			input.btn.btn-lg.btn-block.btn-secondary(
+				value='Next'
+				type='button')

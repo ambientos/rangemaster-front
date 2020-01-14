@@ -18,13 +18,7 @@ block content
 						.h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero.
 						.contacts-form-fields
-							- var fieldList = [{label: 'Name', type: 'text'}, {label: 'Surname', type: 'text'}, {label: 'Telephone number', type: 'tel'}, {label: 'E-mail', type: 'email'}];
-							each field in fieldList
-								.form-group
-									label.screen-reader-text= field.label
-									input.form-control(
-										type=field.type
-										placeholder=field.label)
+							+formGroups([{label: 'Name', type: 'text'}, {label: 'Surname', type: 'text'}, {label: 'Telephone number', type: 'tel'}, {label: 'E-mail', type: 'email'}])
 					.contacts-form-submit
 						input.btn.btn-lg.btn-block.btn-secondary(
 							value='Send'

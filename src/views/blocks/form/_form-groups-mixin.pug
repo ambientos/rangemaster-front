@@ -1,0 +1,7 @@
+mixin formGroups(fieldList)
+	each field in fieldList
+		.form-group
+			label.screen-reader-text= field.label
+			input.form-control(
+				type=field.type
+				placeholder=field.label)
