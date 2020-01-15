@@ -1,5 +1,8 @@
 #popup-sign-in.popup.popup-sign.d-flex
-	form.popup-sign-form.d-flex.flex-column
+	form.popup-sign-form.d-flex.flex-column(
+		action=''
+		method='post')
+
 		.popup-sign-form-inner.widget._dark.flex-grow-1
 			ul.popup-sign-type-list.list-unstyled.d-flex
 				li.popup-sign-type-list-item
@@ -17,6 +20,6 @@
 		.popup-sign-form-submit
 			a.btn.btn-lg.btn-block.btn-forgot(href='/') Forgot your password?
 
-			input.btn.btn-lg.btn-block.btn-secondary._sign-up-next(
-					value='Next'
+			input.btn.btn-lg.btn-block.btn-secondary(
+					value='Sign In'
 					type='submit')
