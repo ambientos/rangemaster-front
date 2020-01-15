@@ -10,9 +10,10 @@
 
 			ul.popup-sign-type-list.list-unstyled.d-flex
 				li.popup-sign-type-list-item
-					a#sign-up-tab.active(href='#popup-sign') Sign Up
+					span.active Sign Up
 				li.popup-sign-type-list-item
-					a#sign-in-tab(href='#popup-sign-in') Sign In
+					a.popup-sign-type-toggle(
+						href='#popup-sign-in') Sign In
 
 			.d-none.d-md-block
 				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero.
@@ -22,6 +23,7 @@
 					+formGroups([{label: 'E-mail', type: 'email'}, {label: 'Password', type: 'password'}, {label: 'Password again', type: 'password'}])
 				._step-2
 					+formGroups([{label: 'Name', type: 'text'}, {label: 'Surname', type: 'text'}, {label: 'Phone number', type: 'tel'}])
+
 		.popup-sign-form-submit
 			._step-1
 				input.btn.btn-lg.btn-block.btn-secondary._sign-up-next(

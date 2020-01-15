@@ -216,9 +216,17 @@
 
 		&-nav {
 			position: absolute;
-			top: 1.8em;
-			right: $grid-gutter-width * 3;
 			color: $gray-550;
+
+			@include media-breakpoint-down('md') {
+				top: 1.5em;
+				right: $padding-x;
+			}
+
+			@include media-breakpoint-up('lg') {
+				top: 1.8em;
+				right: $grid-gutter-width * 3;
+			}
 		}
 
 		&-type {
@@ -240,10 +248,13 @@
 					a {
 						color: inherit;
 
-						&:hover,
-						&.active {
+						&:hover {
 							color: $link-color;
 						}
+					}
+
+					.active {
+						color: $link-color;
 					}
 				}
 			}
@@ -251,10 +262,18 @@
 
 		&-back {
 			position: absolute;
-			left: $grid-gutter-width * 2.8;
-			top: 2em;
 			padding: .5em;
 			cursor: pointer;
+
+			@include media-breakpoint-down('md') {
+				left: $padding-x * .7;
+				top: 1.3em;
+			}
+
+			@include media-breakpoint-up('lg') {
+				left: $grid-gutter-width * 2.8;
+				top: 2em;
+			}
 
 			&:hover .ico-svg {
 				fill: $color-hover;

@@ -1,0 +1,22 @@
+#popup-sign-in.popup.popup-sign.d-flex
+	form.popup-sign-form.d-flex.flex-column
+		.popup-sign-form-inner.widget._dark.flex-grow-1
+			ul.popup-sign-type-list.list-unstyled.d-flex
+				li.popup-sign-type-list-item
+					a.popup-sign-type-toggle(
+						href='#popup-sign') Sign Up
+				li.popup-sign-type-list-item
+					span.active Sign In
+
+			.d-none.d-md-block
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero.
+
+			.popup-sign-form-fields
+				+formGroups([{label: 'E-mail', type: 'email'}, {label: 'Password', type: 'password'}])
+
+		.popup-sign-form-submit
+			a.btn.btn-lg.btn-block.btn-forgot(href='/') Forgot your password?
+
+			input.btn.btn-lg.btn-block.btn-secondary._sign-up-next(
+					value='Next'
+					type='submit')

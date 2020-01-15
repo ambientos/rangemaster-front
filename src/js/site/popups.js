@@ -19,22 +19,12 @@ $('[data-src="#popup-search"]').fancybox({
 /**
  * Popup Sign In / Sign Up
  */
-$('[data-src="#popup-sign"],[data-src="#popup-sign-in"]')
-	.on('click', function(e){
-		let button = $(this)
+let signUpSelector = '#popup-sign',
+	$signUp        = $(signUpSelector),
+	signInSelector = '#popup-sign-in',
+	$signToggle    = $('.popup-sign-type-toggle'),
 
-		if ( button.hasClass('_clicked') ) {
-			e.preventDefault()
-
-			$.fancybox.close()
-
-			button.removeClass('_clicked')
-		}
-		else {
-			button.addClass('_clicked')
-		}
-	})
-	.fancybox({
+	fancyboxSignDefaultOptions = {
 		touch: false,
 		beforeShow: function( instance, current ) {
 			let $container = instance.$refs.container,
@@ -43,14 +33,39 @@ $('[data-src="#popup-sign"],[data-src="#popup-sign-in"]')
 			$container.addClass('popup-sign-container')
 			$slide.addClass('d-flex')
 		}
+	}
+
+// Close popup if is open
+$('[data-src="'+ signUpSelector +'"]')
+	.on('click', function(e){
+		let fancyboxCurrentInstance = $.fancybox.getInstance()
+
+		if ( fancyboxCurrentInstance ) {
+			e.preventDefault()
+
+			fancyboxCurrentInstance.close()
+		}
 	})
+
+	// Set default options for Sign Up button
+	.fancybox(fancyboxSignDefaultOptions)
+
+
+/**
+ * Toggle between Sign Up / Sign In
+ */
+$signToggle.on('click', function(e){
+	e.preventDefault()
+
+	$.fancybox.close()
+	$.fancybox.open( $.extend( fancyboxSignDefaultOptions, { src: $(this).attr('href') } ))
+})
 
 
 /**
  * Popup Sign In steps
  */
-let $signUp           = $('#popup-sign'),
-	$buttonSignUpNext = $('._sign-up-next'),
+let $buttonSignUpNext = $('._sign-up-next'),
 	$buttonSignUpBack = $('.popup-sign-back'),
 	signUpStep2Class  = '_step-2'
 

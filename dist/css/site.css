@@ -1284,9 +1284,15 @@
 
 .popup-sign-nav {
   position: absolute;
-  top: 1.8em;
-  right: 90px;
   color: #8c8c8c; }
+  @media (max-width: 991.98px) {
+    .popup-sign-nav {
+      top: 1.5em;
+      right: 24px; } }
+  @media (min-width: 992px) {
+    .popup-sign-nav {
+      top: 1.8em;
+      right: 90px; } }
 
 .popup-sign-type-list {
   margin-bottom: 2.5em; }
@@ -1299,15 +1305,23 @@
       content: '|'; }
     .popup-sign-type-list-item a {
       color: inherit; }
-      .popup-sign-type-list-item a:hover, .popup-sign-type-list-item a.active {
+      .popup-sign-type-list-item a:hover {
         color: #f00; }
+    .popup-sign-type-list-item .active {
+      color: #f00; }
 
 .popup-sign-back {
   position: absolute;
-  left: 84px;
-  top: 2em;
   padding: .5em;
   cursor: pointer; }
+  @media (max-width: 991.98px) {
+    .popup-sign-back {
+      left: 16.8px;
+      top: 1.3em; } }
+  @media (min-width: 992px) {
+    .popup-sign-back {
+      left: 84px;
+      top: 2em; } }
   .popup-sign-back:hover .ico-svg {
     fill: #fff; }
 

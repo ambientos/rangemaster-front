@@ -2534,20 +2534,11 @@ fieldset:disabled a.btn {
   border-color: #f00;
   background-color: #f00; }
 
-.btn-link {
-  font-weight: 400;
-  color: #f00;
-  text-decoration: none; }
-  .btn-link:hover {
-    color: #b30000;
-    text-decoration: none; }
-  .btn-link:focus, .btn-link.focus {
-    text-decoration: none;
-    -webkit-box-shadow: none;
-            box-shadow: none; }
-  .btn-link:disabled, .btn-link.disabled {
-    color: #6c757d;
-    pointer-events: none; }
+.btn-forgot {
+  color: #8c8c8c;
+  background-color: #0d0d0d; }
+  .btn-forgot:hover {
+    color: #fff; }
 
 .btn-lg {
   padding: 1.438rem 1.5rem;
