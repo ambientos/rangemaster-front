@@ -141,10 +141,27 @@
 
 	&-sign {
 		$padding-x: $grid-gutter-width * .8;
+		$color-hover: $white;
 
 		@include media-breakpoint-up('lg') {
 			width: 55%;
 			margin-left: auto;
+		}
+
+		&:not(._step-2) {
+			._step-2 {
+				display: none;
+			}
+		}
+
+		&._step-2 {
+			._step-1 {
+				display: none;
+			}
+
+			.fancybox-close-small {
+				display: none;
+			}
 		}
 
 		&,
@@ -155,6 +172,8 @@
 		}
 
 		&-form {
+			width: 100%;
+
 			&-inner {
 				@include media-breakpoint-down('md') {
 					padding: $grid-gutter-width * 2 $padding-x $grid-gutter-width * 1.3;
@@ -195,9 +214,60 @@
 			}
 		}
 
+		&-nav {
+			position: absolute;
+			top: 1.8em;
+			right: $grid-gutter-width * 3;
+			color: $gray-550;
+		}
+
+		&-type {
+			&-list {
+				margin-bottom: 2.5em;
+
+				&-item {
+					@include font-size(1.125rem);
+					font-weight: $font-weight-normal;
+					color: $gray-550;
+
+					&:not(:last-child) {
+						&::after {
+							margin: 0 1em;
+							content: '|';
+						}
+					}
+
+					a {
+						color: inherit;
+
+						&:hover,
+						&.active {
+							color: $link-color;
+						}
+					}
+				}
+			}
+		}
+
+		&-back {
+			position: absolute;
+			left: $grid-gutter-width * 2.8;
+			top: 2em;
+			padding: .5em;
+			cursor: pointer;
+
+			&:hover .ico-svg {
+				fill: $color-hover;
+			}
+		}
+
 		.fancybox-close-small {
 			right: auto;
 			color: $gray-550;
+
+			&:hover {
+				color: $color-hover;
+			}
 
 			@include media-breakpoint-down('md') {
 				left: .6em;

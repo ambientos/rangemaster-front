@@ -367,6 +367,8 @@
         height: 1.25em; }
       .ico:hover .ico-svg._top {
         fill: #f00; }
+    .ico-svg._popup {
+      fill: #8c8c8c; }
 
 @media (max-width: 991.98px) {
   .widget._text {
@@ -1241,25 +1243,33 @@
     width: 55%;
     margin-left: auto; } }
 
+.popup-sign:not(._step-2) ._step-2 {
+  display: none; }
+
+.popup-sign._step-2 ._step-1 {
+  display: none; }
+
+.popup-sign._step-2 .fancybox-close-small {
+  display: none; }
+
 @media (max-width: 991.98px) {
   .popup-sign, .popup-sign-form {
     width: 100%; } }
 
-@media (max-width: 991.98px) {
-  .popup-sign-form-inner {
-    padding: 60px 24px 39px; } }
-
-@media (min-width: 992px) {
-  .popup-sign-form-inner {
-    padding: 75px 90px 39px; } }
-
-@media (max-width: 991.98px) {
-  .popup-sign-form-fields {
-    margin-top: 1.5em; } }
-
-@media (min-width: 992px) {
-  .popup-sign-form-fields {
-    margin-top: 3em; } }
+.popup-sign-form {
+  width: 100%; }
+  @media (max-width: 991.98px) {
+    .popup-sign-form-inner {
+      padding: 60px 24px 39px; } }
+  @media (min-width: 992px) {
+    .popup-sign-form-inner {
+      padding: 75px 90px 39px; } }
+  @media (max-width: 991.98px) {
+    .popup-sign-form-fields {
+      margin-top: 1.5em; } }
+  @media (min-width: 992px) {
+    .popup-sign-form-fields {
+      margin-top: 3em; } }
 
 @media (min-width: 992px) {
   .popup-sign-container {
@@ -1272,9 +1282,40 @@
 .popup-sign-container .fancybox-content {
   background-color: transparent; }
 
+.popup-sign-nav {
+  position: absolute;
+  top: 1.8em;
+  right: 90px;
+  color: #8c8c8c; }
+
+.popup-sign-type-list {
+  margin-bottom: 2.5em; }
+  .popup-sign-type-list-item {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #8c8c8c; }
+    .popup-sign-type-list-item:not(:last-child)::after {
+      margin: 0 1em;
+      content: '|'; }
+    .popup-sign-type-list-item a {
+      color: inherit; }
+      .popup-sign-type-list-item a:hover, .popup-sign-type-list-item a.active {
+        color: #f00; }
+
+.popup-sign-back {
+  position: absolute;
+  left: 84px;
+  top: 2em;
+  padding: .5em;
+  cursor: pointer; }
+  .popup-sign-back:hover .ico-svg {
+    fill: #fff; }
+
 .popup-sign .fancybox-close-small {
   right: auto;
   color: #8c8c8c; }
+  .popup-sign .fancybox-close-small:hover {
+    color: #fff; }
   @media (max-width: 991.98px) {
     .popup-sign .fancybox-close-small {
       left: .6em;

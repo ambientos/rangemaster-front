@@ -1,0 +1,33 @@
+#popup-sign.popup.popup-sign.d-flex
+	form.popup-sign-form.d-flex.flex-column
+		.popup-sign-form-inner.widget._dark.flex-grow-1
+			.popup-sign-nav
+				._step-1 1/2
+				._step-2 2/2
+
+			.popup-sign-back._step-2
+				include ./i/arrow-back.svg
+
+			ul.popup-sign-type-list.list-unstyled.d-flex
+				li.popup-sign-type-list-item
+					a#sign-up-tab.active(href='#popup-sign') Sign Up
+				li.popup-sign-type-list-item
+					a#sign-in-tab(href='#popup-sign-in') Sign In
+
+			.d-none.d-md-block
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero.
+
+			.popup-sign-form-fields
+				._step-1
+					+formGroups([{label: 'E-mail', type: 'email'}, {label: 'Password', type: 'password'}, {label: 'Password again', type: 'password'}])
+				._step-2
+					+formGroups([{label: 'Name', type: 'text'}, {label: 'Surname', type: 'text'}, {label: 'Phone number', type: 'tel'}])
+		.popup-sign-form-submit
+			._step-1
+				input.btn.btn-lg.btn-block.btn-secondary._sign-up-next(
+					value='Next'
+					type='button')
+			._step-2
+				input.btn.btn-lg.btn-block.btn-secondary(
+					value='Register'
+					type='submit')
