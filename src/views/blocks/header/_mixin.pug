@@ -13,7 +13,12 @@ mixin header(type)
 						.header-nav.d-flex.align-items-center
 							include ./nav-icons.pug
 
-							a.header-nav-item(href='/') En
+							span.header-nav-item
+								span.header-nav-lang
+									a.header-nav-lang-current(href='/') En
+									span.header-nav-lang-list
+										a.header-nav-lang-list-item(href='/') De
+										a.header-nav-lang-list-item(href='/') Ru
 
 				div(class='header-nav-tablet navbar-dark d-flex d-lg-none align-items-center justify-content-end')
 					include ./nav-icons.pug

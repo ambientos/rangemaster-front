@@ -33,6 +33,7 @@
 		}
 
 		&-item {
+			display: inline-block;
 			font-weight: $font-weight-normal;
 			color: $gray-550;
 			outline: none;
@@ -63,6 +64,70 @@
 
 			@include media-breakpoint-down('sm') {
 				right: $grid-gutter-width * .5;
+			}
+		}
+
+		&-lang {
+			position: relative;
+			display: inline-block;
+
+			&-current {
+				color: inherit;
+			}
+
+			&-list {
+				color: $white;
+				border-radius: .3em;
+				background-color: $black;
+
+				@include media-breakpoint-up('lg') {
+					$arrow-height: 8px;
+
+					display: none;
+					position: absolute;
+					left: -65%;
+					top: calc(100% + #{$arrow-height});
+					padding: .5em .8em;
+
+					&::before {
+						display: block;
+						position: absolute;
+						left: 50%;
+						top: -$arrow-height;
+						width: 0;
+						height: 0;
+						content: '';
+						border: {
+							style: solid;
+							width: 0 5px $arrow-height 5px;
+							color: transparent transparent $black transparent;
+						}
+						transform: translateX(-50%);
+					}
+
+					:hover > & {
+						display: block;
+					}
+				}
+
+				&-item {
+					color: inherit;
+					margin: .1em 0;
+					padding: .1em 0;
+
+					&:hover {
+						color: $link-color;
+					}
+
+					@include media-breakpoint-down('md') {
+						display: inline-block;
+						margin-left: 1em;
+					}
+
+					@include media-breakpoint-up('lg') {
+						display: block;
+					}
+				}
 			}
 		}
 	}
