@@ -1,0 +1,33 @@
+extends ./layout/skeleton.pug
+
+block meta
+	title Manuals
+
+block top
+	- var currentMenuItem = 'downloads';
+	+header('overlay')
+
+	+title({title: 'Manuals', bg: '26'})
+
+block content
+	main.main
+		.container.container-manuals
+			.d-md-flex
+				.main-content
+					table.product-col-table.table.table-striped
+						colgroup
+							col.product-col-name
+							col.product-col-dl
+
+						thead
+							tr
+								th Name
+								th Page
+
+						tbody
+							- var manList = ['X3 PRO/.NET - FULL RANGE AUTOMATION - BRIEF OVERVIEW (2016)', 'X3 PRO/.NET - FULL RANGE AUTOMATION - BRIEF OVERVIEW (2016)', 'X3 PRO/.NET - FULL RANGE AUTOMATION - BRIEF OVERVIEW (2016)', 'X3 PRO/.NET - FULL RANGE AUTOMATION - BRIEF OVERVIEW (2016)'];
+							each manItem in manList
+								tr
+									td.product-col-name(data-title='Name')
+										a(href='/').product-col-link= manItem
+									td.product-col-dl(data-title='Page') DOWNLOADS

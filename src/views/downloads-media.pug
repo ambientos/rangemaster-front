@@ -1,0 +1,29 @@
+extends ./layout/skeleton.pug
+
+block meta
+	title Downloads
+
+block top
+	- var currentMenuItem = 'downloads';
+	+header('overlay')
+
+	+title({title: 'Downloads', bg: '22'})
+
+block content
+	main.main
+		.container
+			.d-md-flex
+				aside.main-side
+					+menuSide([{id: 1, title: 'Folders'}, {id: 2, title: 'Resources'}, {id: 3, title: 'Manuals'}, {id: 4, title: 'Software demos and freeware'}, {id: 5, title: 'Media'}], 5)
+
+				.main-content
+					.row
+						- var i = 0;
+						while i < 4
+							- i++;
+							.product-manual-item.col-md-6
+								figure
+									a(href='/')
+										img.img-fluid.img-block(
+											src='t/27.jpg'
+											alt)

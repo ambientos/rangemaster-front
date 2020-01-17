@@ -240,6 +240,10 @@
 			}
 		}
 
+		&-link {
+			color: inherit;
+		}
+
 		&-flag {
 			@include media-breakpoint-down('md') {
 				margin-bottom: -3.4em;
@@ -612,6 +616,23 @@
 				style: solid;
 				width: $size 0 $size $size * 1.7;
 				color: transparent transparent transparent $white;
+			}
+		}
+	}
+
+	&-manual {
+		&-item {
+			@include media-breakpoint-up('md') {
+				$margin-x: 5px;
+
+				padding: {
+					left: $margin-x;
+					right: $margin-x;
+				}
+
+				figure {
+					margin-bottom: $margin-x * 2;
+				}
 			}
 		}
 	}
