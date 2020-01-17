@@ -67,7 +67,6 @@ $('.carousel-container').each(function(){
 
 	if ( promo ) {
 		let promoOptions = {
-			loop:          true,
 			autoplay:      true,
 			nav:           true,
 			animateOut:    'fadeOut',
