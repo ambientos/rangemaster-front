@@ -66,21 +66,24 @@ $('.carousel-container').each(function(){
 
 
 	if ( promo ) {
-		options.nav = true
+		let promoOptions = {
+			nav:           true,
+			animateOut:    'fadeOut',
+			onInitialized: function(event){
+				$container.data( 'count', event.item.count )
+			},
+			onChanged:     function(event){
+				let current  = event.item.index,
+					$current = $container.find('.promo-carousel-nav-current')
 
-		options.onInitialized = function(event){
-			$container.data( 'count', event.item.count )
-		}
-
-		options.onChanged = function(event){
-			let current  = event.item.index,
-				$current = $container.find('.promo-carousel-nav-current')
-
-			if ( Number.isInteger(current) ) {
-				current++
-				$current.text( current.toLocaleString('en', numberFormat) )
+				if ( Number.isInteger(current) ) {
+					current++
+					$current.text( current.toLocaleString('en', numberFormat) )
+				}
 			}
 		}
+
+		$.extend(options, promoOptions)
 	}
 
 
