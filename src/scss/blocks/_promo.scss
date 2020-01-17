@@ -32,6 +32,16 @@
 		&-inner {
 			max-width: 650px;
 			padding-right: 2.5em;
+
+			@include media-breakpoint-up('md') {
+				opacity: 0;
+
+				@include transition(opacity .5s ease-in-out 1s);
+
+				.owl-item.active & {
+					opacity: 1;
+				}
+			}
 		}
 
 		&-label {

@@ -466,6 +466,18 @@
   .promo-item-inner {
     max-width: 650px;
     padding-right: 2.5em; }
+    @media (min-width: 768px) {
+      .promo-item-inner {
+        opacity: 0;
+        -webkit-transition: opacity 0.5s ease-in-out 1s;
+        transition: opacity 0.5s ease-in-out 1s; } }
+  @media (min-width: 768px) and (prefers-reduced-motion: reduce) {
+    .promo-item-inner {
+      -webkit-transition: none;
+      transition: none; } }
+    @media (min-width: 768px) {
+        .owl-item.active .promo-item-inner {
+          opacity: 1; } }
   .promo-item-label {
     margin-bottom: .3em;
     font-weight: 400;
