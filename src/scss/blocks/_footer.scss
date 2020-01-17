@@ -24,6 +24,7 @@
 
 	&-sub {
 		padding-top: .7rem;
+		color: $gray-700;
 		background-color: darken($black, 10%);
 
 		@include media-breakpoint-down('md') {
@@ -61,8 +62,29 @@
 		padding-bottom: .7rem;
 	}
 
-	&-policy {
+	&-policy,
+	&-terms,
+	&-gdpr {
 		text-align: center;
+	}
+
+	@include media-breakpoint-down('md') {
+		&-copy,
+		&-terms {
+			$width: 50%;
+
+			flex-basis: $width;
+			max-width: $width;
+		}
+
+		&-gdpr {
+			text-align: left;
+		}
+
+		&-terms {
+			margin-bottom: 1em;
+			text-align: right;
+		}
 	}
 
 	&-dev {

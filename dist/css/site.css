@@ -202,6 +202,7 @@
         margin-right: 0.3em; } }
   .footer-sub {
     padding-top: .7rem;
+    color: #404040;
     background-color: black; }
     @media (max-width: 991.98px) {
       .footer-sub {
@@ -224,8 +225,18 @@
           transition: none; } }
   .footer-copy, .footer-policy, .footer-dev {
     padding-bottom: .7rem; }
-  .footer-policy {
+  .footer-policy, .footer-terms, .footer-gdpr {
     text-align: center; }
+  @media (max-width: 991.98px) {
+    .footer-copy, .footer-terms {
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+      max-width: 50%; }
+    .footer-gdpr {
+      text-align: left; }
+    .footer-terms {
+      margin-bottom: 1em;
+      text-align: right; } }
   .footer-dev {
     text-align: right; }
 
