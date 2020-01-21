@@ -69,14 +69,10 @@ let $buttonSignUpNext = $('._sign-up-next'),
 	$buttonSignUpBack = $('.popup-sign-back'),
 	signUpStep2Class  = '_step-2'
 
-$buttonSignUpNext.on('click', function(e){
-	e.preventDefault()
-
+$buttonSignUpNext.on('click', function(){
 	$signUp.addClass(signUpStep2Class)
 })
 
-$buttonSignUpBack.on('click', function(e){
-	e.preventDefault()
-
+$buttonSignUpBack.on('click', function(){
 	$signUp.removeClass(signUpStep2Class)
 })
