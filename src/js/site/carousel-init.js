@@ -17,17 +17,16 @@ $('.carousel-container').each(function(){
 		numberFormat  = {
 			minimumIntegerDigits: 2
 			//minimumFractionDigits: 2,
+		},
+
+		options = {
+			items: items,
+			margin: +margin,
+			loop: loop,
+			nav: nav,
+			navText: ['<i></i>', '<i></i>'],
+			dots: dots
 		}
-
-
-	options = {
-		items: items,
-		margin: +margin,
-		loop: loop,
-		nav: nav,
-		navText: ['<i></i>', '<i></i>'],
-		dots: dots
-	}
 
 
 	if ( items === 3 ) {
@@ -70,10 +69,10 @@ $('.carousel-container').each(function(){
 			autoplay:      true,
 			nav:           true,
 			animateOut:    'fadeOut',
-			onInitialized: function(event){
+			onInitialized(event) {
 				$container.data( 'count', event.item.count )
 			},
-			onChanged:     function(event){
+			onChanged(event) {
 				let current  = event.item.index,
 					$current = $container.find('.promo-carousel-nav-current')
 
@@ -84,7 +83,7 @@ $('.carousel-container').each(function(){
 			}
 		}
 
-		$.extend(options, promoOptions)
+		options = { ...options, ...promoOptions }
 	}
 
 
