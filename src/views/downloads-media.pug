@@ -14,7 +14,8 @@ block content
 		.container
 			.d-md-flex
 				aside.main-side
-					+menuSide([{id: 1, title: 'Folders'}, {id: 2, title: 'Resources'}, {id: 3, title: 'Manuals'}, {id: 4, title: 'Software demos and freeware'}, {id: 5, title: 'Media'}], 5)
+					.main-side-title.d-none.d-md-block Folders
+					+menuSide([{id: 1, title: 'Resources'}, {id: 2, title: 'Manuals'}, {id: 3, title: 'Software demos and freeware'}, {id: 4, title: 'Media'}], 4)
 
 				.main-content
 					.row
@@ -23,7 +24,9 @@ block content
 							- i++;
 							.product-manual-item.col-md-6
 								figure
-									a(href='/')
+									a(
+										href='t/27.jpg'
+										data-fancybox='gallery')
 										img.img-fluid.img-block(
 											src='t/27.jpg'
 											alt)
