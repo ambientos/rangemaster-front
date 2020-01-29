@@ -15,7 +15,11 @@ block content
 			.main-content
 				.article-year
 					span.article-year-label Year: 
+					a.article-year-nav._prev(href='/')
+						span.screen-reader-text Previous
 					span.article-year-n 2019
+					a.article-year-nav._next(href='/')
+						span.screen-reader-text Next
 
 				.article-list
 					- var n = 0

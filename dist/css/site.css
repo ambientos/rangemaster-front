@@ -1175,6 +1175,30 @@
 
 .article-year {
   margin-bottom: 3em; }
+  .article-year-nav {
+    display: inline-block;
+    padding: 0 1em; }
+    .article-year-nav:hover::before {
+      border-color: #f00; }
+    .article-year-nav::before {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      content: '';
+      border-width: 1px;
+      border-color: #8c8c8c;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      -webkit-transition: border-color 0.2s ease-in-out;
+      transition: border-color 0.2s ease-in-out; }
+      @media (prefers-reduced-motion: reduce) {
+        .article-year-nav::before {
+          -webkit-transition: none;
+          transition: none; } }
+    .article-year-nav._prev::before {
+      border-style: none none solid solid; }
+    .article-year-nav._next::before {
+      border-style: solid solid none none; }
 
 .article-list-item {
   position: relative;

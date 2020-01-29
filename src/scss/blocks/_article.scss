@@ -1,6 +1,45 @@
 .article {
 	&-year {
 		margin-bottom: 3em;
+
+		&-nav {
+			display: inline-block;
+			padding: 0 1em;
+
+			&:hover {
+				&::before {
+					border-color: $red;
+				}
+			}
+
+			&::before {
+				$size: 8px;
+
+				display: inline-block;
+				width: $size;
+				height: $size;
+				content: '';
+				border: {
+					width: 1px;
+					color: $gray-550;
+				}
+				transform: rotate(45deg);
+
+				@include transition(border-color .2s ease-in-out);
+			}
+
+			&._prev {
+				&::before {
+					border-style: none none solid solid;
+				}
+			}
+
+			&._next {
+				&::before {
+					border-style: solid solid none none;
+				}
+			}
+		}
 	}
 
 	&-list {
