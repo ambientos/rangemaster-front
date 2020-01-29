@@ -622,16 +622,31 @@
 
 	&-manual {
 		&-item {
-			@include media-breakpoint-up('md') {
-				$margin-x: 5px;
+			margin-bottom: $grid-gutter-width;
 
-				padding: {
-					left: $margin-x;
-					right: $margin-x;
+			&-title,
+			&-dl {
+				margin-bottom: .5em;
+				@include font-size(1.125rem);
+				text-transform: uppercase;
+			}
+
+			&-title {
+				margin-right: $grid-gutter-width * .5;
+			}
+
+			&-info {
+				margin-top: 1em;
+				font-size: 1rem;
+
+				@include media-breakpoint-up('xl') {
+					line-height: 1.8;
 				}
+			}
 
-				figure {
-					margin-bottom: $margin-x * 2;
+			figure {
+				@include media-breakpoint-up('lg') {
+					margin-bottom: 0;
 				}
 			}
 		}

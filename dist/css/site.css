@@ -1122,12 +1122,23 @@
     border-width: 6px 0 6px 10.2px;
     border-color: transparent transparent transparent #fff; }
 
-@media (min-width: 768px) {
-  .product-manual-item {
-    padding-left: 5px;
-    padding-right: 5px; }
+.product-manual-item {
+  margin-bottom: 30px; }
+  .product-manual-item-title, .product-manual-item-dl {
+    margin-bottom: .5em;
+    font-size: 1.125rem;
+    text-transform: uppercase; }
+  .product-manual-item-title {
+    margin-right: 15px; }
+  .product-manual-item-info {
+    margin-top: 1em;
+    font-size: 1rem; }
+    @media (min-width: 1200px) {
+      .product-manual-item-info {
+        line-height: 1.8; } }
+  @media (min-width: 992px) {
     .product-manual-item figure {
-      margin-bottom: 10px; } }
+      margin-bottom: 0; } }
 
 .breadcrumbs {
   color: #8c8c8c; }
