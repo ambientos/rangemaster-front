@@ -7,6 +7,6 @@ $('.table-folders').each(function(){
 			folder = toggle.parent().parent().next()
 
 		toggle.toggleClass('_active')
-		folder.toggleClass('d-none')
+		folder.toggleClass('d-lg-none')
 	})
 })

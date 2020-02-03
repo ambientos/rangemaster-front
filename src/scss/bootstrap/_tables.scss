@@ -103,28 +103,34 @@
   &-toggle {
     position: relative;
 
-    &._active {
-      &::after {
-        transform: translateY(-50%) rotate(180deg);
+    @include media-breakpoint-up('lg') {
+      &._active {
+        &::after {
+          transform: translateY(-50%) rotate(180deg);
+        }
       }
-    }
 
-    &::after {
-      $size: 15px;
+      &::after {
+        $size: 15px;
 
-      position: absolute;
-      top: 50%;
-      right: .5em;
-      width: $size;
-      height: $size;
-      content: '';
-      cursor: pointer;
-      transform: translateY(-50%);
-      background: {
-        repeat: no-repeat;
-        position: 50% 50%;
-        size: 60% auto;
-        image: url('#{$img-dir}folder-toggle.svg');
+        position: absolute;
+        top: 50%;
+        right: .5em;
+        width: $size;
+        height: $size;
+        content: '';
+        cursor: pointer;
+        transform: translateY(-50%);
+        background: {
+          repeat: no-repeat;
+          position: 50% 50%;
+          size: 60% auto;
+          image: url('#{$img-dir}folder-toggle.svg');
+        }
+      }
+
+      .table & {
+        padding-right: 1.3rem;
       }
     }
   }

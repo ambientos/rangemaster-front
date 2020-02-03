@@ -134,9 +134,11 @@
 			&-flag,
 			&-name,
 			&-mail,
+			&-addr,
 			&-title,
 			&-phone,
-			&-price {
+			&-price,
+			&-person {
 				display: block;
 			}
 
@@ -147,8 +149,10 @@
 
 			&-web,
 			&-mail,
+			&-addr,
 			&-title,
-			&-phone {
+			&-phone,
+			&-person {
 				padding-left: 60px !important;
 			}
 

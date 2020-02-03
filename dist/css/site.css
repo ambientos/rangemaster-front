@@ -825,11 +825,11 @@
     right: 0; }
 
 @media (max-width: 991.98px) {
-  .product-col-dl, .product-col-web, .product-col-flag, .product-col-name, .product-col-mail, .product-col-title, .product-col-phone, .product-col-price {
+  .product-col-dl, .product-col-web, .product-col-flag, .product-col-name, .product-col-mail, .product-col-addr, .product-col-title, .product-col-phone, .product-col-price, .product-col-person {
     display: block; }
   .product-col-date, .product-col-size {
     display: inline-block; }
-  .product-col-web, .product-col-mail, .product-col-title, .product-col-phone {
+  .product-col-web, .product-col-mail, .product-col-addr, .product-col-title, .product-col-phone, .product-col-person {
     padding-left: 60px !important; }
   .product-col-name._catalog, .product-col-price._catalog {
     text-align: center; }
