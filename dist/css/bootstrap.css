@@ -1497,8 +1497,32 @@ mark,
 .table-borderless tbody + tbody {
   border: 0; }
 
-.table-striped tbody tr:nth-of-type(odd) {
+.table-striped:not(.table-folders) tbody tr:nth-of-type(odd),
+.table-striped.table-folders tbody:nth-of-type(odd) tr {
   background-color: rgba(13, 13, 13, 0.05); }
+
+.table-folders-toggle {
+  position: relative; }
+  .table-folders-toggle._active::after {
+    -webkit-transform: translateY(-50%) rotate(180deg);
+            transform: translateY(-50%) rotate(180deg); }
+  .table-folders-toggle::after {
+    position: absolute;
+    top: 50%;
+    right: .5em;
+    width: 15px;
+    height: 15px;
+    content: '';
+    cursor: pointer;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 60% auto;
+    background-image: url("../i/folder-toggle.svg"); }
+
+.table-folders-content th {
+  padding-bottom: 0; }
 
 .table-hover tbody tr:hover {
   color: #212529;

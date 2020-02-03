@@ -17,7 +17,7 @@ block content
 					+menuSide([{id: 1, title: 'Global partners'}, {id: 2, title: 'Local distributors'}, {id: 3, title: 'There is no distributor in yout country?'}, {id: 4, title: 'You want ti be a distributor?'}], 1)
 
 				.main-content
-					table.product-col-table.table.table-striped
+					table.product-col-table.table.table-striped.table-folders
 						colgroup
 							col.product-col-flag
 							col.product-col-title
@@ -33,9 +33,9 @@ block content
 								th Web
 								th E-mail
 
-						tbody
-							- var distrList = [{flag: 'at', name: 'Rangemaster Systems', tel: '+43-699-104-03-204', url: 'http://www.rangemaster.at', mail: 'info@rangemaster.at'}, {flag: 'fr', name: 'Laporte', tel: '+33(0)493657752', url: 'www.laporte.biz', mail: 'f.legall@laporte.biz'}, {flag: 'fl', name: 'Nastakiekko OY', tel: '+358 207 209 699', url: 'www.nastatrap.com', mail: 'nasta@nastatrap.com'}, {flag: 'de', name: 'Spieth GMBH & CO KG', tel: '07356 – 9376 – 0', url: 'http://www.spieth.com', mail: 'info@spieth.de'}];
-							each distrItem in distrList
+						- var distrList = [{flag: 'at', name: 'Rangemaster Systems', tel: '+43-699-104-03-204', url: 'http://www.rangemaster.at', mail: 'info@rangemaster.at'}, {flag: 'fr', name: 'Laporte', tel: '+33(0)493657752', url: 'www.laporte.biz', mail: 'f.legall@laporte.biz'}, {flag: 'fl', name: 'Nastakiekko OY', tel: '+358 207 209 699', url: 'www.nastatrap.com', mail: 'nasta@nastatrap.com'}, {flag: 'de', name: 'Spieth GMBH & CO KG', tel: '07356 – 9376 – 0', url: 'http://www.spieth.com', mail: 'info@spieth.de'}];
+						each distrItem in distrList
+							tbody
 								tr
 									td.product-col-flag
 										img(
@@ -45,4 +45,13 @@ block content
 									td.product-col-title(data-title='Name')= distrItem.name
 									td.product-col-phone(data-title='Telephone')= distrItem.tel
 									td.product-col-web(data-title='Web')= distrItem.url
-									td.product-col-mail(data-title='E-mail')= distrItem.mail
+									td.product-col-mail.table-folders-toggle(data-title='E-mail')= distrItem.mail
+
+							thead.table-folders-content.d-none
+								tr
+									th(rowspan='2')
+									th Contact Person
+									th Address
+								tr
+									td John Smith
+									td City, Namestreet, 12

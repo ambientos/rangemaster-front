@@ -90,8 +90,49 @@
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
 
 .table-striped {
-  tbody tr:nth-of-type(#{$table-striped-order}) {
+  &:not(.table-folders) tbody tr:nth-of-type(#{$table-striped-order}),
+  &.table-folders tbody:nth-of-type(#{$table-striped-order}) tr {
     background-color: $table-accent-bg;
+  }
+}
+
+
+// Table with folders
+
+.table-folders {
+  &-toggle {
+    position: relative;
+
+    &._active {
+      &::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+
+    &::after {
+      $size: 15px;
+
+      position: absolute;
+      top: 50%;
+      right: .5em;
+      width: $size;
+      height: $size;
+      content: '';
+      cursor: pointer;
+      transform: translateY(-50%);
+      background: {
+        repeat: no-repeat;
+        position: 50% 50%;
+        size: 60% auto;
+        image: url('#{$img-dir}folder-toggle.svg');
+      }
+    }
+  }
+
+  &-content {
+    th {
+      padding-bottom: 0;
+    }
   }
 }
 
