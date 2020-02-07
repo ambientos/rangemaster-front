@@ -64,7 +64,7 @@
 							<tr>
 								<td class="product-col-name _product _catalog">"PPMU" Phono Pull Unit - Multi-Use</td>
 								<td class="product-col-price _product _catalog">595,00 €</td>
-								<td class="product-col-more"><a class="btn btn-block btn-dark btn-contrast-hover" href="/">Submit application</a></td>
+								<td class="product-col-more"><span class="btn btn-block btn-dark btn-contrast-hover" id="submit-app" data-fancybox="" data-src="#popup-submit-app">Submit application</span></td>
 							</tr>
 						</tbody>
 					</table>
@@ -85,10 +85,10 @@
 				<section class="product-widget">
 					<div class="product-thumb-carousel-container _border carousel-container container-product container" data-margin="30" data-items="3" data-dots="1" data-nav="1">
 						<div class="product-thumb-carousel owl-carousel carousel">
-							<figure class="product-thumb-carousel-item"><a href="t/24.jpg"><img class="img-fluid" src="t/5.jpg" width="170" alt></a></figure>
-							<figure class="product-thumb-carousel-item"><a href="t/24.jpg"><img class="img-fluid" src="t/5.jpg" width="170" alt></a></figure>
-							<figure class="product-thumb-carousel-item"><a href="t/24.jpg"><img class="img-fluid" src="t/5.jpg" width="170" alt></a></figure>
-							<figure class="product-thumb-carousel-item"><a href="t/24.jpg"><img class="img-fluid" src="t/5.jpg" width="170" alt></a></figure>
+							<figure class="product-thumb-carousel-item"><a href="t/24.jpg" data-fancybox="product"><img class="img-fluid" src="t/5.jpg" width="170" alt></a></figure>
+							<figure class="product-thumb-carousel-item"><a href="t/24.jpg" data-fancybox="product"><img class="img-fluid" src="t/5.jpg" width="170" alt></a></figure>
+							<figure class="product-thumb-carousel-item"><a href="t/24.jpg" data-fancybox="product"><img class="img-fluid" src="t/5.jpg" width="170" alt></a></figure>
+							<figure class="product-thumb-carousel-item"><a href="t/24.jpg" data-fancybox="product"><img class="img-fluid" src="t/5.jpg" width="170" alt></a></figure>
 						</div>
 					</div>
 				</section>
@@ -330,6 +330,37 @@
 					</div>
 					<div class="popup-sign-form-submit"><a class="btn btn-lg btn-block btn-forgot" href="/">Forgot your password?</a>
 						<input class="btn btn-lg btn-block btn-secondary" value="Sign In" type="submit">
+					</div>
+				</form>
+			</div>
+			<div class="popup popup-sign d-flex" id="popup-submit-app">
+				<form class="popup-sign-form d-flex flex-column" action="" method="post">
+					<div class="popup-sign-form-inner widget _dark flex-grow-1">
+						<div class="h2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						<div class="d-none d-md-block">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero.</p>
+						</div>
+						<div class="popup-sign-form-fields">
+							<div class="form-group">
+								<label class="screen-reader-text">Name</label>
+								<input class="form-control" type="text" placeholder="Name"/>
+							</div>
+							<div class="form-group">
+								<label class="screen-reader-text">Surname</label>
+								<input class="form-control" type="text" placeholder="Surname"/>
+							</div>
+							<div class="form-group">
+								<label class="screen-reader-text">Phone number</label>
+								<input class="form-control" type="tel" placeholder="Phone number"/>
+							</div>
+							<div class="form-group">
+								<label class="screen-reader-text">E-mail</label>
+								<input class="form-control" type="email" placeholder="E-mail"/>
+							</div>
+						</div>
+					</div>
+					<div class="popup-sign-form-submit">
+						<input class="btn btn-lg btn-block btn-secondary" value="Send" type="submit">
 					</div>
 				</form>
 			</div>

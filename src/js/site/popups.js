@@ -21,7 +21,6 @@ $('[data-src="#popup-search"]').fancybox({
  */
 let signUpSelector = '#popup-sign',
 	$signUp        = $(signUpSelector),
-	signInSelector = '#popup-sign-in',
 	$signToggle    = $('.popup-sign-type-toggle'),
 
 	fancyboxSignDefaultOptions = {
@@ -35,8 +34,10 @@ let signUpSelector = '#popup-sign',
 		}
 	}
 
-// Close popup if is open
-$('[data-src="'+ signUpSelector +'"]')
+/**
+ * Close popup if is open
+ */
+$('[data-src="'+ signUpSelector +'"],[data-src="#popup-submit-app"]')
 	.on('click', function(e){
 		let fancyboxCurrentInstance = $.fancybox.getInstance()
 

@@ -1,0 +1,18 @@
+#popup-submit-app.popup.popup-sign.d-flex
+	form.popup-sign-form.d-flex.flex-column(
+		action=''
+		method='post')
+
+		.popup-sign-form-inner.widget._dark.flex-grow-1
+			.h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+			.d-none.d-md-block
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero.
+
+			.popup-sign-form-fields
+				+formGroups([{label: 'Name', type: 'text'}, {label: 'Surname', type: 'text'}, {label: 'Phone number', type: 'tel'}, {label: 'E-mail', type: 'email'}])
+
+		.popup-sign-form-submit
+			input.btn.btn-lg.btn-block.btn-secondary(
+					value='Send'
+					type='submit')
