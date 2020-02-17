@@ -93,7 +93,7 @@
           .header-nav-lang-list {
             display: none;
             position: absolute;
-            left: -65%;
+            left: -45%;
             top: calc(100% + 8px);
             padding: .5em .8em; }
             .header-nav-lang-list::before {
