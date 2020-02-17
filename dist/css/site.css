@@ -484,6 +484,8 @@
   background-position: 50% 50%;
   background-size: cover; }
   .promo-item-inner {
+    position: relative;
+    top: -.8em;
     max-width: 650px;
     padding-right: 2.5em; }
     @media (min-width: 768px) {
