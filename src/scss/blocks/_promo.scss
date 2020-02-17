@@ -196,9 +196,16 @@
 			&-thumb {
 				margin-bottom: $gutter * 2;
 				background-color: $black;
+				overflow: hidden;
 
 				@include media-breakpoint-down('md') {
 					display: none;
+				}
+
+				:hover > & {
+					img {
+						transform: scale(1.05);
+					}
 				}
 
 				&:not(._with-gutter) {
@@ -218,6 +225,10 @@
 				&,
 				img {
 					width: 100%;
+				}
+
+				img {
+					@include transition;
 				}
 			}
 
