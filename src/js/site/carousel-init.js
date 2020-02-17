@@ -16,7 +16,6 @@ $('.carousel-container').each(function(){
 
 		numberFormat  = {
 			minimumIntegerDigits: 2
-			//minimumFractionDigits: 2,
 		},
 
 		options = {
@@ -66,20 +65,21 @@ $('.carousel-container').each(function(){
 
 	if ( promo ) {
 		let promoOptions = {
-			autoplay:      true,
-			nav:           true,
-			animateOut:    'fadeOut',
+			autoplay:           true,
+			nav:                true,
+			animateOut:         'fadeOut',
 			onInitialized(event) {
+				let $current = $container.find('.promo-carousel-nav-current')
+
 				$container.data( 'count', event.item.count )
+
+				setCurrentSlideIndex(event, $current)
 			},
 			onChanged(event) {
 				let current  = event.item.index,
 					$current = $container.find('.promo-carousel-nav-current')
 
-				if ( Number.isInteger(current) ) {
-					current++
-					$current.text( current.toLocaleString('en', numberFormat) )
-				}
+				setCurrentSlideIndex(event, $current)
 			}
 		}
 
@@ -114,5 +114,25 @@ $('.carousel-container').each(function(){
 					<span class="promo-carousel-nav-num">${count}</span>
 				</div>
 			`)
+	}
+
+
+	function setCurrentSlideIndex(event, $current){
+		if (event.item) {
+			let index = event.item.index - 1,
+				count = event.item.count
+
+			if (index > count) {
+				index -= count;
+			}
+
+			if (index <= 0) {
+				index += count;
+			}
+
+			if ( Number.isInteger(index) ) {
+				$current.text( index.toLocaleString('en', numberFormat) )
+			}
+		}
 	}
 })

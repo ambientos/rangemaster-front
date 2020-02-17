@@ -1,6 +1,6 @@
 - var promoData = [{thumb: '1', label: 'Big catalog update', title: 'New shooting range software'}, {thumb: '2', label: 'Big catalog update', title: 'New shooting range devices'}, {thumb: '3', label: 'Distributors', title: 'Successfully cooperate'}];
 
-.promo-container.carousel-container(data-promo='1')
+.promo-container.carousel-container(data-promo='1' data-loop='1')
 	.promo.owl-carousel.carousel
 		each promoItem in promoData
 			.promo-item.d-flex.justify-content-center.align-items-center(
