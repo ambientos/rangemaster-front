@@ -18,6 +18,6 @@ mixin promoGrid(list, type)
 							src='t/'+ item.thumb + '.jpg'
 							alt)
 
-					span(class='promo-grid-item-content' + (type == 'with-gutter' ? ' _with-gutter' : ''))
+					span(class='promo-grid-item-content _animate fadeInDown' + (type == 'with-gutter' ? ' _with-gutter' : ''))
 						.promo-grid-item-label= item.label
 						.promo-grid-item-title= item.title
