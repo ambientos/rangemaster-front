@@ -315,8 +315,24 @@
 				top: 0;
 				bottom: 0;
 				height: $size;
-				border-left: 1px solid $color;
 				transform: translateX(3em);
+
+				&::before {
+					position: absolute;
+					left: 0;
+					top: 0;
+					bottom: 100%;
+					content: '';
+					border-left: 1px solid $color;
+				}
+
+				&._changed::before {
+					animation: {
+						duration: var(--timeout);
+						name: carousel-animation;
+						iteration-count: 1;
+					}
+				}
 			}
 
 			&,
@@ -412,5 +428,15 @@
 				margin-left: $grid-gutter-width * 6.9;
 			}
 		}
+	}
+}
+
+@keyframes carousel-animation {
+	0% {
+		bottom: 100%;
+	}
+
+	100% {
+		bottom: 0;
 	}
 }

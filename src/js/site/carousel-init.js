@@ -3,28 +3,30 @@
  */
 
 $('.carousel-container').each(function(){
-	let $container    = $(this),
-		$carousel     = $container.find('.carousel'),
-		promo         = +$container.data('promo') || 0,
-		items         = +$container.data('items') || 1,
-		loop          = $container.data('loop') || 0,
-		margin        = $container.data('margin') || 0,
-		nav           = $container.data('nav') || 0,
-		navContainer  = $container.data('nav-container') || 0,
-		dots          = $container.data('dots') || 0,
-		dotsContainer = $container.data('dots-container') || 0,
+	let $container      = $(this),
+		$carousel       = $container.find('.carousel'),
+		promo           = +$container.data('promo') || 0,
+		items           = +$container.data('items') || 1,
+		autoplayTimeout = +$container.data('timeout') || 5000,
+		loop            = $container.data('loop') || 0,
+		margin          = $container.data('margin') || 0,
+		nav             = $container.data('nav') || 0,
+		navContainer    = $container.data('nav-container') || 0,
+		dots            = $container.data('dots') || 0,
+		dotsContainer   = $container.data('dots-container') || 0,
 
 		numberFormat  = {
 			minimumIntegerDigits: 2
 		},
 
 		options = {
-			items: items,
-			margin: +margin,
-			loop: loop,
-			nav: nav,
-			navText: ['<i></i>', '<i></i>'],
-			dots: dots
+			items:           items,
+			margin:          +margin,
+			autoplayTimeout: autoplayTimeout,
+			loop:            loop,
+			nav:             nav,
+			navText:         ['<i></i>', '<i></i>'],
+			dots:            dots
 		}
 
 
@@ -64,24 +66,36 @@ $('.carousel-container').each(function(){
 
 
 	if ( promo ) {
-		let promoOptions = {
-			autoplay:           true,
-			nav:                true,
-			animateOut:         'fadeOut',
-			onInitialized(event) {
-				let $current = $container.find('.promo-carousel-nav-current')
+		let promoSetTimeout,
+			promoOptions = {
+				autoplay:           true,
+				nav:                true,
+				animateOut:         'fadeOut',
+				onInitialized(event) {
+					let $current = $container.find('.promo-carousel-nav-current')
 
-				$container.data( 'count', event.item.count )
+					$container.data( 'count', event.item.count )
 
-				setCurrentSlideIndex(event, $current)
-			},
-			onChanged(event) {
-				let current  = event.item.index,
-					$current = $container.find('.promo-carousel-nav-current')
+					setCurrentSlideIndex(event, $current)
+				},
+				onChange(event) {
+					clearTimeout(promoSetTimeout)
 
-				setCurrentSlideIndex(event, $current)
+					$container.find('.promo-carousel-nav')
+						.removeClass('_changed')
+				},
+				onChanged(event) {
+					let current  = event.item.index,
+						$current = $container.find('.promo-carousel-nav-current')
+
+					setCurrentSlideIndex(event, $current)
+
+					promoSetTimeout = setTimeout(() => {
+						$container.find('.promo-carousel-nav')
+							.addClass('_changed')
+					}, 500)
+				}
 			}
-		}
 
 		options = { ...options, ...promoOptions }
 	}
