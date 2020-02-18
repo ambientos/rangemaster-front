@@ -339,7 +339,7 @@
   .main-html {
     min-height: 100%; }
   .main-body,
-  .main-body > * {
+  .main-body > :not(.tooltip) {
     width: 100%; }
   @media (max-width: 767.98px) {
     .main-side {
