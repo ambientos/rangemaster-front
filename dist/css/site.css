@@ -675,6 +675,11 @@
   right: 0;
   margin: auto;
   color: #fff; }
+  .promo-carousel-nav._changed::before {
+    -webkit-animation-duration: var(--timeout);
+            animation-duration: var(--timeout);
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1; }
   @media (max-width: 991.98px) {
     .promo-carousel-nav {
       bottom: 30px;
@@ -682,9 +687,12 @@
               transform: translate(3em, -0.8em); }
       .promo-carousel-nav::before {
         display: block;
-        width: 180px;
+        width: 0;
         content: '';
-        border-top: 1px solid #fff; } }
+        border-top: 1px solid #fff; }
+      .promo-carousel-nav._changed::before {
+        -webkit-animation-name: carousel-animation-x;
+                animation-name: carousel-animation-x; } }
   @media (min-width: 992px) {
     .promo-carousel-nav {
       top: 0;
@@ -700,25 +708,21 @@
         content: '';
         border-left: 1px solid #fff; }
       .promo-carousel-nav._changed::before {
-        -webkit-animation-duration: var(--timeout);
-                animation-duration: var(--timeout);
-        -webkit-animation-name: carousel-animation;
-                animation-name: carousel-animation;
-        -webkit-animation-iteration-count: 1;
-                animation-iteration-count: 1; } }
+        -webkit-animation-name: carousel-animation-y;
+                animation-name: carousel-animation-y; } }
   .promo-carousel-nav, .promo-carousel-nav-current, .promo-carousel-nav-num {
     position: absolute; }
   @media (max-width: 991.98px) {
     .promo-carousel-nav-current, .promo-carousel-nav-num {
       top: 0; }
     .promo-carousel-nav-current {
-      left: 0;
+      left: .5em;
       -webkit-transform: translate(-0.5em, -50%);
               transform: translate(-0.5em, -50%); }
     .promo-carousel-nav-num {
-      left: 180px;
-      -webkit-transform: translate(1.5em, -50%);
-              transform: translate(1.5em, -50%); } }
+      right: 0;
+      -webkit-transform: translate(-5.3em, -50%);
+              transform: translate(-5.3em, -50%); } }
   @media (min-width: 992px) {
     .promo-carousel-nav-current, .promo-carousel-nav-num {
       left: 0; }
@@ -759,15 +763,28 @@
 
 @media (max-width: 991.98px) {
   .promo button.owl-next {
-    margin-left: 207px; } }
+    position: absolute;
+    right: 15px; } }
 
-@-webkit-keyframes carousel-animation {
+@-webkit-keyframes carousel-animation-x {
+  0% {
+    width: 0; }
+  100% {
+    width: calc(100% - 84px); } }
+
+@keyframes carousel-animation-x {
+  0% {
+    width: 0; }
+  100% {
+    width: calc(100% - 84px); } }
+
+@-webkit-keyframes carousel-animation-y {
   0% {
     bottom: 100%; }
   100% {
     bottom: 0; } }
 
-@keyframes carousel-animation {
+@keyframes carousel-animation-y {
   0% {
     bottom: 100%; }
   100% {

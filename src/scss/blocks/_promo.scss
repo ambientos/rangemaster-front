@@ -299,15 +299,28 @@
 			margin: auto;
 			color: $color;
 
+			&._changed::before {
+				animation: {
+					duration: var(--timeout);
+					iteration-count: 1;
+				}
+			}
+
 			@include media-breakpoint-down('md') {
 				bottom: $grid-gutter-width;
 				transform: translate(3em, -.8em);
 
 				&::before {
 					display: block;
-					width: $size * 2;
+					width: 0;
 					content: '';
 					border-top: 1px solid $color;
+				}
+
+				&._changed::before {
+					animation: {
+						name: carousel-animation-x;
+					}
 				}
 			}
 
@@ -328,9 +341,7 @@
 
 				&._changed::before {
 					animation: {
-						duration: var(--timeout);
-						name: carousel-animation;
-						iteration-count: 1;
+						name: carousel-animation-y;
 					}
 				}
 			}
@@ -348,13 +359,13 @@
 				}
 
 				&-current {
-					left: 0;
+					left: .5em;
 					transform: translate(-.5em, -50%);
 				}
 
 				&-num {
-					left: $size * 2;
-					transform: translate(1.5em, -50%);
+					right: 0;
+					transform: translate(-5.3em, -50%);
 				}
 			}
 
@@ -425,13 +436,24 @@
 
 		@include media-breakpoint-down('md') {
 			&.owl-next {
-				margin-left: $grid-gutter-width * 6.9;
+				position: absolute;
+				right: $grid-gutter-width * .5;
 			}
 		}
 	}
 }
 
-@keyframes carousel-animation {
+@keyframes carousel-animation-x {
+	0% {
+		width: 0;
+	}
+
+	100% {
+		width: calc(100% - #{$grid-gutter-width * 2.8});
+	}
+}
+
+@keyframes carousel-animation-y {
 	0% {
 		bottom: 100%;
 	}
