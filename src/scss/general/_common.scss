@@ -34,4 +34,15 @@
 	&-manuals {
 		max-width: 960px;
 	}
+
+	&-margins {
+		@include media-breakpoint-up('lg') {
+			$padding: 6.5em;
+
+			padding: {
+				left: $padding;
+				right: $padding;
+			}
+		}
+	}
 }

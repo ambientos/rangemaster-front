@@ -24,6 +24,11 @@
 .container-product, .container-manuals {
   max-width: 960px; }
 
+@media (min-width: 992px) {
+  .container-margins {
+    padding-left: 6.5em;
+    padding-right: 6.5em; } }
+
 @font-face {
   font-family: "BebasNeue";
   font-weight: 700;
