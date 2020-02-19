@@ -774,7 +774,15 @@
   right: 0;
   margin: auto;
   color: #fff; }
-  .promo-carousel-nav._changed::before {
+  .promo-carousel-nav::before, .promo-carousel-nav::after {
+    display: block;
+    content: '';
+    border-width: 1px; }
+  .promo-carousel-nav::before {
+    border-color: rgba(255, 255, 255, 0.3); }
+  .promo-carousel-nav::after {
+    border-color: #fff; }
+  .promo-carousel-nav._changed::after {
     -webkit-animation-duration: var(--timeout);
             animation-duration: var(--timeout);
     -webkit-animation-iteration-count: 1;
@@ -784,12 +792,14 @@
       bottom: 30px;
       -webkit-transform: translate(3em, -0.8em);
               transform: translate(3em, -0.8em); }
+      .promo-carousel-nav::before, .promo-carousel-nav::after {
+        border-top-style: solid; }
       .promo-carousel-nav::before {
-        display: block;
-        width: 0;
-        content: '';
-        border-top: 1px solid #fff; }
-      .promo-carousel-nav._changed::before {
+        width: calc(100% - 84px); }
+      .promo-carousel-nav::after {
+        margin-top: -1px;
+        width: 0; }
+      .promo-carousel-nav._changed::after {
         -webkit-animation-name: carousel-animation-x;
                 animation-name: carousel-animation-x; } }
   @media (min-width: 992px) {
@@ -799,14 +809,16 @@
       height: 90px;
       -webkit-transform: translateX(3em);
               transform: translateX(3em); }
-      .promo-carousel-nav::before {
+      .promo-carousel-nav::before, .promo-carousel-nav::after {
         position: absolute;
         left: 0;
         top: 0;
-        bottom: 100%;
-        content: '';
-        border-left: 1px solid #fff; }
-      .promo-carousel-nav._changed::before {
+        border-left-style: solid; }
+      .promo-carousel-nav::before {
+        bottom: 0; }
+      .promo-carousel-nav::after {
+        bottom: 100%; }
+      .promo-carousel-nav._changed::after {
         -webkit-animation-name: carousel-animation-y;
                 animation-name: carousel-animation-y; } }
   .promo-carousel-nav, .promo-carousel-nav-current, .promo-carousel-nav-num {
