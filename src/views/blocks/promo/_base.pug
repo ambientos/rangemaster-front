@@ -4,12 +4,14 @@
 
 .promo-container.carousel-container(
 	data-promo='1'
+	data-nav='1'
 	data-loop='1'
+	data-autoplay='1'
 	data-timeout='5000'
 	style='--timeout: 5s')
 	.promo.owl-carousel.carousel
 		each promoItem in promoData
-			.promo-item.d-flex.justify-content-center.align-items-center(
+			.promo-item.d-flex.justify-content-center.align-items-md-center.align-items-end(
 				style='background-image:url(t/'+ promoItem.thumb +'.jpg)')
 
 				.container.d-flex.justify-content-end

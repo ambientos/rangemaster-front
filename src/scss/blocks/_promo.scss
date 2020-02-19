@@ -29,13 +29,21 @@
 			size: cover;
 		}
 
+		@include media-breakpoint-down('sm') {
+			padding-bottom: 7em;
+		}
+
 		&-inner {
 			position: relative;
-			top: -.8em;
 			max-width: 650px;
 			padding-right: 2.5em;
 
+			@include media-breakpoint-down('sm') {
+				top: .8em;
+			}
+
 			@include media-breakpoint-up('md') {
+				top: -.8em;
 				opacity: 0;
 
 				@include transition(opacity .5s ease-in-out 1s);
