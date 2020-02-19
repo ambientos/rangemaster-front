@@ -439,7 +439,7 @@
   .main-html {
     min-height: 100%; }
   .main-body,
-  .main-body > :not(.tooltip) {
+  .main-body > :not(.tooltip):not(.main-to-top) {
     width: 100%; }
   @media (max-width: 767.98px) {
     .main-side {
@@ -1479,19 +1479,21 @@
 
 .popup-search {
   width: 100%;
+  padding-left: 18px;
   padding-top: 13.5px;
+  padding-right: 18px;
   color: #fff;
   vertical-align: top;
   background-color: transparent; }
-  @media (max-width: 767.98px) {
-    .popup-search-form, .popup-search-often-container {
-      margin-right: 4em; } }
   @media (min-width: 768px) {
     .popup-search-form, .popup-search-often-container {
       max-width: 480px;
       margin: auto; } }
   .popup-search-form {
     position: relative; }
+    @media (max-width: 767.98px) {
+      .popup-search-form {
+        margin-right: 4em; } }
     .popup-search-form::before {
       position: absolute;
       left: -2.5em;
@@ -1506,13 +1508,22 @@
       padding-right: 2em;
       font-weight: 500;
       border-color: #adb5bd; }
+      @media (max-width: 767.98px) {
+        .popup-search-form-input {
+          padding-left: 0;
+          font-size: .625rem; } }
     .popup-search-form-submit {
       position: absolute;
       top: 1em;
-      right: .4em;
       padding: 0;
       border: none;
       background-color: transparent; }
+      @media (max-width: 767.98px) {
+        .popup-search-form-submit {
+          right: 0; } }
+      @media (min-width: 768px) {
+        .popup-search-form-submit {
+          right: .4em; } }
       .popup-search-form-submit .ico {
         vertical-align: top;
         -webkit-transition: fill 0.2s ease-in-out;

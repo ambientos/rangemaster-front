@@ -25,7 +25,7 @@
 
 	&-body {
 		&,
-		> :not(.tooltip) {
+		> :not(.tooltip):not(.main-to-top) {
 			width: 100%;
 		}
 	}

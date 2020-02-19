@@ -3,17 +3,17 @@
 		$search-width: 480px;
 
 		width: 100%;
-		padding-top: $grid-gutter-width * .45;
+		padding: {
+			left: $grid-gutter-width * .6;
+			top: $grid-gutter-width * .45;
+			right: $grid-gutter-width * .6;
+		}
 		color: $white;
 		vertical-align: top;
 		background-color: transparent;
 
 		&-form,
 		&-often-container {
-			@include media-breakpoint-down('sm') {
-				margin-right: 4em;
-			}
-
 			@include media-breakpoint-up('md') {
 				max-width: $search-width;
 				margin: auto;
@@ -22,6 +22,10 @@
 
 		&-form {
 			position: relative;
+
+			@include media-breakpoint-down('sm') {
+				margin-right: 4em;
+			}
 
 			&::before {
 				$size: 15px;
@@ -43,15 +47,27 @@
 				padding-right: 2em;
 				font-weight: $font-weight-medium;
 				border-color: $gray-500;
+
+				@include media-breakpoint-down('sm') {
+					padding-left: 0;
+					font-size: .625rem;
+				}
 			}
 
 			&-submit {
 				position: absolute;
 				top: 1em;
-				right: .4em;
 				padding: 0;
 				border: none;
 				background-color: transparent;
+
+				@include media-breakpoint-down('sm') {
+					right: 0;
+				}
+
+				@include media-breakpoint-up('md') {
+					right: .4em;
+				}
 
 				.ico {
 					vertical-align: top;
