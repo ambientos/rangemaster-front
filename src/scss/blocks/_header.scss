@@ -17,6 +17,7 @@
 
 	&._is-menu-expanded {
 		@include media-breakpoint-down('md') {
+			bottom: 0;
 			background-color: $black;
 		}
 	}

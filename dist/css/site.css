@@ -147,6 +147,7 @@
     background-color: #0d0d0d; }
   @media (max-width: 991.98px) {
     .header._is-menu-expanded {
+      bottom: 0;
       background-color: #0d0d0d; } }
   .header-container {
     position: relative; }
@@ -1629,7 +1630,7 @@
     .popup-sign-type-list-item a {
       color: inherit; }
       .popup-sign-type-list-item a:hover {
-        color: #f00; }
+        color: #fff; }
     .popup-sign-type-list-item .active {
       color: #f00; }
 
