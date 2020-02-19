@@ -105,10 +105,6 @@ button.owl-prev, button.owl-next {
   vertical-align: top;
   border: none;
   background: transparent; }
-  button.owl-prev.disabled, button.owl-prev.disabled:hover, button.owl-next.disabled, button.owl-next.disabled:hover {
-    cursor: default; }
-    button.owl-prev.disabled i::before, button.owl-prev.disabled:hover i::before, button.owl-next.disabled i::before, button.owl-next.disabled:hover i::before {
-      border-color: rgba(140, 140, 140, 0.4); }
   button.owl-prev:hover i::before, button.owl-next:hover i::before {
     border-color: #8c8c8c; }
   button.owl-prev i, button.owl-next i {

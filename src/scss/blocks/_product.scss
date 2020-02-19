@@ -210,6 +210,10 @@
 				}
 			}
 
+			@include media-breakpoint-up('lg') {
+				margin-top: -2.5em;
+			}
+
 			&._doc {
 				thead {
 					border-bottom: $border-width solid $gray-400;
@@ -244,10 +248,6 @@
 			}
 		}
 
-		&-link {
-			color: inherit;
-		}
-
 		&-flag {
 			@include media-breakpoint-down('md') {
 				margin-bottom: -3.4em;
@@ -261,10 +261,6 @@
 			}
 		}
 
-		&-name {
-			text-transform: uppercase;
-		}
-
 		&-name,
 		&-price {
 			&._product {
@@ -272,6 +268,14 @@
 					font-size: 1.125rem;
 				}
 			}
+		}
+
+		&-name {
+			text-transform: uppercase;
+		}
+
+		&-price {
+			color: $gray-700;
 		}
 
 		&-title {
@@ -291,6 +295,9 @@
 		}
 
 		&-info {
+			font-weight: $font-weight-light;
+			color: $gray-700;
+
 			@include media-breakpoint-down('md') {
 				margin-bottom: 1em;
 			}
@@ -390,6 +397,14 @@
 				}
 			}
 		}
+
+		&-link {
+			color: inherit;
+
+			&:hover {
+				color: $link-color;
+			}
+		}
 	}
 
 	&-main {
@@ -404,6 +419,9 @@
 	}
 
 	&-widget {
+		font-weight: $font-weight-normal;
+		color: $gray-700;
+
 		&:not(:last-child) {
 			@include media-breakpoint-down('sm') {
 				margin-bottom: 3em;
@@ -419,7 +437,7 @@
 			padding-bottom: .3em;
 			font: {
 				size: .75rem;
-				weight: $font-weight-normal;
+				weight: $font-weight-medium;
 			}
 			text-transform: uppercase;
 			color: $gray-550;
@@ -524,10 +542,6 @@
 							radius: 50%;
 						}
 
-						&.disabled {
-							border-color: rgba($gray-550, .4);
-						}
-
 						i {
 							left: .1em;
 
@@ -551,6 +565,7 @@
 
 	&-option {
 		margin: 1.7em 0;
+		font-weight: $font-weight-normal;
 		text-transform: uppercase;
 
 		&-label {
@@ -632,6 +647,7 @@
 			&-dl {
 				margin-bottom: .5em;
 				@include font-size(1.125rem);
+				font-weight: $font-weight-normal;
 				text-transform: uppercase;
 			}
 
@@ -642,6 +658,7 @@
 			&-info {
 				margin-top: 1em;
 				font-size: 1rem;
+				color: $gray-700;
 
 				@include media-breakpoint-up('xl') {
 					line-height: 1.8;

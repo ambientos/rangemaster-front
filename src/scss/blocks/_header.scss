@@ -188,6 +188,7 @@
 			position: relative;
 
 			&-date {
+				font-weight: $font-weight-normal;
 				color: $gray-550;
 
 				@include media-breakpoint-down('md') {

@@ -44,8 +44,13 @@ block content
 											alt)
 									td.product-col-title(data-title='Name')= distrItem.name
 									td.product-col-phone(data-title='Telephone')= distrItem.tel
-									td.product-col-web(data-title='Web')= distrItem.url
-									td.product-col-mail.table-folders-toggle(data-title='E-mail')= distrItem.mail
+									td.product-col-web(data-title='Web')
+										a.product-col-link(
+											href=distrItem.url
+											target='blank')= distrItem.url
+									td.product-col-mail.table-folders-toggle(data-title='E-mail')
+										a.product-col-link(
+											href='mailto:'+ distrItem.mail)= distrItem.mail
 									td.product-col-person.d-lg-none(data-title='Contact Person') John Smith
 									td.product-col-addr.d-lg-none(data-title='Address') City, Namestreet, 12
 

@@ -27,10 +27,14 @@
   th {
     font: {
       size: .75rem;
-      weight: $font-weight-normal;
+      weight: $font-weight-medium;
     }
     color: $gray-550;
     text-transform: uppercase;
+  }
+
+  td {
+    font-weight: $font-weight-normal;
   }
 
   thead th {

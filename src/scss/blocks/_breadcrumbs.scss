@@ -1,6 +1,8 @@
 .breadcrumbs {
 	$margin-x: $grid-gutter-width * .8;
 
+	padding-bottom: $margin-x * .5;
+	font-weight: $font-weight-normal;
 	color: $gray-550;
 
 	@include media-breakpoint-down('sm') {

@@ -1472,9 +1472,11 @@ mark,
         padding-right: 24px; } }
   .table th {
     font-size: .75rem;
-    font-weight: 400;
+    font-weight: 500;
     color: #8c8c8c;
     text-transform: uppercase; }
+  .table td {
+    font-weight: 400; }
   .table thead th {
     vertical-align: bottom; }
 

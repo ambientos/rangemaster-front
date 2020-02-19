@@ -61,6 +61,7 @@
 		}
 
 		&-item {
+			font-weight: $font-weight-normal;
 			color: $gray-550;
 
 			&:not(:last-child) {

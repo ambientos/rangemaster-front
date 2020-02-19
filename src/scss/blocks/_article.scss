@@ -1,6 +1,11 @@
 .article {
 	&-year {
 		margin-bottom: 3em;
+		font-weight: $font-weight-normal;
+
+		&-label {
+			color: $gray-550;
+		}
 
 		&-nav {
 			display: inline-block;
@@ -39,6 +44,10 @@
 					border-style: solid solid none none;
 				}
 			}
+		}
+
+		&-n {
+			color: $gray-700;
 		}
 	}
 

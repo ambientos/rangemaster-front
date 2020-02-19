@@ -36,17 +36,20 @@
 
 			&-label,
 			&-text {
-				font-weight: $font-weight-normal;
 				text-transform: uppercase;
 			}
 
 			&-label {
 				display: block;
-				font-size: .75rem;
+				font: {
+					size: .75rem;
+					weight: $font-weight-medium;
+				}
 				color: $gray-550;
 			}
 
 			&-text {
+				font-weight: $font-weight-normal;
 				color: $black;
 			}
 		}
