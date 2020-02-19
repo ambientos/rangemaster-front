@@ -1,18 +1,16 @@
 /**
  * Popup Search
  */
-let $menu      = $('.header-menu-container'),
-	$tabletNav = $('.header-nav-tablet *')
 
-$('[data-src="#popup-search"]').fancybox({
-	afterShow: function() {
-		$tabletNav.addClass('d-none')
-		$menu.fadeOut()
-	},
-	afterClose: function(){
-		$tabletNav.removeClass('d-none')
-		$menu.fadeIn()
-	}
+$('[href="#popup-search"]').fancybox({
+	baseTpl: `
+		<div class="fancybox-container" role="dialog" tabindex="-1">
+			<div class="fancybox-bg _opaque"></div>
+			<div class="fancybox-inner">
+				<div class="fancybox-stage"></div>
+			</div>
+		</div>
+	`
 })
 
 
