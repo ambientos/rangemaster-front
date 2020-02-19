@@ -222,8 +222,6 @@
 					img {
 						opacity: 0;
 
-						@include transition;
-
 						:hover > & {
 							opacity: 1;
 						}
@@ -236,7 +234,10 @@
 				}
 
 				img {
-					@include transition;
+					@include transition(
+						opacity .5s ease-in-out,
+						transform .7s ease-in-out
+					);
 				}
 			}
 

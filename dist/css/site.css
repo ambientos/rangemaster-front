@@ -706,21 +706,17 @@
       .promo-grid-item-thumb:not(._with-gutter) {
         margin-bottom: 0; }
         .promo-grid-item-thumb:not(._with-gutter) img {
-          opacity: 0;
-          -webkit-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out; }
-          @media (prefers-reduced-motion: reduce) {
-            .promo-grid-item-thumb:not(._with-gutter) img {
-              -webkit-transition: none;
-              transition: none; } }
+          opacity: 0; }
           :hover > .promo-grid-item-thumb:not(._with-gutter) img {
             opacity: 1; }
       .promo-grid-item-thumb,
       .promo-grid-item-thumb img {
         width: 100%; }
       .promo-grid-item-thumb img {
-        -webkit-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out; }
+        -webkit-transition: opacity 0.5s ease-in-out, -webkit-transform 0.7s ease-in-out;
+        transition: opacity 0.5s ease-in-out, -webkit-transform 0.7s ease-in-out;
+        transition: opacity 0.5s ease-in-out, transform 0.7s ease-in-out;
+        transition: opacity 0.5s ease-in-out, transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out; }
         @media (prefers-reduced-motion: reduce) {
           .promo-grid-item-thumb img {
             -webkit-transition: none;
