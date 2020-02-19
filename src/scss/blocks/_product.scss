@@ -596,10 +596,15 @@
 
 		display: inline-block;
 		position: relative;
+		overflow: hidden;
 
 		&:hover {
 			&::before {
 				background-color: rgba($white, .5);
+			}
+
+			img {
+				transform: scale(1.05);
 			}
 		}
 
@@ -612,6 +617,7 @@
 			bottom: 0;
 			margin: auto;
 			content: '';
+			z-index: 1;
 		}
 
 		&::before {
@@ -636,6 +642,10 @@
 				width: $size 0 $size $size * 1.7;
 				color: transparent transparent transparent $white;
 			}
+		}
+
+		img {
+			@include transition(transform .2s ease-in-out);
 		}
 	}
 
