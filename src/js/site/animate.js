@@ -17,8 +17,6 @@ wow.init()
 
 let headerTitleBg = $('.header-title-container')
 
-headerTitleBg.css('--bg-position', '50% 0')
-
 $(window).on('scroll', function() {
 	var topPosition = $(this).scrollTop(),
 		bgPosition  = -topPosition / 5
