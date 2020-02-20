@@ -249,12 +249,17 @@
           padding-top: 8em; } }
     .header-title-container._with-bg {
       background-color: #0d0d0d;
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-size: cover; }
+      background-repeat: no-repeat; }
       @media (max-width: 767.98px) {
         .header-title-container._with-bg {
-          min-height: 200px; } }
+          min-height: 200px;
+          background-position: 50% 50%;
+          background-size: cover; } }
+      @media (min-width: 768px) {
+        .header-title-container._with-bg {
+          background-position: var(--bg-position);
+          background-size: 100% auto;
+          background-attachment: fixed; } }
       @media (min-width: 768px) and (max-width: 1199.98px) {
         .header-title-container._with-bg {
           min-height: 250px; } }

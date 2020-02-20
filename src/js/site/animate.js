@@ -1,3 +1,7 @@
+/**
+ * Appear animate on visible
+ */
+
 import WOW from 'wow.js'
 
 var wow = new WOW({
@@ -5,3 +9,19 @@ var wow = new WOW({
 })
 
 wow.init()
+
+
+/**
+ * Parallax effect for Header with background
+ */
+
+let headerTitleBg = $('.header-title-container')
+
+headerTitleBg.css('--bg-position', '50% 0')
+
+$(window).on('scroll', function() {
+	var topPosition = $(this).scrollTop(),
+		bgPosition  = -topPosition / 5
+
+	headerTitleBg.css('--bg-position', '50% '+ bgPosition +'px')
+})

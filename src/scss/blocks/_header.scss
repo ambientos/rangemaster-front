@@ -170,13 +170,23 @@
 			&._with-bg {
 				background: {
 					color: $black;
-					position: 50% 50%;
 					repeat: no-repeat;
-					size: cover;
 				}
 
 				@include media-breakpoint-down('sm') {
 					min-height: 200px;
+					background: {
+						position: 50% 50%;
+						size: cover;
+					}
+				}
+
+				@include media-breakpoint-up('md') {
+					background: {
+						position: var(--bg-position);
+						size: 100% auto;
+						attachment: fixed;
+					}
 				}
 
 				@include media-breakpoint-between('md', 'lg') {
