@@ -237,7 +237,7 @@
         width: 85px;
         height: 27px; } }
   .header-title {
-    margin-bottom: .75em;
+    margin-bottom: .5em;
     color: #fff; }
     .header-title-container:not(._with-bg) {
       background-color: #f4f4f4; }
@@ -254,10 +254,13 @@
       background-size: cover; }
       @media (max-width: 767.98px) {
         .header-title-container._with-bg {
-          min-height: 220px; } }
-      @media (min-width: 768px) {
+          min-height: 200px; } }
+      @media (min-width: 768px) and (max-width: 1199.98px) {
         .header-title-container._with-bg {
-          min-height: 400px; } }
+          min-height: 250px; } }
+      @media (min-width: 1200px) {
+        .header-title-container._with-bg {
+          min-height: 300px; } }
     .header-title-article {
       position: relative; }
       .header-title-article-date {

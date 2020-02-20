@@ -151,7 +151,7 @@
 	}
 
 	&-title {
-		margin-bottom: .75em;
+		margin-bottom: .5em;
 		color: $white;
 
 		&-container {
@@ -176,11 +176,15 @@
 				}
 
 				@include media-breakpoint-down('sm') {
-					min-height: 220px;
+					min-height: 200px;
 				}
 
-				@include media-breakpoint-up('md') {
-					min-height: 400px;
+				@include media-breakpoint-between('md', 'lg') {
+					min-height: 250px;
+				}
+
+				@include media-breakpoint-up('xl') {
+					min-height: 300px;
 				}
 			}
 		}
