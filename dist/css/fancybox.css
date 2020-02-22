@@ -42,7 +42,7 @@ body.compensate-for-scrollbar {
   overflow-y: auto; }
 
 .fancybox-bg {
-  background: rgba(13, 13, 13, 0.95);
+  background-color: rgba(13, 13, 13, 0.95);
   opacity: 0;
   -webkit-transition-duration: inherit;
           transition-duration: inherit;
@@ -50,11 +50,15 @@ body.compensate-for-scrollbar {
   transition-property: opacity;
   -webkit-transition-timing-function: cubic-bezier(0.47, 0, 0.74, 0.71);
           transition-timing-function: cubic-bezier(0.47, 0, 0.74, 0.71); }
+  .fancybox-bg._opaque {
+    background-color: #0d0d0d; }
 
 .fancybox-is-open .fancybox-bg {
   opacity: .9;
   -webkit-transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
           transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
+  .fancybox-is-open .fancybox-bg._opaque {
+    opacity: 1; }
 
 .fancybox-infobar, .fancybox-toolbar, .fancybox-caption,
 .fancybox-navigation .fancybox-button {
