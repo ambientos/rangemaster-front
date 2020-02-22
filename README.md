@@ -2,12 +2,6 @@
 
 To start the project you need to install npm packages:
 
-Install development dependencies,
-```sh
-$ npm i -D
-```
-
-Install production dependencies,
 ```sh
 $ npm i
 ```
