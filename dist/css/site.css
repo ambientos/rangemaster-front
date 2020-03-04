@@ -1423,9 +1423,8 @@
   @media (min-width: 992px) {
     .article-list-item {
       padding: 1.5em 8em; } }
-  .article-list-item:nth-of-type(odd) {
-    background-color: #f4f4f4; }
   .article-list-item-date {
+    margin: .5em 0;
     color: #8c8c8c; }
   .article-list-item-title {
     display: block;

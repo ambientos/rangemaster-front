@@ -26,8 +26,14 @@ block content
 					while n < 8
 						- n++
 						article.article-list-item
-							.article-list-item-date 20.11.19
-							a.article-list-item-title(href='/') Lorem ipsum dolor sit amet, consectetur
+							figure.article-list-item-thumb
+								img.img-fluid.img-block(
+									src='t/18.jpg'
+									alt)
+							.d-md-flex.justify-content-between.align-items-center
+								a.article-list-item-title(href='/') Lorem ipsum dolor sit amet, consectetur
+								.article-list-item-date
+									time(datetime='2019-11-20T17:00:00+03:00') 20.11.19
 							.article-list-item-excerpt
 								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum fermentum pretium. Praesent at consequat neque. Praesent ut lectus rutrum, gravida turpis eget, lobortis libero. Donec est lorem, blandit quis imperdiet ut, placerat sed ante. Proin suscipit cursus ultricies.
 
