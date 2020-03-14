@@ -17,6 +17,10 @@
 			margin: .5em 0;
 		}
 
+		@include media-breakpoint-between('lg','lg') {
+			font-size: .75rem;
+		}
+
 		@include media-breakpoint-up('lg') {
 			margin: 0 $grid-gutter-width * .5;
 		}

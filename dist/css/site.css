@@ -359,6 +359,9 @@
   @media (max-width: 991.98px) {
     .menu-item {
       margin: .5em 0; } }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .menu-item {
+      font-size: .75rem; } }
   @media (min-width: 992px) {
     .menu-item {
       margin: 0 15px; } }
