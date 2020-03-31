@@ -53,31 +53,55 @@
 
 	&-list {
 		&-item {
+			$padding-y: 1.5em;
+
 			position: relative;
 			margin-bottom: $grid-gutter-width;
 
+			&:not(:last-child)::after {
+				position: absolute;
+				bottom: 0;
+				content: '';
+				border-top: 1px solid $gray-700;
+			}
+
 			@include media-breakpoint-down('md') {
-				$margin-x: $grid-gutter-width * .8;
+				$padding-x: $grid-gutter-width * .8;
 
 				margin: {
-					left: -$margin-x;
-					right: -$margin-x;
+					left: -$padding-x;
+					right: -$padding-x;
 				}
-				padding: 1.5em $margin-x;
+				padding: $padding-y $padding-x;
+
+				&:not(:last-child)::after {
+					left: $padding-x;
+					right: $padding-x;
+				}
 			}
 
 			@include media-breakpoint-up('lg') {
-				padding: 1.5em 8em;
+				$padding-x: 8em;
+
+				padding: $padding-y $padding-x;
+
+				&:not(:last-child)::after {
+					left: $padding-x;
+					right: $padding-x;
+				}
+			}
+
+			&-date,
+			&-title {
+				margin: 0 0 .5em;
 			}
 
 			&-date {
-				margin: .5em 0;
 				color: $gray-550;
 			}
 
 			&-title {
 				display: block;
-				margin: .5em 0;
 				font: {
 					size: 1.125rem;
 					weight: $font-weight-normal;
