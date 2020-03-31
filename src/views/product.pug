@@ -65,77 +65,76 @@ block content
 										width='170'
 										alt)
 
-			section.product-widget
-				.product-widget-title Technical data:
-				- var dataList = ['Suitable for any type of electrically operated traps', '5 microphones connectable', 'Built in display', 'Adjustable sensitivity', 'Adjustable timer', 'Resetable counter', 'Highly imune against background noise'];
-				ul.product-option-list.list-unstyled
-					each dataItem in dataList
-						li= dataItem
+			.tab-container
+				.tab-list.d-flex
+					span.tab-list-item._active Technical data
+					span.tab-list-item Documentation
+					span.tab-list-item Watch Video
+					span.tab-list-item Compatible Products
 
-			section.product-widget
-				- var langsList = {ru: 'Russian', en: 'English', de: 'Deutsch'};
-				- var docList = [{title: 'RANGEMASTER X3 PRO/.NET - PRES. FOR iPAD, iPHONE & iMAC (.key)', dl: {ru: '#', en: '#', de: false}}, {title: 'RANGEMASTER X3 PRO/.NET - PRES. FOR iPAD, iPHONE & iMAC (.key)', dl: {ru: false, en: '#', de: false}}, {title: 'RANGEMASTER X3 PRO/.NET - PRES. FOR iPAD, iPHONE & iMAC (.key)', dl: {ru: '#', en: '#', de: '#'}}];
-				table.product-col-table.table._doc
-					colgroup
-						col.product-col-name
-						col.product-col-dl
+				.tab-content
+					section.tab-content-item._active
+						- var dataList = ['Suitable for any type of electrically operated traps', '5 microphones connectable', 'Built in display', 'Adjustable sensitivity', 'Adjustable timer', 'Resetable counter', 'Highly imune against background noise'];
+						ul.product-option-list.list-unstyled
+							each dataItem in dataList
+								li= dataItem
 
-					thead
-						th Documentation:
-						th Language:
+					section.tab-content-item
+						- var langsList = {ru: 'Russian', en: 'English', de: 'Deutsch'};
+						- var docList = [{title: 'RANGEMASTER X3 PRO/.NET - PRES. FOR iPAD, iPHONE & iMAC (.key)', dl: {ru: '#', en: '#', de: false}}, {title: 'RANGEMASTER X3 PRO/.NET - PRES. FOR iPAD, iPHONE & iMAC (.key)', dl: {ru: false, en: '#', de: false}}, {title: 'RANGEMASTER X3 PRO/.NET - PRES. FOR iPAD, iPHONE & iMAC (.key)', dl: {ru: '#', en: '#', de: '#'}}];
+						table.product-col-table.table._doc
+							colgroup
+								col.product-col-name
+								col.product-col-dl
 
-					tbody
-						each docItem in docList
-							tr
-								td.product-col-name(data-title='Documentation')= docItem.title
-								td.product-col-dl(data-title='Language')
-									table
-										colgroup
-											col.product-col-flag._dl
-											col.product-col-flag._dl
-											col.product-col-flag._dl
-										tbody
-											tr
-												each link, index in docItem.dl
-													td
-														if link
-															a.product-col-dl-link(
-																href=link
-																data-title=langsList[index])
-																img(
-																	width='26'
-																	src='i/flags/'+ index +'.svg'
-																	alt)
+							thead
+								th Documentation:
+								th Language:
 
-			section.product-widget
-				.product-widget-title Watch Video:
-				a.product-video(
-					href='https://www.youtube.com/watch?v=X8n4SlhJuK4'
-					data-fancybox)
-					img.img-fluid(
-						src='t/25.jpg'
-						alt)
+							tbody
+								each docItem in docList
+									tr
+										td.product-col-name(data-title='Documentation')= docItem.title
+										td.product-col-dl(data-title='Language')
+											table
+												colgroup
+													col.product-col-flag._dl
+													col.product-col-flag._dl
+													col.product-col-flag._dl
+												tbody
+													tr
+														each link, index in docItem.dl
+															td
+																if link
+																	a.product-col-dl-link(
+																		href=link
+																		data-title=langsList[index])
+																		img(
+																			width='26'
+																			src='i/flags/'+ index +'.svg'
+																			alt)
+					section.tab-content-item
+						a.product-video(
+							href='https://www.youtube.com/watch?v=X8n4SlhJuK4'
+							data-fancybox)
+							img.img-fluid(
+								src='t/25.jpg'
+								alt)
 
-			section.product-widget.d-lg-none
-				span.btn.btn-block.btn-dark.btn-contrast-hover(
-					data-fancybox=''
-					data-src='#popup-submit-app') Submit application
-
-			section.product-widget
-				.product-widget-title Compatible Products
-				.product-thumb-carousel-container.carousel-container.container-product.container(
-					data-margin='30'
-					data-items='3'
-					data-dots='1'
-					data-nav='1')
-					.product-thumb-carousel.owl-carousel.carousel
-						- var i=0;
-						while i < 4
-							- i++;
-							figure.product-thumb-carousel-item
-								a(href='/')
-									img.img-fluid(
-										src='t/17.jpg'
-										width='220'
-										alt)
-									span.product-thumb-carousel-item-title "PPMU" Phono Pull Unit - Multi-Use
+					section.tab-content-item
+						.product-thumb-carousel-container.carousel-container.container-product.container(
+							data-margin='30'
+							data-items='3'
+							data-dots='1'
+							data-nav='1')
+							.product-thumb-carousel.owl-carousel.carousel
+								- var i=0;
+								while i < 4
+									- i++;
+									figure.product-thumb-carousel-item
+										a(href='/')
+											img.img-fluid(
+												src='t/17.jpg'
+												width='220'
+												alt)
+											span.product-thumb-carousel-item-title "PPMU" Phono Pull Unit - Multi-Use

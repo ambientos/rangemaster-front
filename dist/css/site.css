@@ -915,6 +915,31 @@
   100% {
     bottom: 0; } }
 
+.tab-list {
+  margin-bottom: 1.8em; }
+  .tab-list-item {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-right: 2.5em;
+    padding-bottom: .3em;
+    font-size: .75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #8c8c8c;
+    cursor: pointer; }
+    .tab-list-item._active {
+      border-bottom: 1px solid #ced4da; }
+
+.tab-content-item {
+  padding-top: 1px; }
+  .tab-content-item:not(._active) {
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden; }
+  .tab-content-item .product-col-table {
+    margin-top: 0; }
+
 .product-grid-title {
   margin-bottom: .5em;
   font-family: "BebasNeue", "Arial Narrow", sans-serif;

@@ -1,0 +1,38 @@
+.tab {
+	&-container {}
+
+	&-list {
+		margin-bottom: 1.8em;
+
+		&-item {
+			display: inline-flex;
+			margin-right: 2.5em;
+			padding-bottom: .3em;
+			font-size: .75rem;
+			font-weight: $font-weight-medium;
+			text-transform: uppercase;
+			color: $gray-550;
+			cursor: pointer;
+
+			&._active {
+				border-bottom: $border-width solid $gray-400;
+			}
+		}
+	}
+
+	&-content {
+		&-item {
+			padding-top: 1px;
+
+			&:not(._active) {
+				height: 1px;
+				overflow: hidden;
+				visibility: hidden;
+			}
+
+			.product-col-table {
+				margin-top: 0;
+			}
+		}
+	}
+}
