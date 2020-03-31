@@ -1422,7 +1422,7 @@
     position: absolute;
     bottom: 0;
     content: '';
-    border-top: 1px solid #404040; }
+    border-top: 1px solid #ced4da; }
   @media (max-width: 991.98px) {
     .article-list-item {
       margin-left: -24px;
