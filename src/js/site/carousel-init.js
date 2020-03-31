@@ -71,6 +71,13 @@ $('.carousel-container').each(function(){
 		let promoSetTimeout,
 			promoOptions = {
 				animateOut: 'fadeOut',
+				onInitialize() {
+					$carousel.children().sort(function(){
+						return Math.round(Math.random()) - 0.5
+					}).each(function(){
+						$(this).appendTo($carousel)
+					})
+				},
 				onInitialized(event) {
 					let $current = $container.find('.promo-carousel-nav-current')
 
