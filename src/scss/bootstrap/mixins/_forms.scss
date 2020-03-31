@@ -12,15 +12,20 @@
 // contrast against a dark gray background.
 @mixin form-control-focus($ignore-warning: false) {
   &:focus {
-    color: $input-focus-color;
+    color: invert($input-focus-color);
     background-color: $input-focus-bg;
-    border-color: $input-focus-border-color;
+    border-color: invert($input-focus-border-color);
     outline: 0;
     // Avoid using mixin so we can pass custom focus shadow properly
     @if $enable-shadows {
       box-shadow: $input-box-shadow, $input-focus-box-shadow;
     } @else {
       box-shadow: $input-focus-box-shadow;
+    }
+
+    ._dark & {
+      color: $input-focus-color;
+      border-color: $input-focus-border-color;
     }
   }
   @include deprecate("The `form-control-focus()` mixin", "v4.4.0", "v5", $ignore-warning);

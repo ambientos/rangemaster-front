@@ -14,13 +14,17 @@
   font-weight: $input-font-weight;
   line-height: $input-line-height;
   text-transform: uppercase;
-  color: $input-color;
+  color: invert($input-color);
   background-color: $input-bg;
   background-clip: padding-box;
   border: {
     width: $input-border-width;
     style: none none solid;
     color: $input-border-color;
+  }
+
+  ._dark & {
+    color: $input-color;
   }
 
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
