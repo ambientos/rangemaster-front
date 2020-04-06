@@ -56,6 +56,12 @@
 					display: none;
 				}
 			}
+
+			@include media-breakpoint-down('md') {
+				&._exit {
+					margin-right: .4em;
+				}
+			}
 		}
 
 		&-tablet {

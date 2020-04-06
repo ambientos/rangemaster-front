@@ -1,17 +1,21 @@
-mixin header(type)
+mixin header(type, logged)
 	- var _type = type ? ' _' + type : '';
+	- var _logged = logged ? 1 : 0;
 
 	header(class='header' + _type)
 		.header-container.container
 			.row.align-items-center.justify-content-between
-				figure.header-logo.col-lg-2.col-xl-3
+				figure.header-logo.col-lg-auto
 					+logo('header')
 
 				nav.header-menu-container.menu-container.navbar.navbar-expand-lg.navbar-dark.col-md
 					#navbarSupportedContent.collapse.navbar-collapse.justify-content-between
 						+menu('header')
 						.header-nav.d-flex.align-items-center
-							include ./nav-icons.pug
+							if _logged
+								include ./_nav-logged-icons.pug
+							else
+								include ./_nav-icons.pug
 
 							span.header-nav-item
 								span.header-nav-lang
@@ -21,7 +25,10 @@ mixin header(type)
 										a.header-nav-lang-list-item(href='/') Rus
 
 				div(class='header-nav-tablet navbar-dark d-flex d-lg-none align-items-center justify-content-end')
-					include ./nav-icons.pug
+					if _logged
+						include ./_nav-logged-icons.pug
+					else
+						include ./_nav-icons.pug
 
 					button.navbar-toggler.collapsed(
 						type='button'

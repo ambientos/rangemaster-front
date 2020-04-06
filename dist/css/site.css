@@ -171,6 +171,9 @@
       @media (max-width: 991.98px) {
         .header:not(._is-menu-expanded) .header-nav-item {
           display: none; } }
+      @media (max-width: 991.98px) {
+        .header-nav-item._exit {
+          margin-right: .4em; } }
     .header-nav-tablet {
       position: absolute;
       top: 0;
