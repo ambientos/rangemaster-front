@@ -29,8 +29,24 @@
 			size: cover;
 		}
 
+		&::after {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			content: '';
+			background: rgba($black, .6);
+		}
+
 		@include media-breakpoint-down('sm') {
 			padding-bottom: 7em;
+		}
+
+		.container,
+		&-more {
+			position: relative;
+			z-index: 1;
 		}
 
 		&-video {
