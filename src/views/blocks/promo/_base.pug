@@ -16,9 +16,11 @@
 
 				if promoItem.video
 					video.promo-item-video(
-						preload='preload'
-						autoplay='autoplay'
-						loop='loop')
+						preload
+						autoplay
+						loop
+						muted
+						playsinline)
 						source(
 							src='t/'+ promoItem.video +'.webm'
 							type='video/webm')

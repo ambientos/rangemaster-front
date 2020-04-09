@@ -596,7 +596,8 @@
   color: #fff;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
   .promo-item::after {
     position: absolute;
     left: 0;
