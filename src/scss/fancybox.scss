@@ -501,16 +501,18 @@ body.compensate-for-scrollbar {
 		}
 
 		a {
-			&,
-			&:link,
-			&:visited {
-				color: #ccc;
-				text-decoration: none;
-			}
+			&:not(.btn) {
+				&,
+				&:link,
+				&:visited {
+					color: #ccc;
+					text-decoration: none;
+				}
 
-			&:hover {
-				color: #fff;
-				text-decoration: underline;
+				&:hover {
+					color: #fff;
+					text-decoration: underline;
+				}
 			}
 		}
 	}

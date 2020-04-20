@@ -407,10 +407,10 @@ body.compensate-for-scrollbar {
     max-height: 50vh;
     overflow: auto;
     pointer-events: all; }
-  .fancybox-caption a, .fancybox-caption a:link, .fancybox-caption a:visited {
+  .fancybox-caption a:not(.btn), .fancybox-caption a:not(.btn):link, .fancybox-caption a:not(.btn):visited {
     color: #ccc;
     text-decoration: none; }
-  .fancybox-caption a:hover {
+  .fancybox-caption a:not(.btn):hover {
     color: #fff;
     text-decoration: underline; }
 
