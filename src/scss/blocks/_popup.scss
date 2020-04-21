@@ -320,4 +320,30 @@
 			}
 		}
 	}
+
+	&-content {
+		width: 680px;
+		padding: 2em 6em 1em;
+		color: $gray-550;
+
+		&-inner {
+			max-height: 410px;
+			overflow-y: auto;
+		}
+	}
+
+	&-title,
+	&-subtitle {
+		font-size: 1.125rem;
+	}
+
+	&-title {
+		margin-bottom: .5em;
+		color: $red;
+	}
+
+	&-subtitle {
+		margin-bottom: 1.5em;
+		color: $gray-550;
+	}
 }

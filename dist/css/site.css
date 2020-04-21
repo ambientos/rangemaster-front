@@ -1761,4 +1761,23 @@
       left: 5.35em;
       top: 1em; } }
 
+.popup-content {
+  width: 680px;
+  padding: 2em 6em 1em;
+  color: #8c8c8c; }
+  .popup-content-inner {
+    max-height: 410px;
+    overflow-y: auto; }
+
+.popup-title, .popup-subtitle {
+  font-size: 1.125rem; }
+
+.popup-title {
+  margin-bottom: .5em;
+  color: #f00; }
+
+.popup-subtitle {
+  margin-bottom: 1.5em;
+  color: #8c8c8c; }
+
 /*# sourceMappingURL=site.css.map */
