@@ -609,6 +609,9 @@
   @media (max-width: 767.98px) {
     .promo-item {
       padding-bottom: 7em; } }
+  @media (min-width: 768px) {
+    .promo-item {
+      padding-bottom: 5em; } }
   .promo-item .container, .promo-item-more {
     position: relative;
     z-index: 1; }
@@ -843,8 +846,7 @@
                 animation-name: carousel-animation-x; } }
   @media (min-width: 992px) {
     .promo-carousel-nav {
-      top: 0;
-      bottom: 0;
+      bottom: 7.5em;
       height: 90px;
       -webkit-transform: translateX(3em);
               transform: translateX(3em); }
@@ -897,10 +899,7 @@
       bottom: 30px; } }
   @media (min-width: 992px) {
     .promo .owl-nav {
-      top: 0;
-      bottom: 0;
-      -webkit-transform: translateY(-4.2em);
-              transform: translateY(-4.2em); } }
+      bottom: 14.15em; } }
 
 .promo button.owl-prev.disabled i::before, .promo button.owl-prev.disabled:hover i::before, .promo button.owl-next.disabled i::before, .promo button.owl-next.disabled:hover i::before {
   border-color: rgba(255, 255, 255, 0.4); }
