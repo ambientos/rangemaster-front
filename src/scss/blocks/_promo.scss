@@ -66,9 +66,13 @@
 		}
 
 		&-inner {
+			$padding-x: 2.5em;
+
 			position: relative;
-			max-width: 650px;
-			padding-right: 2.5em;
+			padding: {
+				left: $padding-x;
+				right: $padding-x;
+			}
 
 			@include media-breakpoint-down('sm') {
 				top: .8em;
@@ -76,6 +80,7 @@
 
 			@include media-breakpoint-up('md') {
 				top: -.8em;
+				padding-bottom: 1.5em;
 				opacity: 0;
 
 				@include transition(opacity .5s ease-in-out 1s);

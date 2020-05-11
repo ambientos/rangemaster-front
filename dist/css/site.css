@@ -627,7 +627,7 @@
             transform: translate(-50%, -50%); }
   .promo-item-inner {
     position: relative;
-    max-width: 650px;
+    padding-left: 2.5em;
     padding-right: 2.5em; }
     @media (max-width: 767.98px) {
       .promo-item-inner {
@@ -635,6 +635,7 @@
     @media (min-width: 768px) {
       .promo-item-inner {
         top: -.8em;
+        padding-bottom: 1.5em;
         opacity: 0;
         -webkit-transition: opacity 0.5s ease-in-out 1s;
         transition: opacity 0.5s ease-in-out 1s; } }
