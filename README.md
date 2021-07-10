@@ -3,7 +3,7 @@
 To start the project you need to install npm packages:
 
 ```sh
-$ npm i
+$ yarn
 ```
 
 To run the project:
